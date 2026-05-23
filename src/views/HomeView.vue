@@ -7,18 +7,18 @@ import exam from '../data/exam.json'
 
 const categories = [
   {
-    title: '论文笔记',
-    description: '经典 AI 论文阅读笔记，涵盖 Transformer、GPT、DeepSeek 等',
-    count: papers.length,
-    route: '/papers',
-    icon: '📄',
-  },
-  {
     title: '学习路线',
     description: '从基础认知到 AI 产品的 5 阶段学习路径 + 术语表',
     count: knowledge.stages.length + ' 阶段',
     route: '/knowledge',
     icon: '🗺️',
+  },
+  {
+    title: '论文笔记',
+    description: '经典 AI 论文阅读笔记，涵盖 Transformer、GPT、DeepSeek 等',
+    count: papers.length,
+    route: '/papers',
+    icon: '📄',
   },
   {
     title: 'Agent 资源',
