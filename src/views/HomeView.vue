@@ -41,6 +41,13 @@ const categories = [
     route: '/exam',
     icon: '🎯',
   },
+  {
+    title: '我的想法',
+    description: 'AI 产品灵感、思考笔记和创意收集',
+    count: '占坑中',
+    route: '',
+    icon: '💭',
+  },
 ]
 </script>
 
@@ -52,17 +59,24 @@ const categories = [
     </section>
 
     <section class="categories">
-      <router-link
-        v-for="cat in categories"
-        :key="cat.route"
-        :to="cat.route"
-        class="category-card"
-      >
-        <span class="card-icon">{{ cat.icon }}</span>
-        <h2>{{ cat.title }}</h2>
-        <p>{{ cat.description }}</p>
-        <span class="card-count">{{ cat.count }}</span>
-      </router-link>
+      <template v-for="cat in categories" :key="cat.route || cat.title">
+        <router-link
+          v-if="cat.route"
+          :to="cat.route"
+          class="category-card"
+        >
+          <span class="card-icon">{{ cat.icon }}</span>
+          <h2>{{ cat.title }}</h2>
+          <p>{{ cat.description }}</p>
+          <span class="card-count">{{ cat.count }}</span>
+        </router-link>
+        <div v-else class="category-card placeholder">
+          <span class="card-icon">{{ cat.icon }}</span>
+          <h2>{{ cat.title }}</h2>
+          <p>{{ cat.description }}</p>
+          <span class="card-count placeholder-count">{{ cat.count }}</span>
+        </div>
+      </template>
     </section>
   </div>
 </template>
@@ -153,5 +167,15 @@ const categories = [
   border-radius: 99px;
   font-size: 0.8rem;
   font-weight: 600;
+}
+
+.category-card.placeholder {
+  border-style: dashed;
+  opacity: 0.7;
+  cursor: default;
+}
+
+.placeholder-count {
+  background: var(--color-text-muted);
 }
 </style>
