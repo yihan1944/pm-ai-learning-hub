@@ -4,6 +4,9 @@ import knowledge from '../data/knowledge.json'
 import agents from '../data/agents.json'
 import products from '../data/products.json'
 import exam from '../data/exam.json'
+import { useAnalytics } from '../composables/useAnalytics'
+
+const { pv, uv } = useAnalytics()
 
 const categories = [
   {
@@ -78,6 +81,12 @@ const categories = [
         </div>
       </template>
     </section>
+
+    <footer class="site-stats">
+      <span>PV {{ pv }}</span>
+      <span class="stats-dot">·</span>
+      <span>UV {{ uv }}</span>
+    </footer>
   </div>
 </template>
 
@@ -177,5 +186,18 @@ const categories = [
 
 .placeholder-count {
   background: var(--color-text-muted);
+}
+
+.site-stats {
+  text-align: center;
+  padding: 2.5rem 0 1rem;
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  opacity: 0.5;
+}
+
+.stats-dot {
+  margin: 0 0.4em;
 }
 </style>
