@@ -85,20 +85,28 @@ const categories = [
 }
 
 .categories {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1rem;
 }
 
+.category-card {
+  flex: 0 1 calc((100% - 2rem) / 3);
+  min-width: 280px;
+}
+
 @media (max-width: 900px) {
-  .categories {
-    grid-template-columns: repeat(2, 1fr);
+  .category-card {
+    flex: 0 1 calc((100% - 1rem) / 2);
+    min-width: 240px;
   }
 }
 
 @media (max-width: 580px) {
-  .categories {
-    grid-template-columns: 1fr;
+  .category-card {
+    flex: 1 1 100%;
+    min-width: 0;
   }
 }
 
