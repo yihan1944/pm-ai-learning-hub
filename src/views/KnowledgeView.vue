@@ -6,7 +6,7 @@ import LearningStage from '../components/LearningStage.vue'
 <template>
   <div class="knowledge">
     <h1>学习路线</h1>
-    <p class="subtitle">从基础认知到 AI 产品的 5 阶段学习路径</p>
+    <p class="subtitle">从基础认知到 AI 产品的 {{ knowledge.stages.length }} 阶段学习路径</p>
 
     <section class="stages">
       <LearningStage
