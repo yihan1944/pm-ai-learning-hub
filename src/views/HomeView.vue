@@ -83,9 +83,9 @@ const categories = [
     </section>
 
     <footer class="site-stats">
-      <span>PV {{ pv }}</span>
+      <span>访问次数 {{ pv }}</span>
       <span class="stats-dot">·</span>
-      <span>UV {{ uv }}</span>
+      <span>访问人数 {{ uv }}</span>
     </footer>
   </div>
 </template>
