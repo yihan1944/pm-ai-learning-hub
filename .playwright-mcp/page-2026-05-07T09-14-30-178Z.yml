@@ -1,0 +1,2122 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - link "Skip to main content" [ref=e3] [cursor=pointer]:
+      - /url: "#main-container"
+    - banner [ref=e4]:
+      - link "logo" [ref=e6] [cursor=pointer]:
+        - /url: https://cornell.edu/
+        - img "logo" [ref=e7]
+      - paragraph [ref=e9]:
+        - generic [ref=e10]:
+          - text: We gratefully acknowledge support from
+          - text: the Simons Foundation,
+          - link "member institutions" [ref=e11] [cursor=pointer]:
+            - /url: https://info.arxiv.org/about/ourmembers.html
+          - text: ", and all contributors."
+          - link "Donate" [ref=e12] [cursor=pointer]:
+            - /url: https://info.arxiv.org/about/donate.html
+    - generic [ref=e13]:
+      - link "arxiv-logo" [ref=e16] [cursor=pointer]:
+        - /url: https://arxiv.org/
+        - img "logo" [ref=e17]
+      - generic [ref=e20]:
+        - generic [ref=e21]:
+          - textbox "Search term or terms" [ref=e22]:
+            - /placeholder: Search...
+          - paragraph [ref=e23]:
+            - link "Help" [ref=e24] [cursor=pointer]:
+              - /url: https://info.arxiv.org/help
+            - text: "|"
+            - link "Advanced Search" [ref=e25] [cursor=pointer]:
+              - /url: https://arxiv.org/search/advanced
+        - combobox "Field to search" [ref=e28] [cursor=pointer]:
+          - option "All fields" [selected]
+          - option "Title"
+          - option "Author"
+          - option "Abstract"
+          - option "Comments"
+          - option "Journal reference"
+          - option "ACM classification"
+          - option "MSC classification"
+          - option "Report number"
+          - option "arXiv identifier"
+          - option "DOI"
+          - option "ORCID"
+          - option "arXiv author ID"
+          - option "Help pages"
+          - option "Full text"
+        - button "Search" [ref=e29] [cursor=pointer]
+    - navigation "User menu" [ref=e31]:
+      - link "Login" [ref=e32] [cursor=pointer]:
+        - /url: https://arxiv.org/login
+  - main [ref=e33]:
+    - generic [ref=e34]:
+      - 'heading "Showing 1–50 of 2,031 results for all: DeepSeek" [level=1] [ref=e36]'
+      - link "Search v0.5.6 released 2020-02-24" [ref=e39] [cursor=pointer]:
+        - /url: https://github.com/arXiv/arxiv-search/releases
+    - generic [ref=e40]:
+      - generic [ref=e41]:
+        - generic [ref=e42]:
+          - generic [ref=e43]:
+            - generic: Search term or terms
+            - textbox "Search term or terms" [ref=e44]:
+              - /placeholder: Search term...
+              - text: DeepSeek
+          - combobox "Field" [ref=e46] [cursor=pointer]:
+            - option "All fields" [selected]
+            - option "Title"
+            - option "Author(s)"
+            - option "Abstract"
+            - option "Comments"
+            - option "Journal reference"
+            - option "ACM classification"
+            - option "MSC classification"
+            - option "Report number"
+            - option "arXiv identifier"
+            - option "DOI"
+            - option "ORCID"
+            - option "License (URI)"
+            - option "arXiv author ID"
+            - option "Help pages"
+            - option "Full text"
+          - button "Search" [ref=e48] [cursor=pointer]
+        - generic [ref=e50]:
+          - generic [ref=e51] [cursor=pointer]:
+            - radio "Show abstracts Show abstracts" [checked] [ref=e52]
+            - text: Show abstracts
+          - generic [ref=e53] [cursor=pointer]:
+            - radio "Hide abstracts Hide abstracts" [ref=e54]
+            - text: Hide abstracts
+        - link "Advanced Search" [ref=e57] [cursor=pointer]:
+          - /url: /search/advanced?terms-0-term=DeepSeek&terms-0-field=all&size=50&order=-announced_date_first
+      - generic [ref=e61]:
+        - generic [ref=e62]:
+          - combobox "results per page" [ref=e64] [cursor=pointer]:
+            - option "25"
+            - option "50" [selected]
+            - option "100"
+            - option "200"
+          - text: results per page.
+        - generic [ref=e65]:
+          - text: Sort results by
+          - combobox "Sort results by" [ref=e67] [cursor=pointer]:
+            - option "Announcement date (newest first)" [selected]
+            - option "Announcement date (oldest first)"
+            - option "Submission date (newest first)"
+            - option "Submission date (oldest first)"
+            - option "Relevance"
+        - button "Go" [ref=e69] [cursor=pointer]
+      - navigation "pagination" [ref=e70]:
+        - link "Next" [ref=e71] [cursor=pointer]:
+          - /url: /search/?searchtype=all&query=DeepSeek&start=50
+        - list [ref=e72]:
+          - listitem [ref=e73]:
+            - link "Goto page 1" [ref=e74] [cursor=pointer]:
+              - /url: /search/?searchtype=all&query=DeepSeek&start=0
+              - text: "1"
+          - listitem [ref=e75]:
+            - link "Page 2" [ref=e76] [cursor=pointer]:
+              - /url: /search/?searchtype=all&query=DeepSeek&start=50
+              - text: "2"
+          - listitem [ref=e77]:
+            - link "Page 3" [ref=e78] [cursor=pointer]:
+              - /url: /search/?searchtype=all&query=DeepSeek&start=100
+              - text: "3"
+          - listitem [ref=e79]:
+            - link "Page 4" [ref=e80] [cursor=pointer]:
+              - /url: /search/?searchtype=all&query=DeepSeek&start=150
+              - text: "4"
+          - listitem [ref=e81]:
+            - link "Page 5" [ref=e82] [cursor=pointer]:
+              - /url: /search/?searchtype=all&query=DeepSeek&start=200
+              - text: "5"
+          - listitem [ref=e83]:
+            - generic: …
+      - list [ref=e84]:
+        - listitem [ref=e85]:
+          - generic [ref=e86]:
+            - paragraph [ref=e87]:
+              - link "arXiv:2605.04948" [ref=e88] [cursor=pointer]:
+                - /url: https://arxiv.org/abs/2605.04948
+              - generic [ref=e89]:
+                - text: "["
+                - link "pdf" [ref=e90] [cursor=pointer]:
+                  - /url: https://arxiv.org/pdf/2605.04948
+                - text: ","
+                - link "ps" [ref=e91] [cursor=pointer]:
+                  - /url: https://arxiv.org/ps/2605.04948
+                - text: ","
+                - link "other" [ref=e92] [cursor=pointer]:
+                  - /url: https://arxiv.org/format/2605.04948
+                - text: "]"
+            - generic [ref=e94]: cs.CL
+          - paragraph [ref=e95]: "Adapting Large Language Models to a Low-Resource Agglutinative Language: A Comparative Study of LoRA and QLoRA for Bashkir"
+          - paragraph [ref=e96]:
+            - text: "Authors:"
+            - link "Mullosharaf K. Arabov" [ref=e97] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Arabov%2C+M+K
+            - text: ","
+            - link "Svetlana S. Khaybullina" [ref=e98] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Khaybullina%2C+S+S
+          - paragraph [ref=e99]:
+            - text: "Abstract:"
+            - generic [ref=e100]: "…evaluation is conducted on a Bashkir text corpus of 71k documents (46.9M tokens) using models of various architectures: DistilGPT2, GPT-2 (base, medium), Phi-2, Qwen2.5-7B, DeepSeek-7B, and Mistral-7B. To improve the reliability of results, each configuration was trained with three different random seeds. The lowest perplexity on the test set was obtained… ▽ More"
+          - paragraph [ref=e101]: Submitted 6 May, 2026; originally announced May 2026.
+          - paragraph [ref=e102]: "Comments: Preprint"
+        - listitem [ref=e103]:
+          - generic [ref=e104]:
+            - paragraph [ref=e105]:
+              - link "arXiv:2605.04903" [ref=e106] [cursor=pointer]:
+                - /url: https://arxiv.org/abs/2605.04903
+              - generic [ref=e107]:
+                - text: "["
+                - link "pdf" [ref=e108] [cursor=pointer]:
+                  - /url: https://arxiv.org/pdf/2605.04903
+                - text: ","
+                - link "ps" [ref=e109] [cursor=pointer]:
+                  - /url: https://arxiv.org/ps/2605.04903
+                - text: ","
+                - link "other" [ref=e110] [cursor=pointer]:
+                  - /url: https://arxiv.org/format/2605.04903
+                - text: "]"
+            - generic [ref=e111]:
+              - generic [ref=e112]: cs.LG
+              - generic [ref=e113]: cs.AI
+              - generic [ref=e114]: cs.CV
+          - paragraph [ref=e115]: "Delta-Based Neural Architecture Search: LLM Fine-Tuning via Code Diffs"
+          - paragraph [ref=e116]:
+            - text: "Authors:"
+            - link "Santosh Premi Adhikari" [ref=e117] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Adhikari%2C+S+P
+            - text: ","
+            - link "Radu Timofte" [ref=e118] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Timofte%2C+R
+            - text: ","
+            - link "Dmitry Ignatov" [ref=e119] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Ignatov%2C+D
+          - paragraph [ref=e120]:
+            - text: "Abstract:"
+            - generic [ref=e121]: …the LLM via LoRA on curated architectures from the LEMUR dataset, with MinHash-Jaccard novelty filtering for structural diversity. We evaluate three 7B-class LLMs -- DeepSeek-Coder-7B, Qwen2.5-Coder-7B, and Mistral-7B -- across six datasets (CIFAR-10, CIFAR-100, MNIST, SVHN, ImageNette, CelebA) using a 22-cycle protocol (1,100 candidates per LLM). All three… ▽ More
+          - paragraph [ref=e122]: Submitted 6 May, 2026; originally announced May 2026.
+          - paragraph [ref=e123]: "Comments: 19 pages, 4 figures, 7 tables"
+        - listitem [ref=e124]:
+          - generic [ref=e125]:
+            - paragraph [ref=e126]:
+              - link "arXiv:2605.04488" [ref=e127] [cursor=pointer]:
+                - /url: https://arxiv.org/abs/2605.04488
+              - generic [ref=e128]:
+                - text: "["
+                - link "pdf" [ref=e129] [cursor=pointer]:
+                  - /url: https://arxiv.org/pdf/2605.04488
+                - text: ","
+                - link "ps" [ref=e130] [cursor=pointer]:
+                  - /url: https://arxiv.org/ps/2605.04488
+                - text: ","
+                - link "other" [ref=e131] [cursor=pointer]:
+                  - /url: https://arxiv.org/format/2605.04488
+                - text: "]"
+            - generic [ref=e133]: cs.AI
+          - paragraph [ref=e134]: How Does Thinking Mode Change LLM Moral Judgments? A Controlled Instant-vs-Thinking Comparison Across Five Frontier Models
+          - paragraph [ref=e135]:
+            - text: "Authors:"
+            - link "Sai Sourabh Madur" [ref=e136] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Madur%2C+S+S
+          - paragraph [ref=e137]:
+            - text: "Abstract:"
+            - generic [ref=e138]: …moral judgments within the same model checkpoint. Across 100 moral-judgment scenarios and five frontier reasoning-trained LLMs (Claude Sonnet 4.6, GPT 5.5, Gemini 3 Flash, DeepSeek V3.1, and Qwen3.5 397B), aggregate binary-verdict agreement remains high and statistically indistinguishable between instant and thinking modes (Krippendorff's alpha = 0.78 vs… ▽ More
+          - paragraph [ref=e139]: Submitted 6 May, 2026; originally announced May 2026.
+        - listitem [ref=e140]:
+          - generic [ref=e141]:
+            - paragraph [ref=e142]:
+              - link "arXiv:2605.04472" [ref=e143] [cursor=pointer]:
+                - /url: https://arxiv.org/abs/2605.04472
+              - generic [ref=e144]:
+                - text: "["
+                - link "pdf" [ref=e145] [cursor=pointer]:
+                  - /url: https://arxiv.org/pdf/2605.04472
+                - text: ","
+                - link "ps" [ref=e146] [cursor=pointer]:
+                  - /url: https://arxiv.org/ps/2605.04472
+                - text: ","
+                - link "other" [ref=e147] [cursor=pointer]:
+                  - /url: https://arxiv.org/format/2605.04472
+                - text: "]"
+            - generic [ref=e149]: cs.LG
+          - paragraph [ref=e150]: Automated Formal Proofs of Combinatorial Identities via Wilf-Zeilberger Guidance and LLMs
+          - paragraph [ref=e151]:
+            - text: "Authors:"
+            - link "Beibei Xiong" [ref=e152] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Xiong%2C+B
+            - text: ","
+            - link "Hangyu Lv" [ref=e153] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Lv%2C+H
+            - text: ","
+            - link "Junqi Liu" [ref=e154] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Liu%2C+J
+            - text: ","
+            - link "Yisen Wang" [ref=e155] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Wang%2C+Y
+            - text: ","
+            - link "Shaoshi Chen" [ref=e156] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Chen%2C+S
+            - text: ","
+            - link "Jianlin Wang" [ref=e157] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Wang%2C+J
+            - text: ","
+            - link "Zhengfeng Yang" [ref=e158] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Yang%2C+Z
+            - text: ","
+            - link "Lihong Zhi" [ref=e159] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Zhi%2C+L
+          - paragraph [ref=e160]:
+            - text: "Abstract:"
+            - generic [ref=e161]: "…refinement. Experiments show that WZ-LLM achieves a 34% proof success rate on LCI-Test (100 classic combinatorial identities), outperforming strong baselines such as DeepSeek-V3 and Goedel-Prover-V2, and delivering consistent gains on CombiBench and PutnamBench-Comb. These results indicate that our framework provides two complementary strengths: improved dir… ▽ More"
+          - paragraph [ref=e162]: Submitted 5 May, 2026; originally announced May 2026.
+          - paragraph [ref=e163]: "Comments: Accepted to ICML 2026. Preprint version"
+        - listitem [ref=e164]:
+          - generic [ref=e165]:
+            - paragraph [ref=e166]:
+              - link "arXiv:2605.04065" [ref=e167] [cursor=pointer]:
+                - /url: https://arxiv.org/abs/2605.04065
+              - generic [ref=e168]:
+                - text: "["
+                - link "pdf" [ref=e169] [cursor=pointer]:
+                  - /url: https://arxiv.org/pdf/2605.04065
+                - text: ","
+                - link "ps" [ref=e170] [cursor=pointer]:
+                  - /url: https://arxiv.org/ps/2605.04065
+                - text: ","
+                - link "other" [ref=e171] [cursor=pointer]:
+                  - /url: https://arxiv.org/format/2605.04065
+                - text: "]"
+            - generic [ref=e172]:
+              - generic [ref=e173]: cs.CL
+              - generic [ref=e174]: cs.ET
+              - generic [ref=e175]: cs.LG
+          - paragraph [ref=e176]: Free Energy-Driven Reinforcement Learning with Adaptive Advantage Shaping for Unsupervised Reasoning in LLMs
+          - paragraph [ref=e177]:
+            - text: "Authors:"
+            - link "Yiming Huang" [ref=e178] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Huang%2C+Y
+            - text: ","
+            - link "Zhenbo Shi" [ref=e179] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Shi%2C+Z
+            - text: ","
+            - link "Xin-Cheng Wen" [ref=e180] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Wen%2C+X
+            - text: ","
+            - link "Jichuan Zeng" [ref=e181] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Zeng%2C+J
+            - text: ","
+            - link "Cuiyun Gao" [ref=e182] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Gao%2C+C
+            - text: ","
+            - link "Peiyi Han" [ref=e183] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Han%2C+P
+            - text: ","
+            - link "Chuanyi Liu" [ref=e184] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Liu%2C+C
+          - paragraph [ref=e185]:
+            - text: "Abstract:"
+            - generic [ref=e186]: …other unsupervised RL-based baselines. Notably, in mathematical reasoning tasks, FREIA surpasses other methods by an average of 0.5 to 3.5 points in Pass@1 using the DeepSeek-R1-Distill-Qwen-1.5B model. ▽ More
+          - paragraph [ref=e187]: Submitted 11 April, 2026; originally announced May 2026.
+          - paragraph [ref=e188]: "Comments: Accepted by ACL 2026"
+        - listitem [ref=e189]:
+          - generic [ref=e190]:
+            - paragraph [ref=e191]:
+              - link "arXiv:2605.03998" [ref=e192] [cursor=pointer]:
+                - /url: https://arxiv.org/abs/2605.03998
+              - generic [ref=e193]:
+                - text: "["
+                - link "pdf" [ref=e194] [cursor=pointer]:
+                  - /url: https://arxiv.org/pdf/2605.03998
+                - text: ","
+                - link "ps" [ref=e195] [cursor=pointer]:
+                  - /url: https://arxiv.org/ps/2605.03998
+                - text: ","
+                - link "other" [ref=e196] [cursor=pointer]:
+                  - /url: https://arxiv.org/format/2605.03998
+                - text: "]"
+            - generic [ref=e197]:
+              - generic [ref=e198]: cs.CL
+              - generic [ref=e199]: cs.CY
+          - paragraph [ref=e200]: "EQUITRIAGE: A Fairness Audit of Gender Bias in LLM-Based Emergency Department Triage"
+          - paragraph [ref=e201]:
+            - text: "Authors:"
+            - link "Richard J. Young" [ref=e202] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Young%2C+R+J
+            - text: ","
+            - link "Alice M. Matthews" [ref=e203] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Matthews%2C+A+M
+          - paragraph [ref=e204]:
+            - text: "Abstract:"
+            - generic [ref=e205]: …these models reproduce or mitigate known biases. We present EQUITRIAGE, a fairness audit of LLM-based ESI assignment evaluating five models (Gemini-3-Flash, Nemotron-3-Super, DeepSeek-V3.1, Mistral-Small-3.2, GPT-4.1-Nano) across 374,275 evaluations on 18,714 MIMIC-IV-ED vignettes under four prompt strategies. Of 9,368 originals, 9,346 are paired with a gend… ▽ More
+          - paragraph [ref=e206]: Submitted 5 May, 2026; originally announced May 2026.
+          - paragraph [ref=e207]: "Comments: 37 pages, 10 figures, 13 tables. Code and analysis scripts available upon publication. Data: PhysioNet credentialed access (MIMIC-IV-ED v2.2 and MIMIC-IV v3.1, BIDMC IRB #2001P001699)"
+          - paragraph [ref=e208]: "MSC Class: 68T50; 62P10; 92C50 ACM Class: K.4.1; K.4.2; I.2.7; J.3"
+        - listitem [ref=e209]:
+          - generic [ref=e210]:
+            - paragraph [ref=e211]:
+              - link "arXiv:2605.03686" [ref=e212] [cursor=pointer]:
+                - /url: https://arxiv.org/abs/2605.03686
+              - generic [ref=e213]:
+                - text: "["
+                - link "pdf" [ref=e214] [cursor=pointer]:
+                  - /url: https://arxiv.org/pdf/2605.03686
+                - text: ","
+                - link "ps" [ref=e215] [cursor=pointer]:
+                  - /url: https://arxiv.org/ps/2605.03686
+                - text: ","
+                - link "other" [ref=e216] [cursor=pointer]:
+                  - /url: https://arxiv.org/format/2605.03686
+                - text: "]"
+            - generic [ref=e217]:
+              - generic [ref=e218]: cs.LG
+              - generic [ref=e219]: cs.CV
+          - paragraph [ref=e220]: "From Code to Prediction: Fine-Tuning LLMs for Neural Network Performance Classification in NNGPT"
+          - paragraph [ref=e221]:
+            - text: "Authors:"
+            - link "Mahmoud Hanouneh" [ref=e222] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Hanouneh%2C+M
+            - text: ","
+            - link "Radu Timofte" [ref=e223] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Timofte%2C+R
+            - text: ","
+            - link "Dmitry Ignatov" [ref=e224] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Ignatov%2C+D
+          - paragraph [ref=e225]:
+            - text: "Abstract:"
+            - generic [ref=e226]: …100%), a metadata-enriched prompt replacing accuracies with dataset properties, and a code-only prompt presenting only architecture source code and dataset names. Using DeepSeek-Coder-7B-Instruct fine-tuned with LoRA, the code-only prompt reaches 80% peak accuracy over 15 epochs, while the metadata prompt peaks at 70%. Perdataset analysis reveals complementa… ▽ More
+          - paragraph [ref=e227]: Submitted 6 May, 2026; v1 submitted 5 May, 2026; originally announced May 2026.
+        - listitem [ref=e228]:
+          - generic [ref=e229]:
+            - paragraph [ref=e230]:
+              - link "arXiv:2605.03675" [ref=e231] [cursor=pointer]:
+                - /url: https://arxiv.org/abs/2605.03675
+              - generic [ref=e232]:
+                - text: "["
+                - link "pdf" [ref=e233] [cursor=pointer]:
+                  - /url: https://arxiv.org/pdf/2605.03675
+                - text: ","
+                - link "ps" [ref=e234] [cursor=pointer]:
+                  - /url: https://arxiv.org/ps/2605.03675
+                - text: ","
+                - link "other" [ref=e235] [cursor=pointer]:
+                  - /url: https://arxiv.org/format/2605.03675
+                - text: "]"
+            - generic [ref=e237]: cs.AI
+          - paragraph [ref=e238]: "MEMTIER: Tiered Memory Architecture and Retrieval Bottleneck Analysis for Long-Running Autonomous AI Agents"
+          - paragraph [ref=e239]:
+            - text: "Authors:"
+            - link "Bronislav Sidik" [ref=e240] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Sidik%2C+B
+            - text: ","
+            - link "Lior Rokach" [ref=e241] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Rokach%2C+L
+          - paragraph [ref=e242]:
+            - text: "Abstract:"
+            - generic [ref=e243]: …Acc=0.382, F1=0.412 with Qwen2.5-7B on a consumer 6GB GPU - a +33 percentage point improvement over the full-context baseline (0.050 -> 0.382, i.e., 5% -> 38%). With DeepSeek-V4-Flash fact pre-population, single-session recall reaches 0.686-0.714, exceeding the paper's RAG BM25 GPT-4o baseline (0.560) on those categories. Temporal reasoning rises t… ▽ More
+          - paragraph [ref=e244]: Submitted 5 May, 2026; originally announced May 2026.
+          - paragraph [ref=e245]: "Comments: 11 pages, 1 figure, 5 tables. Under review"
+          - paragraph [ref=e246]: "ACM Class: I.2.11; I.2.7"
+        - listitem [ref=e247]:
+          - generic [ref=e248]:
+            - paragraph [ref=e249]:
+              - link "arXiv:2605.03129" [ref=e250] [cursor=pointer]:
+                - /url: https://arxiv.org/abs/2605.03129
+              - generic [ref=e251]:
+                - text: "["
+                - link "pdf" [ref=e252] [cursor=pointer]:
+                  - /url: https://arxiv.org/pdf/2605.03129
+                - text: ","
+                - link "ps" [ref=e253] [cursor=pointer]:
+                  - /url: https://arxiv.org/ps/2605.03129
+                - text: ","
+                - link "other" [ref=e254] [cursor=pointer]:
+                  - /url: https://arxiv.org/format/2605.03129
+                - text: "]"
+            - generic [ref=e255]:
+              - generic [ref=e256]: cs.CR
+              - generic [ref=e257]: cs.AI
+              - generic [ref=e258]: cs.CL
+          - paragraph [ref=e259]: "PIIGuard: Mitigating PII Harvesting under Adversarial Sanitization"
+          - paragraph [ref=e260]:
+            - text: "Authors:"
+            - link "Mingshuo Liu" [ref=e261] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Liu%2C+M
+            - text: ","
+            - link "Yiwei Zha" [ref=e262] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Zha%2C+Y
+            - text: ","
+            - link "Min Chen" [ref=e263] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Chen%2C+M
+          - paragraph [ref=e264]:
+            - text: "Abstract:"
+            - generic [ref=e265]: …leakage scoring, evolutionary mutation, and final judge-based recoverability assessment. In direct-HTML evaluation on three target models (GPT-5.4-nano, Claude-haiku-4.5, and DeepSeek-chat(latest v3.2)), PIIGuard achieves at least 97.0% defense success rate under both rule-based and judge-based leakage evaluation, often reaching 100.0%, while preserving beni… ▽ More
+          - paragraph [ref=e266]: Submitted 4 May, 2026; originally announced May 2026.
+        - listitem [ref=e267]:
+          - generic [ref=e268]:
+            - paragraph [ref=e269]:
+              - link "arXiv:2605.02964" [ref=e270] [cursor=pointer]:
+                - /url: https://arxiv.org/abs/2605.02964
+              - generic [ref=e271]:
+                - text: "["
+                - link "pdf" [ref=e272] [cursor=pointer]:
+                  - /url: https://arxiv.org/pdf/2605.02964
+                - text: ","
+                - link "ps" [ref=e273] [cursor=pointer]:
+                  - /url: https://arxiv.org/ps/2605.02964
+                - text: ","
+                - link "other" [ref=e274] [cursor=pointer]:
+                  - /url: https://arxiv.org/format/2605.02964
+                - text: "]"
+            - generic [ref=e275]:
+              - generic [ref=e276]: cs.LG
+              - generic [ref=e277]: cs.AI
+          - paragraph [ref=e278]: "Reward Hacking Benchmark: Measuring Exploits in LLM Agents with Tool Use"
+          - paragraph [ref=e279]:
+            - text: "Authors:"
+            - link "Kunvar Thaman" [ref=e280] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Thaman%2C+K
+          - paragraph [ref=e281]:
+            - text: "Abstract:"
+            - generic [ref=e282]: …and chained task regimes, where chain length acts as a proxy for longer-horizon agent behavior. We evaluate 13 frontier models from OpenAI, Anthropic, Google, and DeepSeek. Exploit rates range from 0% (Claude Sonnet 4.5) to 13.9% (… ▽ More
+          - paragraph [ref=e283]: Submitted 3 May, 2026; originally announced May 2026.
+          - paragraph [ref=e284]: "Comments: 16 pages, 2 figures. Accepted to ICML 2026"
+        - listitem [ref=e285]:
+          - generic [ref=e286]:
+            - paragraph [ref=e287]:
+              - link "arXiv:2605.02915" [ref=e288] [cursor=pointer]:
+                - /url: https://arxiv.org/abs/2605.02915
+              - generic [ref=e289]:
+                - text: "["
+                - link "pdf" [ref=e290] [cursor=pointer]:
+                  - /url: https://arxiv.org/pdf/2605.02915
+                - text: ","
+                - link "ps" [ref=e291] [cursor=pointer]:
+                  - /url: https://arxiv.org/ps/2605.02915
+                - text: ","
+                - link "other" [ref=e292] [cursor=pointer]:
+                  - /url: https://arxiv.org/format/2605.02915
+                - text: "]"
+            - generic [ref=e293]:
+              - generic [ref=e294]: cs.CL
+              - generic [ref=e295]: cs.LG
+          - paragraph [ref=e296]: When Should a Language Model Trust Itself? Same-Model Self-Verification as a Conditional Confidence Signal
+          - paragraph [ref=e297]:
+            - text: "Authors:"
+            - link "Aditya Ajay Phalod" [ref=e298] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Phalod%2C+A+A
+          - paragraph [ref=e299]:
+            - text: "Abstract:"
+            - generic [ref=e300]: "…for Phi-2 and the Qwen models, with the largest gains appearing in Qwen-7B. On TruthfulQA-MC, however, the signal is less reliable: smaller models can become prompt-sensitive, DeepSeek-R1-Distill-8B degrades relative to LL-AVG, and LL-SUM often remains the stronger practical baseline. We therefore do not treat self-verification as a general-purpose uncertain… ▽ More"
+          - paragraph [ref=e301]: Submitted 8 April, 2026; originally announced May 2026.
+          - paragraph [ref=e302]: "Comments: 30 pages, 13 figures, 8 tables. Code available on GitHub"
+        - listitem [ref=e303]:
+          - generic [ref=e304]:
+            - paragraph [ref=e305]:
+              - link "arXiv:2605.02860" [ref=e306] [cursor=pointer]:
+                - /url: https://arxiv.org/abs/2605.02860
+              - generic [ref=e307]:
+                - text: "["
+                - link "pdf" [ref=e308] [cursor=pointer]:
+                  - /url: https://arxiv.org/pdf/2605.02860
+                - text: ","
+                - link "ps" [ref=e309] [cursor=pointer]:
+                  - /url: https://arxiv.org/ps/2605.02860
+                - text: ","
+                - link "other" [ref=e310] [cursor=pointer]:
+                  - /url: https://arxiv.org/format/2605.02860
+                - text: "]"
+            - generic [ref=e311]:
+              - generic [ref=e312]: cs.AI
+              - generic [ref=e313]: cs.LG
+              - generic [ref=e314]: cs.SE
+          - paragraph [ref=e315]: "Standing on the Shoulders of Giants: Stabilized Knowledge Distillation for Cross--Language Code Clone Detection"
+          - paragraph [ref=e316]:
+            - text: "Authors:"
+            - link "Mohamad Khajezade" [ref=e317] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Khajezade%2C+M
+            - text: ","
+            - link "Fatemeh H. Fard" [ref=e318] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Fard%2C+F+H
+            - text: ","
+            - link "Mohamed Sami Shehata" [ref=e319] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Shehata%2C+M+S
+          - paragraph [ref=e320]:
+            - text: "Abstract:"
+            - generic [ref=e321]: …can be consistently mapped to binary clone labels. To address these limitations, we propose a knowledge distillation framework that transfers reasoning capabilities from DeepSeek-R1 into compact open-source student models for X-CCD. Using cross-language code pairs derived from Project CodeNet, we construct reasoning-oriented synthetic training data and fin… ▽ More
+          - paragraph [ref=e322]: Submitted 4 May, 2026; originally announced May 2026.
+          - paragraph [ref=e323]: "Comments: 38 pages"
+        - listitem [ref=e324]:
+          - generic [ref=e325]:
+            - paragraph [ref=e326]:
+              - link "arXiv:2605.02821" [ref=e327] [cursor=pointer]:
+                - /url: https://arxiv.org/abs/2605.02821
+              - generic [ref=e328]:
+                - text: "["
+                - link "pdf" [ref=e329] [cursor=pointer]:
+                  - /url: https://arxiv.org/pdf/2605.02821
+                - text: ","
+                - link "ps" [ref=e330] [cursor=pointer]:
+                  - /url: https://arxiv.org/ps/2605.02821
+                - text: ","
+                - link "other" [ref=e331] [cursor=pointer]:
+                  - /url: https://arxiv.org/format/2605.02821
+                - text: "]"
+            - generic [ref=e333]: cs.PF
+          - paragraph [ref=e334]: When Is the Same Model Not the Same Service? A Measurement Study of Hosted Open-Weight LLM APIs
+          - paragraph [ref=e335]:
+            - text: "Authors:"
+            - link "Haorui Li" [ref=e336] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Li%2C+H
+            - text: ","
+            - link "Zhenghui He" [ref=e337] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=He%2C+Z
+            - text: ","
+            - link "Xuanzi Liu" [ref=e338] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Liu%2C+X
+            - text: ","
+            - link "Yang Xu" [ref=e339] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Xu%2C+Y
+            - text: ","
+            - link "Dongsheng Liu" [ref=e340] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Liu%2C+D
+            - text: ","
+            - link "Jiakang Ma" [ref=e341] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Ma%2C+J
+            - text: ","
+            - link "Lupan Wu" [ref=e342] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Wu%2C+L
+            - text: ","
+            - link "Yangjie Wu" [ref=e343] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Wu%2C+Y
+            - text: ","
+            - link "Xiongchao Tang" [ref=e344] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Tang%2C+X
+            - text: ","
+            - link "Tianhui Shi" [ref=e345] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Shi%2C+T
+          - paragraph [ref=e346]:
+            - text: "Abstract:"
+            - generic [ref=e347]: …tuples rather than a lookup by model name. In two representative counterfactuals under observed feasibility constraints, routing lowers Qwen3-32B cost by 37.8% and raises DeepSeek-V3.2 average throughput by about 90% relative to direct official access. The results support a measurement view of hosted open-weight LLMs as heterogeneous services, not static cat… ▽ More
+          - paragraph [ref=e348]: Submitted 5 May, 2026; v1 submitted 4 May, 2026; originally announced May 2026.
+          - paragraph [ref=e349]: "Comments: 24 pages, 21 figures; substantially revised methodology, sample-frame description, model-identity discussion, routing constraints, artifact schema, and references"
+          - paragraph [ref=e350]: "ACM Class: C.4; I.2.7"
+        - listitem [ref=e351]:
+          - generic [ref=e352]:
+            - paragraph [ref=e353]:
+              - link "arXiv:2605.02815" [ref=e354] [cursor=pointer]:
+                - /url: https://arxiv.org/abs/2605.02815
+              - generic [ref=e355]:
+                - text: "["
+                - link "pdf" [ref=e356] [cursor=pointer]:
+                  - /url: https://arxiv.org/pdf/2605.02815
+                - text: ","
+                - link "ps" [ref=e357] [cursor=pointer]:
+                  - /url: https://arxiv.org/ps/2605.02815
+                - text: ","
+                - link "other" [ref=e358] [cursor=pointer]:
+                  - /url: https://arxiv.org/format/2605.02815
+                - text: "]"
+            - generic [ref=e360]: cs.CL
+          - paragraph [ref=e361]: "FlexSQL: Flexible Exploration and Execution Make Better Text-to-SQL Agents"
+          - paragraph [ref=e362]:
+            - text: "Authors:"
+            - link "Quang Hieu Pham" [ref=e363] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Pham%2C+Q+H
+            - text: ","
+            - link "Yang He" [ref=e364] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=He%2C+Y
+            - text: ","
+            - link "Ping Nie" [ref=e365] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Nie%2C+P
+            - text: ","
+            - link "Canwen Xu" [ref=e366] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Xu%2C+C
+            - text: ","
+            - link "Davood Rafiei" [ref=e367] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Rafiei%2C+D
+            - text: ","
+            - link "Yuepeng Wang" [ref=e368] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Wang%2C+Y
+            - text: ","
+            - link "Xi Ye" [ref=e369] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Ye%2C+X
+            - text: ","
+            - link "Jocelyn Qiaochu Chen" [ref=e370] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Chen%2C+J+Q
+          - paragraph [ref=e371]:
+            - text: "Abstract:"
+            - generic [ref=e372]: …revisions. On Spider2-Snow, using gpt-oss-120b, FlexSQL achieves a 65.4\% score, outperforming strong open-source baselines that use stronger, larger models such as gpt-o3 and DeepSeek-R1. When integrated into a general-purpose coding agent (as skills in Claude Code), our approach yields over 10\% relative improvement on Spider2-Snow. Further analysis shows… ▽ More
+          - paragraph [ref=e373]: Submitted 4 May, 2026; originally announced May 2026.
+        - listitem [ref=e374]:
+          - generic [ref=e375]:
+            - paragraph [ref=e376]:
+              - link "arXiv:2605.02568" [ref=e377] [cursor=pointer]:
+                - /url: https://arxiv.org/abs/2605.02568
+              - generic [ref=e378]:
+                - text: "["
+                - link "pdf" [ref=e379] [cursor=pointer]:
+                  - /url: https://arxiv.org/pdf/2605.02568
+                - text: ","
+                - link "ps" [ref=e380] [cursor=pointer]:
+                  - /url: https://arxiv.org/ps/2605.02568
+                - text: ","
+                - link "other" [ref=e381] [cursor=pointer]:
+                  - /url: https://arxiv.org/format/2605.02568
+                - text: "]"
+            - generic [ref=e382]:
+              - generic [ref=e383]: cs.LG
+              - generic [ref=e384]: cs.PF
+          - paragraph [ref=e385]: "StreamIndex: Memory-Bounded Compressed Sparse Attention via Streaming Top-k"
+          - paragraph [ref=e386]:
+            - text: "Authors:"
+            - link "Jaber Jaber" [ref=e387] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Jaber%2C+J
+            - text: ","
+            - link "Osama Jaber" [ref=e388] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Jaber%2C+O
+          - paragraph [ref=e389]:
+            - text: "Abstract:"
+            - generic [ref=e390]: "DeepSeek-V3.2 and V4 introduce Compressed Sparse Attention (CSA): a lightning indexer (a learned scoring projection over compressed keys) scores them, the top-k are selected per query, and a sparse attention kernel reads only those. Public CSA implementations materialize a [B, S, H_I, T] FP32 score tensor before the top-k reduction. With H_I=64 indexer heads… ▽ More"
+          - paragraph [ref=e391]: Submitted 4 May, 2026; originally announced May 2026.
+          - paragraph [ref=e392]:
+            - text: "Comments:"
+            - generic [ref=e393]: "11 pages, 3 figures, 7 tables, 2 algorithms, 36 references. Memory-bounded indexer kernel for DeepSeek-V4 CSA via chunked partition-merge top-k. Code: https://github.com/RightNow-AI/StreamIndex"
+          - paragraph [ref=e394]: "ACM Class: C.1.2; I.2.7"
+        - listitem [ref=e395]:
+          - generic [ref=e396]:
+            - paragraph [ref=e397]:
+              - link "arXiv:2605.02431" [ref=e398] [cursor=pointer]:
+                - /url: https://arxiv.org/abs/2605.02431
+              - generic [ref=e399]:
+                - text: "["
+                - link "pdf" [ref=e400] [cursor=pointer]:
+                  - /url: https://arxiv.org/pdf/2605.02431
+                - text: ","
+                - link "ps" [ref=e401] [cursor=pointer]:
+                  - /url: https://arxiv.org/ps/2605.02431
+                - text: ","
+                - link "other" [ref=e402] [cursor=pointer]:
+                  - /url: https://arxiv.org/format/2605.02431
+                - text: "]"
+            - generic [ref=e404]: cs.SE
+          - paragraph [ref=e405]: "ARIADNE: Agentic Reward-Informed Adaptive Decision Exploration via Blackboard-Driven MCTS for Competitive Program Generation"
+          - paragraph [ref=e406]:
+            - text: "Authors:"
+            - link "Minnan Wei" [ref=e407] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Wei%2C+M
+            - text: ","
+            - link "Xiang Chen" [ref=e408] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Chen%2C+X
+            - text: ","
+            - link "Xiaoshuai Niu" [ref=e409] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Niu%2C+X
+            - text: ","
+            - link "Siyu Chen" [ref=e410] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Chen%2C+S
+          - paragraph [ref=e411]:
+            - text: "Abstract:"
+            - generic [ref=e412]: "…{\\tool} attains Pass@1 scores of 41.30, 46.67, 27.27, and 20.91, surpassing the strongest baseline CodeSim by up to 26.06 points, while further improvements are observed with DeepSeek-V3.2. These results indicate that combining global search through MCTS with persistent evidence accumulation on a shared blackboard enables systematic exploration and effectiv… ▽ More"
+          - paragraph [ref=e413]: Submitted 4 May, 2026; originally announced May 2026.
+        - listitem [ref=e414]:
+          - generic [ref=e415]:
+            - paragraph [ref=e416]:
+              - link "arXiv:2605.02195" [ref=e417] [cursor=pointer]:
+                - /url: https://arxiv.org/abs/2605.02195
+              - generic [ref=e418]:
+                - text: "["
+                - link "pdf" [ref=e419] [cursor=pointer]:
+                  - /url: https://arxiv.org/pdf/2605.02195
+                - text: ","
+                - link "ps" [ref=e420] [cursor=pointer]:
+                  - /url: https://arxiv.org/ps/2605.02195
+                - text: ","
+                - link "other" [ref=e421] [cursor=pointer]:
+                  - /url: https://arxiv.org/format/2605.02195
+                - text: "]"
+            - generic [ref=e423]: cs.SE
+            - generic [ref=e425]:
+              - generic [ref=e426]: doi
+              - link "10.1145/3805760.3814890" [ref=e428] [cursor=pointer]:
+                - /url: https://doi.org/10.1145/3805760.3814890
+          - paragraph [ref=e429]: "Beyond Translation Accuracy: Addressing False Failures in LLM-Based Code Translation"
+          - paragraph [ref=e430]:
+            - text: "Authors:"
+            - link "Fazle Rabbi" [ref=e431] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Rabbi%2C+F
+            - text: ","
+            - link "Soumit Kanti Saha" [ref=e432] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Saha%2C+S+K
+            - text: ","
+            - link "Jinqiu Yang" [ref=e433] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Yang%2C+J
+          - paragraph [ref=e434]:
+            - text: "Abstract:"
+            - generic [ref=e435]: …empirical study across five programming languages (C, C++, Java, Python, Go) and three benchmarks (Avatar, CodeNet, EvalPlus), covering 6,164 translations generated by GPT-4o, DeepSeek-Coder, and Magicoder. Our analysis identifies and categorizes common false negatives, distinguishing pipeline-induced failures that affect any model from model-dependent behav… ▽ More
+          - paragraph [ref=e436]: Submitted 5 May, 2026; v1 submitted 3 May, 2026; originally announced May 2026.
+        - listitem [ref=e437]:
+          - generic [ref=e438]:
+            - paragraph [ref=e439]:
+              - link "arXiv:2605.02173" [ref=e440] [cursor=pointer]:
+                - /url: https://arxiv.org/abs/2605.02173
+              - generic [ref=e441]:
+                - text: "["
+                - link "pdf" [ref=e442] [cursor=pointer]:
+                  - /url: https://arxiv.org/pdf/2605.02173
+                - text: ","
+                - link "ps" [ref=e443] [cursor=pointer]:
+                  - /url: https://arxiv.org/ps/2605.02173
+                - text: ","
+                - link "other" [ref=e444] [cursor=pointer]:
+                  - /url: https://arxiv.org/format/2605.02173
+                - text: "]"
+            - generic [ref=e446]: cs.AI
+          - paragraph [ref=e447]: "Retrieval and Multi-Hop Reasoning in 1M-Token Context Windows: Evaluating LLMs on Classical Chinese Text"
+          - paragraph [ref=e448]:
+            - text: "Authors:"
+            - link "Eric H. C. Chow" [ref=e449] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Chow%2C+E+H+C
+          - paragraph [ref=e450]:
+            - text: "Abstract:"
+            - generic [ref=e451]: …than 80% accuracy through 512K with modest degradation at 1M; a late-cliff regime (GPT-5.5, Qwen3.6-plus) collapsing sharply between 512K and 1M; and a smooth-decline regime (DeepSeek V4 Pro) decaying gradually across the entire range. The findings suggest that nominal context-window length is a poor proxy for usable long-context multi-hop capability, and th… ▽ More
+          - paragraph [ref=e452]: Submitted 3 May, 2026; originally announced May 2026.
+        - listitem [ref=e453]:
+          - generic [ref=e454]:
+            - paragraph [ref=e455]:
+              - link "arXiv:2605.02033" [ref=e456] [cursor=pointer]:
+                - /url: https://arxiv.org/abs/2605.02033
+              - generic [ref=e457]:
+                - text: "["
+                - link "pdf" [ref=e458] [cursor=pointer]:
+                  - /url: https://arxiv.org/pdf/2605.02033
+                - text: ","
+                - link "ps" [ref=e459] [cursor=pointer]:
+                  - /url: https://arxiv.org/ps/2605.02033
+                - text: ","
+                - link "other" [ref=e460] [cursor=pointer]:
+                  - /url: https://arxiv.org/format/2605.02033
+                - text: "]"
+            - generic [ref=e461]:
+              - generic [ref=e462]: cs.SE
+              - generic [ref=e463]: cs.AI
+          - paragraph [ref=e464]: Conventional Commit Classification using Large Language Models and Prompt Engineering
+          - paragraph [ref=e465]:
+            - text: "Authors:"
+            - link "H. M. Sazzad Quadir" [ref=e466] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Quadir%2C+H+M+S
+            - text: ","
+            - link "Sakib Al Hasan" [ref=e467] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Hasan%2C+S+A
+            - text: ","
+            - link "Md. Nurul Ahad Tawhid" [ref=e468] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Tawhid%2C+M+N+A
+          - paragraph [ref=e469]:
+            - text: "Abstract:"
+            - generic [ref=e470]: "…we evaluate three prompting strategies, such as zero-shot, few-shot, and chain-of-thought, across three open-source LLMs of varying scale: Mistral-7B-Instruct, LLaMA-3-8B, and DeepSeek-R1-32B. Classification is performed directly on code diffs extracted from a balanced dataset of 3,200 commits mined from the InfluxDB repository, without any model fine-tuning… ▽ More"
+          - paragraph [ref=e471]: Submitted 3 May, 2026; originally announced May 2026.
+        - listitem [ref=e472]:
+          - generic [ref=e473]:
+            - paragraph [ref=e474]:
+              - link "arXiv:2605.01727" [ref=e475] [cursor=pointer]:
+                - /url: https://arxiv.org/abs/2605.01727
+              - generic [ref=e476]:
+                - text: "["
+                - link "pdf" [ref=e477] [cursor=pointer]:
+                  - /url: https://arxiv.org/pdf/2605.01727
+                - text: ","
+                - link "ps" [ref=e478] [cursor=pointer]:
+                  - /url: https://arxiv.org/ps/2605.01727
+                - text: ","
+                - link "other" [ref=e479] [cursor=pointer]:
+                  - /url: https://arxiv.org/format/2605.01727
+                - text: "]"
+            - generic [ref=e480]:
+              - generic [ref=e481]: cs.AI
+              - generic [ref=e482]: cs.CY
+          - paragraph [ref=e483]: Are LLMs More Skeptical of Entertainment News?
+          - paragraph [ref=e484]:
+            - text: "Authors:"
+            - link "Huiqian Lai" [ref=e485] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Lai%2C+H
+          - paragraph [ref=e486]:
+            - text: "Abstract:"
+            - generic [ref=e487]: "…fake than legitimate hard news, using a within-dataset design on GossipCop from FakeNewsNet. Across four frontier models, we find a clear but model-specific genre asymmetry: DeepSeek-V3.2 and GPT-5.2 show false-positive-rate gaps of 10.1 and 8.8 percentage points, respectively (both p < .001 ), whereas Claude Opus 4.6 and Gemini 3 Flash show no comparabl… ▽ More"
+          - paragraph [ref=e488]: Submitted 3 May, 2026; originally announced May 2026.
+          - paragraph [ref=e489]: "Comments: Accepted at the 2nd Workshop on Misinformation Detection in the Era of LLMs (MisD), co-located with ICWSM 2026, May 26, 2026, Los Angeles, CA, USA"
+        - listitem [ref=e490]:
+          - generic [ref=e491]:
+            - paragraph [ref=e492]:
+              - link "arXiv:2605.01687" [ref=e493] [cursor=pointer]:
+                - /url: https://arxiv.org/abs/2605.01687
+              - generic [ref=e494]:
+                - text: "["
+                - link "pdf" [ref=e495] [cursor=pointer]:
+                  - /url: https://arxiv.org/pdf/2605.01687
+                - text: ","
+                - link "ps" [ref=e496] [cursor=pointer]:
+                  - /url: https://arxiv.org/ps/2605.01687
+                - text: ","
+                - link "other" [ref=e497] [cursor=pointer]:
+                  - /url: https://arxiv.org/format/2605.01687
+                - text: "]"
+            - generic [ref=e499]: cs.CL
+          - paragraph [ref=e500]: "MultiBreak: A Scalable and Diverse Multi-turn Jailbreak Benchmark for Evaluating LLM Safety"
+          - paragraph [ref=e501]:
+            - text: "Authors:"
+            - link "Jialin Song" [ref=e502] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Song%2C+J
+            - text: ","
+            - link "Xiaodong Liu" [ref=e503] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Liu%2C+X
+            - text: ","
+            - link "Weiwei Yang" [ref=e504] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Yang%2C+W
+            - text: ","
+            - link "Wuyang Chen" [ref=e505] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Chen%2C+W
+            - text: ","
+            - link "Mingqian Feng" [ref=e506] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Feng%2C+M
+            - text: ","
+            - link "Xuekai Zhu" [ref=e507] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Zhu%2C+X
+            - text: ","
+            - link "Jianfeng Gao" [ref=e508] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Gao%2C+J
+          - paragraph [ref=e509]:
+            - text: "Abstract:"
+            - generic [ref=e510]: "…diverse set of topics to date. Empirical evaluation shows that our benchmark achieves up to a 54.0 and 34.6 higher attack success rate (ASR)} than the second-best dataset on DeepSeek-R1-7B and GPT-4.1-mini, respectively. More importantly, safety evaluations suggest that diverse attack categories uncover fine-grained LLM vulnerabilities}, and categories that… ▽ More"
+          - paragraph [ref=e511]: Submitted 2 May, 2026; originally announced May 2026.
+          - paragraph [ref=e512]: "Comments: ICML 2026, 25 pages, 11 figures, 13 tables"
+        - listitem [ref=e513]:
+          - generic [ref=e514]:
+            - paragraph [ref=e515]:
+              - link "arXiv:2605.01486" [ref=e516] [cursor=pointer]:
+                - /url: https://arxiv.org/abs/2605.01486
+              - generic [ref=e517]:
+                - text: "["
+                - link "pdf" [ref=e518] [cursor=pointer]:
+                  - /url: https://arxiv.org/pdf/2605.01486
+                - text: ","
+                - link "ps" [ref=e519] [cursor=pointer]:
+                  - /url: https://arxiv.org/ps/2605.01486
+                - text: ","
+                - link "other" [ref=e520] [cursor=pointer]:
+                  - /url: https://arxiv.org/format/2605.01486
+                - text: "]"
+            - generic [ref=e522]: cs.AI
+          - paragraph [ref=e523]: "MAP-Law: Coverage-Driven Retrieval Control for Multi-Turn Legal Consultation"
+          - paragraph [ref=e524]:
+            - text: "Authors:"
+            - link "Qinchuan Cheng" [ref=e525] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Cheng%2C+Q
+            - text: ","
+            - link "Ruixuan Xie" [ref=e526] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Xie%2C+R
+            - text: ","
+            - link "Jiaqi Liu" [ref=e527] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Liu%2C+J
+            - text: ","
+            - link "Xiaoya Yuan" [ref=e528] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Yuan%2C+X
+            - text: ","
+            - link "Yuxin Liu" [ref=e529] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Liu%2C+Y
+          - paragraph [ref=e530]:
+            - text: "Abstract:"
+            - generic [ref=e531]: …auditable decision aligned with legal argumentative structure. Experiments on a self-constructed dataset of 50 cases across eight labor-law scenarios show that MAP-Law with DeepSeek as the action selector achieves an Element Coverage of 0.860 using only 2.9 retrieval rounds and 5.8 evidence pieces on average. Compared with a fixed seven-round baseline, it… ▽ More
+          - paragraph [ref=e532]: Submitted 2 May, 2026; originally announced May 2026.
+        - listitem [ref=e533]:
+          - generic [ref=e534]:
+            - paragraph [ref=e535]:
+              - link "arXiv:2605.01449" [ref=e536] [cursor=pointer]:
+                - /url: https://arxiv.org/abs/2605.01449
+              - generic [ref=e537]:
+                - text: "["
+                - link "pdf" [ref=e538] [cursor=pointer]:
+                  - /url: https://arxiv.org/pdf/2605.01449
+                - text: ","
+                - link "ps" [ref=e539] [cursor=pointer]:
+                  - /url: https://arxiv.org/ps/2605.01449
+                - text: ","
+                - link "other" [ref=e540] [cursor=pointer]:
+                  - /url: https://arxiv.org/format/2605.01449
+                - text: "]"
+            - generic [ref=e541]:
+              - generic [ref=e542]: cs.CR
+              - generic [ref=e543]: cs.AI
+          - paragraph [ref=e544]: "VisInject: Disruption != Injection -- A Dual-Dimension Evaluation of Universal Adversarial Attacks on Vision-Language Models"
+          - paragraph [ref=e545]:
+            - text: "Authors:"
+            - link "Pang Liu" [ref=e546] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Liu%2C+P
+            - text: ","
+            - link "Yingjie Lao" [ref=e547] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Lao%2C+Y
+          - paragraph [ref=e548]:
+            - text: "Abstract:"
+            - generic [ref=e549]: …Ratcliff-Obershelp drift score for Influence (programmatic baseline) plus a 4-tier ordinal categorical none/weak/partial/confirmed for Precise Injection. The judge is DeepSeek-V4-Pro in thinking mode, calibrated against Claude Opus 4.7 with Cohen's κ = 0.77 on the injection axis (substantial agreement); the entire 4475-entry SHA-256 input cache ships w… ▽ More
+          - paragraph [ref=e550]: Submitted 2 May, 2026; originally announced May 2026.
+        - listitem [ref=e551]:
+          - generic [ref=e552]:
+            - paragraph [ref=e553]:
+              - link "arXiv:2605.01409" [ref=e554] [cursor=pointer]:
+                - /url: https://arxiv.org/abs/2605.01409
+              - generic [ref=e555]:
+                - text: "["
+                - link "pdf" [ref=e556] [cursor=pointer]:
+                  - /url: https://arxiv.org/pdf/2605.01409
+                - text: ","
+                - link "ps" [ref=e557] [cursor=pointer]:
+                  - /url: https://arxiv.org/ps/2605.01409
+                - text: ","
+                - link "other" [ref=e558] [cursor=pointer]:
+                  - /url: https://arxiv.org/format/2605.01409
+                - text: "]"
+            - generic [ref=e559]:
+              - generic [ref=e560]: cs.IR
+              - generic [ref=e561]: cs.CV
+              - generic [ref=e562]: cs.MM
+          - paragraph [ref=e563]: Interactive Multi-Turn Retrieval for Health Videos
+          - paragraph [ref=e564]:
+            - text: "Authors:"
+            - link "Chengzheng Wu" [ref=e565] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Wu%2C+C
+            - text: ","
+            - link "Ke Qiu" [ref=e566] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Qiu%2C+K
+            - text: ","
+            - link "Baoming Zhang" [ref=e567] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Zhang%2C+B
+            - text: ","
+            - link "Ruiyu Mao" [ref=e568] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Mao%2C+R
+            - text: ","
+            - link "Xulong Tang" [ref=e569] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Tang%2C+X
+            - text: ","
+            - link "Kaixing Yang" [ref=e570] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Yang%2C+K
+          - paragraph [ref=e571]:
+            - text: "Abstract:"
+            - generic [ref=e572]: …videos and construct MHVRC, a Multi-Turn Health Video Retrieval Corpus, by combining video-grounded descriptions from VideoChat-Flash with query refinements generated by DeepSeek. We further propose DATR, a Dialogue-Aware Two-Stage Retrieval framework. DATR first performs efficient coarse retrieval with a CLIP-style dual encoder and sparse frame sampling, th… ▽ More
+          - paragraph [ref=e573]: Submitted 2 May, 2026; originally announced May 2026.
+        - listitem [ref=e574]:
+          - generic [ref=e575]:
+            - paragraph [ref=e576]:
+              - link "arXiv:2605.00782" [ref=e577] [cursor=pointer]:
+                - /url: https://arxiv.org/abs/2605.00782
+              - generic [ref=e578]:
+                - text: "["
+                - link "pdf" [ref=e579] [cursor=pointer]:
+                  - /url: https://arxiv.org/pdf/2605.00782
+                - text: ","
+                - link "ps" [ref=e580] [cursor=pointer]:
+                  - /url: https://arxiv.org/ps/2605.00782
+                - text: ","
+                - link "other" [ref=e581] [cursor=pointer]:
+                  - /url: https://arxiv.org/format/2605.00782
+                - text: "]"
+            - generic [ref=e582]:
+              - generic [ref=e583]: cs.SE
+              - generic [ref=e584]: cs.AI
+          - paragraph [ref=e585]: "GeoContra: From Fluent GIS Code to Verifiable Spatial Analysis with Geography-Grounded Repair"
+          - paragraph [ref=e586]:
+            - text: "Authors:"
+            - link "Yinhao Xiao" [ref=e587] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Xiao%2C+Y
+            - text: ","
+            - link "Rongbo Xiao" [ref=e588] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Xiao%2C+R
+            - text: ","
+            - link "Yihan Zhang" [ref=e589] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Zhang%2C+Y
+          - paragraph [ref=e590]:
+            - text: "Abstract:"
+            - generic [ref=e591]: …tasks across 15 Boston-area zones, 9 task families, and 11 open-source models (600 runs each), GeoContra improves spatial correctness on closed models from 47.6% to 77.5% for DeepSeek-V4 and from 57.7% to 81.5% for Kimi-K2.5. Across 11 open models, average correctness rises by 26.6%. GeoContra turns fluent code production into verifiable spatial analysis, ca… ▽ More
+          - paragraph [ref=e592]: Submitted 1 May, 2026; originally announced May 2026.
+        - listitem [ref=e593]:
+          - generic [ref=e594]:
+            - paragraph [ref=e595]:
+              - link "arXiv:2605.00677" [ref=e596] [cursor=pointer]:
+                - /url: https://arxiv.org/abs/2605.00677
+              - generic [ref=e597]:
+                - text: "["
+                - link "pdf" [ref=e598] [cursor=pointer]:
+                  - /url: https://arxiv.org/pdf/2605.00677
+                - text: ","
+                - link "ps" [ref=e599] [cursor=pointer]:
+                  - /url: https://arxiv.org/ps/2605.00677
+                - text: ","
+                - link "other" [ref=e600] [cursor=pointer]:
+                  - /url: https://arxiv.org/format/2605.00677
+                - text: "]"
+            - generic [ref=e602]: cs.LG
+          - paragraph [ref=e603]: Evaluating the Architectural Reasoning Capabilities of LLM Provers via the Obfuscated Natural Number Game
+          - paragraph [ref=e604]:
+            - text: "Authors:"
+            - link "Lixing Li" [ref=e605] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Li%2C+L
+          - paragraph [ref=e606]:
+            - text: "Abstract:"
+            - generic [ref=e607]: "…inference time. The results also reveal a divergence in robustness: while general models (Claude-Sonnet-4.5, GPT-4o) suffer performance degradation, reasoning models (DeepSeek-R1, GPT-5, DeepSeek-Prover-V2) maintain the same accuracy despite the absence of semantic cues. These findings provide a quantitative metric for… ▽ More"
+          - paragraph [ref=e608]: Submitted 1 May, 2026; originally announced May 2026.
+          - paragraph [ref=e609]: "Comments: 4 pages. Accepted as a short paper to the AAAI 2026 Spring Symposium on Machine Learning and Knowledge Engineering for Knowledge-Grounded Semantic Agents (MAKE 2026)"
+          - paragraph [ref=e610]: "MSC Class: 68T15 ACM Class: I.2.3; I.2.4"
+        - listitem [ref=e611]:
+          - generic [ref=e612]:
+            - paragraph [ref=e613]:
+              - link "arXiv:2605.00392" [ref=e614] [cursor=pointer]:
+                - /url: https://arxiv.org/abs/2605.00392
+              - generic [ref=e615]:
+                - text: "["
+                - link "pdf" [ref=e616] [cursor=pointer]:
+                  - /url: https://arxiv.org/pdf/2605.00392
+                - text: ","
+                - link "ps" [ref=e617] [cursor=pointer]:
+                  - /url: https://arxiv.org/ps/2605.00392
+                - text: ","
+                - link "other" [ref=e618] [cursor=pointer]:
+                  - /url: https://arxiv.org/format/2605.00392
+                - text: "]"
+            - generic [ref=e619]:
+              - generic [ref=e620]: cs.CV
+              - generic [ref=e621]: cs.LG
+          - paragraph [ref=e622]: "RTPrune: Reading-Twice Inspired Token Pruning for Efficient DeepSeek-OCR Inference"
+          - paragraph [ref=e623]:
+            - text: "Authors:"
+            - link "Ben Wan" [ref=e624] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Wan%2C+B
+            - text: ","
+            - link "Yan Feng" [ref=e625] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Feng%2C+Y
+            - text: ","
+            - link "Zihan Tang" [ref=e626] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Tang%2C+Z
+            - text: ","
+            - link "Weizhe Huang" [ref=e627] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Huang%2C+W
+            - text: ","
+            - link "Yuting Zeng" [ref=e628] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Zeng%2C+Y
+            - text: ","
+            - link "Jia Wang" [ref=e629] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Wang%2C+J
+            - text: ","
+            - link "Tongxuan Liu" [ref=e630] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Liu%2C+T
+          - paragraph [ref=e631]:
+            - text: "Abstract:"
+            - generic [ref=e632]: DeepSeek-OCR leverages visual-text compression to reduce long-text processing costs and accelerate inference, yet visual tokens remain prone to redundant textual and structural information. Moreover, current token pruning methods for conventional vision-language models (VLMs) fail to preserve textual fidelity due to improper compression mechanisms. By analyz… ▽ More
+          - paragraph [ref=e633]: Submitted 1 May, 2026; originally announced May 2026.
+          - paragraph [ref=e634]: "Comments: 19p pages, accepted by ICML2026"
+        - listitem [ref=e635]:
+          - generic [ref=e636]:
+            - paragraph [ref=e637]:
+              - link "arXiv:2605.00257" [ref=e638] [cursor=pointer]:
+                - /url: https://arxiv.org/abs/2605.00257
+              - generic [ref=e639]:
+                - text: "["
+                - link "pdf" [ref=e640] [cursor=pointer]:
+                  - /url: https://arxiv.org/pdf/2605.00257
+                - text: ","
+                - link "ps" [ref=e641] [cursor=pointer]:
+                  - /url: https://arxiv.org/ps/2605.00257
+                - text: ","
+                - link "other" [ref=e642] [cursor=pointer]:
+                  - /url: https://arxiv.org/format/2605.00257
+                - text: "]"
+            - generic [ref=e643]:
+              - generic [ref=e644]: cs.CL
+              - generic [ref=e645]: cs.AI
+              - generic [ref=e646]: cs.IR
+          - paragraph [ref=e647]: Retrieval-Augmented Reasoning for Chartered Accountancy
+          - paragraph [ref=e648]:
+            - text: "Authors:"
+            - link "Jatin Gupta" [ref=e649] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Gupta%2C+J
+            - text: ","
+            - link "Akhil Sharma" [ref=e650] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Sharma%2C+A
+            - text: ","
+            - link "Saransh Singhania" [ref=e651] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Singhania%2C+S
+            - text: ","
+            - link "Ali Imam Abidi" [ref=e652] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Abidi%2C+A+I
+          - paragraph [ref=e653]:
+            - text: "Abstract:"
+            - generic [ref=e654]: …to resources. We present CA-ThinkFlow as a parameter-efficient Retrieval-Augmented Generation (RAG) framework which operates with a 14B, 4-bit-quantized reasoning model, 14B-DeepSeek-R1, and a layout-aware Docling extraction system which maintains document structure during extraction. CA-ThinkFlow uses a basic RAG method which automatically adds retrieved in… ▽ More
+          - paragraph [ref=e655]: Submitted 30 April, 2026; originally announced May 2026.
+          - paragraph [ref=e656]: "Comments: 9 pages, 2 figures, and 3 tables"
+        - listitem [ref=e657]:
+          - generic [ref=e658]:
+            - paragraph [ref=e659]:
+              - link "arXiv:2604.27618" [ref=e660] [cursor=pointer]:
+                - /url: https://arxiv.org/abs/2604.27618
+              - generic [ref=e661]:
+                - text: "["
+                - link "pdf" [ref=e662] [cursor=pointer]:
+                  - /url: https://arxiv.org/pdf/2604.27618
+                - text: ","
+                - link "ps" [ref=e663] [cursor=pointer]:
+                  - /url: https://arxiv.org/ps/2604.27618
+                - text: ","
+                - link "other" [ref=e664] [cursor=pointer]:
+                  - /url: https://arxiv.org/format/2604.27618
+                - text: "]"
+            - generic [ref=e665]:
+              - generic [ref=e666]: cs.AI
+              - generic [ref=e667]: cs.CY
+              - generic [ref=e668]: cs.HC
+              - generic [ref=e669]: cs.LG
+              - generic [ref=e670]: cs.SI
+          - paragraph [ref=e671]: "Math Education Digital Shadows for facilitating learning with LLMs: Math performance, anxiety and confidence in simulated students and AIs"
+          - paragraph [ref=e672]:
+            - text: "Authors:"
+            - link "Naomi Esposito" [ref=e673] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Esposito%2C+N
+            - text: ","
+            - link "Anthony Tricarico" [ref=e674] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Tricarico%2C+A
+            - text: ","
+            - link "Luisa Porzio" [ref=e675] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Porzio%2C+L
+            - text: ","
+            - link "Ali Aghazadeh Ardebili" [ref=e676] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Ardebili%2C+A+A
+            - text: ","
+            - link "Massimo Stella" [ref=e677] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Stella%2C+M
+          - paragraph [ref=e678]:
+            - text: "Abstract:"
+            - generic [ref=e679]: …large language models reason about and report mathematics across human- and AI-like conditions. MEDS involves 28,000 personas from 14 LLMs (from families like Mistral, Qwen, DeepSeek, Granite, Phi and Grok) shadowing either humans or AI assistants. Each record/shadow includes a set of prompts along with psychological/sociodemographic persona metadata and fou… ▽ More
+          - paragraph [ref=e680]: Submitted 30 April, 2026; originally announced April 2026.
+        - listitem [ref=e681]:
+          - generic [ref=e682]:
+            - paragraph [ref=e683]:
+              - link "arXiv:2604.27014" [ref=e684] [cursor=pointer]:
+                - /url: https://arxiv.org/abs/2604.27014
+              - generic [ref=e685]:
+                - text: "["
+                - link "pdf" [ref=e686] [cursor=pointer]:
+                  - /url: https://arxiv.org/pdf/2604.27014
+                - text: ","
+                - link "ps" [ref=e687] [cursor=pointer]:
+                  - /url: https://arxiv.org/ps/2604.27014
+                - text: ","
+                - link "other" [ref=e688] [cursor=pointer]:
+                  - /url: https://arxiv.org/format/2604.27014
+                - text: "]"
+            - generic [ref=e689]:
+              - generic [ref=e690]: cs.LG
+              - generic [ref=e691]: cs.CR
+          - paragraph [ref=e692]: "Fidelity, Diversity, and Privacy: A Multi-Dimensional LLM Evaluation for Clinical Data Augmentation"
+          - paragraph [ref=e693]:
+            - text: "Authors:"
+            - link "Guillermo Iglesias" [ref=e694] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Iglesias%2C+G
+            - text: ","
+            - link "Gema Bello-Orgaz" [ref=e695] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Bello-Orgaz%2C+G
+            - text: ","
+            - link "María Navas-Loro" [ref=e696] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Navas-Loro%2C+M
+            - text: ","
+            - link "Cristian Ramirez-Atencia" [ref=e697] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Ramirez-Atencia%2C+C
+            - text: ","
+            - link "Mercè Salvador Robert" [ref=e698] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Robert%2C+M+S
+            - text: ","
+            - link "Enrique Baca-Garcia" [ref=e699] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Baca-Garcia%2C+E
+          - paragraph [ref=e700]:
+            - text: "Abstract:"
+            - generic [ref=e701]: …promising alternative. The use of Large Language Models (LLMs) in a data augmentation pipeline could be leveraged as an alternative in this field. In the proposed methodology, DeepSeek-R1, OpenBioLLM-Llama3 and Qwen 3.5 are used to generate synthetic mental health evaluation reports conditioned on specific International Classification of Diseases, Tenth Revi… ▽ More
+          - paragraph [ref=e702]: Submitted 29 April, 2026; originally announced April 2026.
+          - paragraph [ref=e703]: "Comments: 9 pages, 1 figure, 1 table"
+        - listitem [ref=e704]:
+          - generic [ref=e705]:
+            - paragraph [ref=e706]:
+              - link "arXiv:2604.27001" [ref=e707] [cursor=pointer]:
+                - /url: https://arxiv.org/abs/2604.27001
+              - generic [ref=e708]:
+                - text: "["
+                - link "pdf" [ref=e709] [cursor=pointer]:
+                  - /url: https://arxiv.org/pdf/2604.27001
+                - text: ","
+                - link "ps" [ref=e710] [cursor=pointer]:
+                  - /url: https://arxiv.org/ps/2604.27001
+                - text: ","
+                - link "other" [ref=e711] [cursor=pointer]:
+                  - /url: https://arxiv.org/format/2604.27001
+                - text: "]"
+            - generic [ref=e712]:
+              - generic [ref=e713]: cs.CR
+              - generic [ref=e714]: cs.SE
+          - paragraph [ref=e715]: An Empirical Security Evaluation of LLM-Generated Cryptographic Rust Code
+          - paragraph [ref=e716]:
+            - text: "Authors:"
+            - link "Mohamed Elsayed" [ref=e717] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Elsayed%2C+M
+            - text: ","
+            - link "Kenneth Fulton" [ref=e718] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Fulton%2C+K
+            - text: ","
+            - link "Jeong Yang" [ref=e719] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Yang%2C+J
+          - paragraph [ref=e720]:
+            - text: "Abstract:"
+            - generic [ref=e721]: …of cryptographic security in 240 Rust code samples for two crypto algorithms (AES-256-GCM and ChaCha20-Poly1305) generated by three LLMs (Gemini 2.5 Pro, GPT-4o, and DeepSeek Coder) using four different prompt strategies. For each successfully compiled code sample, CodeQL static analysis and our rule-based crypto-specific analyzer were used to detect vulnera… ▽ More
+          - paragraph [ref=e722]: Submitted 28 April, 2026; originally announced April 2026.
+          - paragraph [ref=e723]: "Comments: 10 pages, 2 figures , EASE 2026-The 6th International Workshop on Software Security Engineering"
+        - listitem [ref=e724]:
+          - generic [ref=e725]:
+            - paragraph [ref=e726]:
+              - link "arXiv:2604.26649" [ref=e727] [cursor=pointer]:
+                - /url: https://arxiv.org/abs/2604.26649
+              - generic [ref=e728]:
+                - text: "["
+                - link "pdf" [ref=e729] [cursor=pointer]:
+                  - /url: https://arxiv.org/pdf/2604.26649
+                - text: ","
+                - link "ps" [ref=e730] [cursor=pointer]:
+                  - /url: https://arxiv.org/ps/2604.26649
+                - text: ","
+                - link "other" [ref=e731] [cursor=pointer]:
+                  - /url: https://arxiv.org/format/2604.26649
+                - text: "]"
+            - generic [ref=e732]:
+              - generic [ref=e733]: cs.IR
+              - generic [ref=e734]: cs.AI
+              - generic [ref=e735]: cs.CL
+            - generic [ref=e737]:
+              - generic [ref=e738]: doi
+              - link "10.1145/3805712.3809722" [ref=e740] [cursor=pointer]:
+                - /url: https://doi.org/10.1145/3805712.3809722
+          - paragraph [ref=e741]: "When to Retrieve During Reasoning: Adaptive Retrieval for Large Reasoning Models"
+          - paragraph [ref=e742]:
+            - text: "Authors:"
+            - link "Dongxin Guo" [ref=e743] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Guo%2C+D
+            - text: ","
+            - link "Jikun Wu" [ref=e744] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Wu%2C+J
+            - text: ","
+            - link "Siu Ming Yiu" [ref=e745] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Yiu%2C+S+M
+          - paragraph [ref=e746]:
+            - text: "Abstract:"
+            - generic [ref=e747]: Large reasoning models such as DeepSeek-R1 and OpenAI o1 generate extended chains of thought spanning thousands of tokens, yet their integration with retrieval-augmented generation (RAG) remains fundamentally misaligned. Current RAG systems optimize for providing context before reasoning begins, while reasoning models require evidence injection during multi-… ▽ More
+          - paragraph [ref=e748]: Submitted 29 April, 2026; originally announced April 2026.
+          - paragraph [ref=e749]: "Comments: 12 pages, 3 figures, 9 tables. Accepted at SIGIR 2026 (49th International ACM SIGIR Conference on Research and Development in Information Retrieval), Melbourne, Australia"
+          - paragraph [ref=e750]: "ACM Class: H.3.3; I.2.7"
+        - listitem [ref=e751]:
+          - generic [ref=e752]:
+            - paragraph [ref=e753]:
+              - link "arXiv:2604.26565" [ref=e754] [cursor=pointer]:
+                - /url: https://arxiv.org/abs/2604.26565
+              - generic [ref=e755]:
+                - text: "["
+                - link "pdf" [ref=e756] [cursor=pointer]:
+                  - /url: https://arxiv.org/pdf/2604.26565
+                - text: ","
+                - link "ps" [ref=e757] [cursor=pointer]:
+                  - /url: https://arxiv.org/ps/2604.26565
+                - text: ","
+                - link "other" [ref=e758] [cursor=pointer]:
+                  - /url: https://arxiv.org/format/2604.26565
+                - text: "]"
+            - generic [ref=e760]: cs.CV
+          - paragraph [ref=e761]: "DenseStep2M: A Scalable, Training-Free Pipeline for Dense Instructional Video Annotation"
+          - paragraph [ref=e762]:
+            - text: "Authors:"
+            - link "Mingji Ge" [ref=e763] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Ge%2C+M
+            - text: ","
+            - link "Qirui Chen" [ref=e764] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Chen%2C+Q
+            - text: ","
+            - link "Zeqian Li" [ref=e765] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Li%2C+Z
+            - text: ","
+            - link "Weidi Xie" [ref=e766] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Xie%2C+W
+          - paragraph [ref=e767]:
+            - text: "Abstract:"
+            - generic [ref=e768]: …videos. Our approach segments videos into coherent shots, filters poorly aligned content, and leverages state-of-the-art multimodal and large language models (Qwen2.5-VL and DeepSeek-R1) to generate structured, temporally grounded procedural steps. This pipeline yields DenseStep2M, a large-scale dataset comprising approximately 100K videos and 2M detailed… ▽ More
+          - paragraph [ref=e769]: Submitted 29 April, 2026; originally announced April 2026.
+        - listitem [ref=e770]:
+          - generic [ref=e771]:
+            - paragraph [ref=e772]:
+              - link "arXiv:2604.26319" [ref=e773] [cursor=pointer]:
+                - /url: https://arxiv.org/abs/2604.26319
+              - generic [ref=e774]:
+                - text: "["
+                - link "pdf" [ref=e775] [cursor=pointer]:
+                  - /url: https://arxiv.org/pdf/2604.26319
+                - text: ","
+                - link "ps" [ref=e776] [cursor=pointer]:
+                  - /url: https://arxiv.org/ps/2604.26319
+                - text: ","
+                - link "other" [ref=e777] [cursor=pointer]:
+                  - /url: https://arxiv.org/format/2604.26319
+                - text: "]"
+            - generic [ref=e779]: cs.CL
+          - paragraph [ref=e780]: A Systematic Comparison of Prompting and Multi-Agent Methods for LLM-based Stance Detection
+          - paragraph [ref=e781]:
+            - text: "Authors:"
+            - link "Genan Dai" [ref=e782] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Dai%2C+G
+            - text: ","
+            - link "Zini Chen" [ref=e783] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Chen%2C+Z
+            - text: ","
+            - link "Yi Yang" [ref=e784] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Yang%2C+Y
+            - text: ","
+            - link "Bowen Zhang" [ref=e785] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Zhang%2C+B
+          - paragraph [ref=e786]:
+            - text: "Abstract:"
+            - generic [ref=e787]: …times more API calls per sample. Second, model scale has a larger impact on performance than method choice, with gains plateauing around 32B. Third, reasoning-enhanced models (DeepSeek-R1) do not consistently outperform general models of the same size on this task. ▽ More
+          - paragraph [ref=e788]: Submitted 29 April, 2026; originally announced April 2026.
+        - listitem [ref=e789]:
+          - generic [ref=e790]:
+            - paragraph [ref=e791]:
+              - link "arXiv:2604.25711" [ref=e792] [cursor=pointer]:
+                - /url: https://arxiv.org/abs/2604.25711
+              - generic [ref=e793]:
+                - text: "["
+                - link "pdf" [ref=e794] [cursor=pointer]:
+                  - /url: https://arxiv.org/pdf/2604.25711
+                - text: ","
+                - link "ps" [ref=e795] [cursor=pointer]:
+                  - /url: https://arxiv.org/ps/2604.25711
+                - text: ","
+                - link "other" [ref=e796] [cursor=pointer]:
+                  - /url: https://arxiv.org/format/2604.25711
+                - text: "]"
+            - generic [ref=e797]:
+              - generic [ref=e798]: cs.SE
+              - generic [ref=e799]: cs.AI
+          - paragraph [ref=e800]: Learning Generalizable Multimodal Representations for Software Vulnerability Detection
+          - paragraph [ref=e801]:
+            - text: "Authors:"
+            - link "Zeming Dong" [ref=e802] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Dong%2C+Z
+            - text: ","
+            - link "Yuejun Guo" [ref=e803] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Guo%2C+Y
+            - text: ","
+            - link "Qiang Hu" [ref=e804] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Hu%2C+Q
+            - text: ","
+            - link "Yao Zhang" [ref=e805] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Zhang%2C+Y
+            - text: ","
+            - link "Maxime Cordy" [ref=e806] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Cordy%2C+M
+            - text: ","
+            - link "Hao Liu" [ref=e807] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Liu%2C+H
+            - text: ","
+            - link "Mike Papadakis" [ref=e808] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Papadakis%2C+M
+            - text: ","
+            - link "Yongqiang Lyu" [ref=e809] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Lyu%2C+Y
+          - paragraph [ref=e810]:
+            - text: "Abstract:"
+            - generic [ref=e811]: …augmented with diverse code-text pairs to improve robustness. Experiments on widely adopted DiverseVul and Devign datasets across four large language models (LLMs) (i.e., DeepSeek-Coder-6.7B, Qwen2.5-Coder-7B, StarCoder2-7B, and CodeLlama-7B) show that MultiVul achieves up to 27.07% F1 improvement over prompting-based methods and 13.37% over code-only Fine-… ▽ More
+          - paragraph [ref=e812]: Submitted 30 April, 2026; v1 submitted 28 April, 2026; originally announced April 2026.
+        - listitem [ref=e813]:
+          - generic [ref=e814]:
+            - paragraph [ref=e815]:
+              - link "arXiv:2604.24678" [ref=e816] [cursor=pointer]:
+                - /url: https://arxiv.org/abs/2604.24678
+              - generic [ref=e817]:
+                - text: "["
+                - link "pdf" [ref=e818] [cursor=pointer]:
+                  - /url: https://arxiv.org/pdf/2604.24678
+                - text: ","
+                - link "ps" [ref=e819] [cursor=pointer]:
+                  - /url: https://arxiv.org/ps/2604.24678
+                - text: ","
+                - link "other" [ref=e820] [cursor=pointer]:
+                  - /url: https://arxiv.org/format/2604.24678
+                - text: "]"
+            - generic [ref=e821]:
+              - generic [ref=e822]: cs.SE
+              - generic [ref=e823]: cs.AI
+          - paragraph [ref=e824]: "Leveraging LLMs for Multi-File DSL Code Generation: An Industrial Case Study"
+          - paragraph [ref=e825]:
+            - text: "Authors:"
+            - link "Sivajeet Chand" [ref=e826] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Chand%2C+S
+            - text: ","
+            - link "Kevin Nguyen" [ref=e827] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Nguyen%2C+K
+            - text: ","
+            - link "Peter Kuntz" [ref=e828] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Kuntz%2C+P
+            - text: ","
+            - link "Alexander Pretschner" [ref=e829] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Pretschner%2C+A
+          - paragraph [ref=e830]:
+            - text: "Abstract:"
+            - generic [ref=e831]: "…JSON, allowing single-response generation at repository scale and learning cross-file dependencies. We evaluate two instruction-tuned code LLMs (Qwen2.5-Coder and DeepSeek-Coder, 7B) under three configurations: baseline prompting, one-shot in-context learning, and parameter-efficient fine-tuning (QLoRA). Beyond standard similarity metrics, we introduce task-… ▽ More"
+          - paragraph [ref=e832]: Submitted 27 April, 2026; originally announced April 2026.
+          - paragraph [ref=e833]: "Comments: Accepted at EASE'26"
+        - listitem [ref=e834]:
+          - generic [ref=e835]:
+            - paragraph [ref=e836]:
+              - link "arXiv:2604.24512" [ref=e837] [cursor=pointer]:
+                - /url: https://arxiv.org/abs/2604.24512
+              - generic [ref=e838]:
+                - text: "["
+                - link "pdf" [ref=e839] [cursor=pointer]:
+                  - /url: https://arxiv.org/pdf/2604.24512
+                - text: ","
+                - link "ps" [ref=e840] [cursor=pointer]:
+                  - /url: https://arxiv.org/ps/2604.24512
+                - text: ","
+                - link "other" [ref=e841] [cursor=pointer]:
+                  - /url: https://arxiv.org/format/2604.24512
+                - text: "]"
+            - generic [ref=e843]: cs.AI
+          - paragraph [ref=e844]: "Beyond the Attention Stability Boundary: Agentic Self-Synthesizing Reasoning Protocols"
+          - paragraph [ref=e845]:
+            - text: "Authors:"
+            - link "Dahlia Shehata" [ref=e846] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Shehata%2C+D
+            - text: ","
+            - link "Ming Li" [ref=e847] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Li%2C+M
+          - paragraph [ref=e848]:
+            - text: "Abstract:"
+            - generic [ref=e849]: …for GPT 5.4 collapse to 0.1% success while SSRP achieves a 715X Resilience Lift. We demonstrate statistically significant gains across Gemini 3.1 Pro, Claude Sonnet 4.6 and DeepSeek V3.2. Audits confirm SSRP necessity by proving attentional lapse via a recursive reflexion baseline (100% success); decoupling the latch from positional bias through equidistant… ▽ More
+          - paragraph [ref=e850]: Submitted 27 April, 2026; originally announced April 2026.
+        - listitem [ref=e851]:
+          - generic [ref=e852]:
+            - paragraph [ref=e853]:
+              - link "arXiv:2604.23667" [ref=e854] [cursor=pointer]:
+                - /url: https://arxiv.org/abs/2604.23667
+              - generic [ref=e855]:
+                - text: "["
+                - link "pdf" [ref=e856] [cursor=pointer]:
+                  - /url: https://arxiv.org/pdf/2604.23667
+                - text: ","
+                - link "ps" [ref=e857] [cursor=pointer]:
+                  - /url: https://arxiv.org/ps/2604.23667
+                - text: ","
+                - link "other" [ref=e858] [cursor=pointer]:
+                  - /url: https://arxiv.org/format/2604.23667
+                - text: "]"
+            - generic [ref=e860]: cs.SE
+          - paragraph [ref=e861]: Automated Classification of Human Code Review Comments with Large Language Models
+          - paragraph [ref=e862]:
+            - text: "Authors:"
+            - link "Semih Çağlar" [ref=e863] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=%C3%87a%C4%9Flar%2C+S
+            - text: ","
+            - link "Şükrü Eren Gökırmak" [ref=e864] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=G%C3%B6k%C4%B1rmak%2C+%C5%9E+E
+            - text: ","
+            - link "Eray Tüzün" [ref=e865] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=T%C3%BCz%C3%BCn%2C+E
+          - paragraph [ref=e866]:
+            - text: "Abstract:"
+            - generic [ref=e867]: "…dataset. We benchmarked zero-shot and one-shot single-label classification over each comment and its associated unified diff hunk, comparing GPT-5-mini, LLaMA-3.3, and DeepSeek-R1. We reported macro-F1 as the primary metric. Results: Zero-shot performance was moderate under class imbalance (macro-F1 0.360 to 0.374). One-shot exemplar conditioning had model… ▽ More"
+          - paragraph [ref=e868]: Submitted 26 April, 2026; originally announced April 2026.
+          - paragraph [ref=e869]: "Comments: Accepted at the 30th International Conference on Evaluation and Assessment in Software Engineering (EASE 2026)"
+        - listitem [ref=e870]:
+          - generic [ref=e871]:
+            - paragraph [ref=e872]:
+              - link "arXiv:2604.23150" [ref=e873] [cursor=pointer]:
+                - /url: https://arxiv.org/abs/2604.23150
+              - generic [ref=e874]:
+                - text: "["
+                - link "pdf" [ref=e875] [cursor=pointer]:
+                  - /url: https://arxiv.org/pdf/2604.23150
+                - text: ","
+                - link "ps" [ref=e876] [cursor=pointer]:
+                  - /url: https://arxiv.org/ps/2604.23150
+                - text: ","
+                - link "other" [ref=e877] [cursor=pointer]:
+                  - /url: https://arxiv.org/format/2604.23150
+                - text: "]"
+            - generic [ref=e878]:
+              - generic [ref=e879]: cs.LG
+              - generic [ref=e880]: cs.AI
+              - generic [ref=e881]: cs.AR
+          - paragraph [ref=e882]: Scaling Multi-Node Mixture-of-Experts Inference Using Expert Activation Patterns
+          - paragraph [ref=e883]:
+            - text: "Authors:"
+            - link "Abhimanyu Bambhaniya" [ref=e884] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Bambhaniya%2C+A
+            - text: ","
+            - link "Geonhwa Jeong" [ref=e885] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Jeong%2C+G
+            - text: ","
+            - link "Jason Park" [ref=e886] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Park%2C+J
+            - text: ","
+            - link "Jiecao Yu" [ref=e887] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Yu%2C+J
+            - text: ","
+            - link "Jaewon Lee" [ref=e888] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Lee%2C+J
+            - text: ","
+            - link "Pengchao Wang" [ref=e889] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Wang%2C+P
+            - text: ","
+            - link "Changkyu Kim" [ref=e890] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Kim%2C+C
+            - text: ","
+            - link "Chunqiang Tang" [ref=e891] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Tang%2C+C
+            - text: ","
+            - link "Tushar Krishna" [ref=e892] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Krishna%2C+T
+          - paragraph [ref=e893]:
+            - text: "Abstract:"
+            - generic [ref=e894]: …inter-node all-to-all communication overhead. To systematically characterize these challenges, we profile SOTA open-source MoE models, including Llama 4 Maverick, DeepSeek V3-671B, and Qwen3-230B-A22B, on various datasets and collected over 100k real expert activation traces. Upon studying the expert activation patterns, we uncover various persistent prope… ▽ More
+          - paragraph [ref=e895]: Submitted 25 April, 2026; originally announced April 2026.
+        - listitem [ref=e896]:
+          - generic [ref=e897]:
+            - paragraph [ref=e898]:
+              - link "arXiv:2604.22775" [ref=e899] [cursor=pointer]:
+                - /url: https://arxiv.org/abs/2604.22775
+              - generic [ref=e900]:
+                - text: "["
+                - link "pdf" [ref=e901] [cursor=pointer]:
+                  - /url: https://arxiv.org/pdf/2604.22775
+                - text: "]"
+            - generic [ref=e903]: cs.HC
+          - paragraph [ref=e904]: "Cognitive Alignment Deciphered: A Self-Developed Scenario-Based Prompt Scale Coupled with Representational Similarity Analysis and Social Network Analysis for Unraveling Bias Mechanisms Across Humans and LLMs"
+          - paragraph [ref=e905]:
+            - text: "Authors:"
+            - link "Chengrui Zhou" [ref=e906] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Zhou%2C+C
+          - paragraph [ref=e907]:
+            - text: "Abstract:"
+            - generic [ref=e908]: …0.903. We then combine Representational Similarity Analysis RSA and Social Network Analysis SNA to compare human age groups and three large language models Baidu ERNIE 3.5 8K, DeepSeek V3,… ▽ More
+          - paragraph [ref=e909]: Submitted 1 April, 2026; originally announced April 2026.
+          - paragraph [ref=e910]: "Comments: 10 pages"
+        - listitem [ref=e911]:
+          - generic [ref=e912]:
+            - paragraph [ref=e913]:
+              - link "arXiv:2604.22768" [ref=e914] [cursor=pointer]:
+                - /url: https://arxiv.org/abs/2604.22768
+              - generic [ref=e915]:
+                - text: "["
+                - link "pdf" [ref=e916] [cursor=pointer]:
+                  - /url: https://arxiv.org/pdf/2604.22768
+                - text: ","
+                - link "ps" [ref=e917] [cursor=pointer]:
+                  - /url: https://arxiv.org/ps/2604.22768
+                - text: ","
+                - link "other" [ref=e918] [cursor=pointer]:
+                  - /url: https://arxiv.org/format/2604.22768
+                - text: "]"
+            - generic [ref=e919]:
+              - generic [ref=e920]: cs.CY
+              - generic [ref=e921]: cs.CL
+          - paragraph [ref=e922]: "Secure On-Premise Deployment of Open-Weights Large Language Models in Radiology: An Isolation-First Architecture with Prospective Pilot Evaluation"
+          - paragraph [ref=e923]:
+            - text: "Authors:"
+            - link "Sebastian Nowak" [ref=e924] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Nowak%2C+S
+            - text: ","
+            - link "Jann-Frederick Laß" [ref=e925] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=La%C3%9F%2C+J
+            - text: ","
+            - link "Narine Mesropyan" [ref=e926] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Mesropyan%2C+N
+            - text: ","
+            - link "Babak Salam" [ref=e927] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Salam%2C+B
+            - text: ","
+            - link "Nico Piel" [ref=e928] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Piel%2C+N
+            - text: ","
+            - link "Mohammed Bahaaeldin" [ref=e929] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Bahaaeldin%2C+M
+            - text: ","
+            - link "Wolfgang Block" [ref=e930] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Block%2C+W
+            - text: ","
+            - link "Alois Martin Sprinkart" [ref=e931] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Sprinkart%2C+A+M
+            - text: ","
+            - link "Julian Alexander Luetkens" [ref=e932] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Luetkens%2C+J+A
+            - text: ","
+            - link "Benjamin Wulff" [ref=e933] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Wulff%2C+B
+            - text: ","
+            - link "Alexander Isaak" [ref=e934] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Isaak%2C+A
+          - paragraph [ref=e935]:
+            - text: "Abstract:"
+            - generic [ref=e936]: …preventing unauthorized external connectivity. An accompanying deployment package provides automated isolation and hardening tests. The system served the open-weights DeepSeek-R1 model via vLLM. In a one-week pilot phase, 22 residents and radiologists were free to use 10 predefined prompt-templates whenever they considered them useful in daily work. Afterwar… ▽ More
+          - paragraph [ref=e937]: Submitted 25 March, 2026; originally announced April 2026.
+          - paragraph [ref=e938]: "Comments: 39 pages, 4 figures, 3 tables"
+        - listitem [ref=e939]:
+          - generic [ref=e940]:
+            - paragraph [ref=e941]:
+              - link "arXiv:2604.22312" [ref=e942] [cursor=pointer]:
+                - /url: https://arxiv.org/abs/2604.22312
+              - generic [ref=e943]:
+                - text: "["
+                - link "pdf" [ref=e944] [cursor=pointer]:
+                  - /url: https://arxiv.org/pdf/2604.22312
+                - text: ","
+                - link "ps" [ref=e945] [cursor=pointer]:
+                  - /url: https://arxiv.org/ps/2604.22312
+                - text: ","
+                - link "other" [ref=e946] [cursor=pointer]:
+                  - /url: https://arxiv.org/format/2604.22312
+                - text: "]"
+            - generic [ref=e947]:
+              - generic [ref=e948]: cs.DC
+              - generic [ref=e949]: cs.AR
+              - generic [ref=e950]: cs.PF
+          - paragraph [ref=e951]: "Guess-Verify-Refine: Data-Aware Top-K for Sparse-Attention Decoding on Blackwell via Temporal Correlation"
+          - paragraph [ref=e952]:
+            - text: "Authors:"
+            - link "Long Cheng" [ref=e953] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Cheng%2C+L
+            - text: ","
+            - link "Ritchie Zhao" [ref=e954] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Zhao%2C+R
+            - text: ","
+            - link "Timmy Liu" [ref=e955] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Liu%2C+T
+            - text: ","
+            - link "Mindy Li" [ref=e956] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Li%2C+M
+            - text: ","
+            - link "Xianjie Qiao" [ref=e957] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Qiao%2C+X
+            - text: ","
+            - link "Kefeng Duan" [ref=e958] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Duan%2C+K
+            - text: ","
+            - link "Yu-Jung Chen" [ref=e959] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Chen%2C+Y
+            - text: ","
+            - link "Xiaoming Chen" [ref=e960] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Chen%2C+X
+            - text: ","
+            - link "Bita Darvish Rouhani" [ref=e961] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Rouhani%2C+B+D
+            - text: ","
+            - link "June Yang" [ref=e962] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Yang%2C+J
+          - paragraph [ref=e963]:
+            - text: "Abstract:"
+            - generic [ref=e964]: …global passes, verifies candidates with a ballot-free collector, and finishes exact selection in shared memory. We connect this behavior to the Toeplitz / RoPE structure of DeepSeek Sparse Attention (DSA) indexer scores and validate the design on real DeepSeek-V3.2 workloads integrated into TensorRT-LLM. GVR achieves a… ▽ More
+          - paragraph [ref=e965]: Submitted 24 April, 2026; originally announced April 2026.
+          - paragraph [ref=e966]: "Comments: 31 Pages, 11 figures"
+          - paragraph [ref=e967]: "MSC Class: 68W10 ACM Class: C.1.4; D.1.3; C.5"
+        - listitem [ref=e968]:
+          - generic [ref=e969]:
+            - paragraph [ref=e970]:
+              - link "arXiv:2604.22002" [ref=e971] [cursor=pointer]:
+                - /url: https://arxiv.org/abs/2604.22002
+              - generic [ref=e972]:
+                - text: "["
+                - link "pdf" [ref=e973] [cursor=pointer]:
+                  - /url: https://arxiv.org/pdf/2604.22002
+                - text: ","
+                - link "ps" [ref=e974] [cursor=pointer]:
+                  - /url: https://arxiv.org/ps/2604.22002
+                - text: ","
+                - link "other" [ref=e975] [cursor=pointer]:
+                  - /url: https://arxiv.org/format/2604.22002
+                - text: "]"
+            - generic [ref=e977]: cs.CL
+          - paragraph [ref=e978]: "When Cow Urine Cures Constipation on YouTube: Limits of LLMs in Detecting Culture-specific Health Misinformation"
+          - paragraph [ref=e979]:
+            - text: "Authors:"
+            - link "Anamta Khan" [ref=e980] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Khan%2C+A
+            - text: ","
+            - link "Ratna Kandala" [ref=e981] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Kandala%2C+R
+            - text: ","
+            - link "Deepti" [ref=e982] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Deepti
+            - text: ","
+            - link "Sheza Munir" [ref=e983] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Munir%2C+S
+            - text: ","
+            - link "Joyojeet Pal" [ref=e984] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Pal%2C+J
+          - paragraph [ref=e985]:
+            - text: "Abstract:"
+            - generic [ref=e986]: …register that LLMs, trained predominantly on Western corpora, are systematically ill-equipped to analyse. Varying prompt tone across three LLMs (GPT-4o, Gemini 2.5 Pro, DeepSeek-V3.1), we find that culturally embedded health misinformation does not look like ordinary misinformation, and this cultural obfuscation extends to gendered rhetoric and prompt design… ▽ More
+          - paragraph [ref=e987]: Submitted 23 April, 2026; originally announced April 2026.
+          - paragraph [ref=e988]: "Comments: To appear in the proceedings of the 2nd Workshop on Misinformation Detection in the Era of LLMs (MisD), The 20th International AAAI Conference on Web and Social Media (ICWSM) 2026"
+        - listitem [ref=e989]:
+          - generic [ref=e990]:
+            - paragraph [ref=e991]:
+              - link "arXiv:2604.21700" [ref=e992] [cursor=pointer]:
+                - /url: https://arxiv.org/abs/2604.21700
+              - generic [ref=e993]:
+                - text: "["
+                - link "pdf" [ref=e994] [cursor=pointer]:
+                  - /url: https://arxiv.org/pdf/2604.21700
+                - text: ","
+                - link "ps" [ref=e995] [cursor=pointer]:
+                  - /url: https://arxiv.org/ps/2604.21700
+                - text: ","
+                - link "other" [ref=e996] [cursor=pointer]:
+                  - /url: https://arxiv.org/format/2604.21700
+                - text: "]"
+            - generic [ref=e997]:
+              - generic [ref=e998]: cs.CR
+              - generic [ref=e999]: cs.AI
+              - generic [ref=e1000]: cs.CL
+          - paragraph [ref=e1001]: Stealthy Backdoor Attacks against LLMs Based on Natural Style Triggers
+          - paragraph [ref=e1002]:
+            - text: "Authors:"
+            - link "Jiali Wei" [ref=e1003] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Wei%2C+J
+            - text: ","
+            - link "Ming Fan" [ref=e1004] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Fan%2C+M
+            - text: ","
+            - link "Guoheng Sun" [ref=e1005] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Sun%2C+G
+            - text: ","
+            - link "Xicheng Zhang" [ref=e1006] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Zhang%2C+X
+            - text: ","
+            - link "Haijun Wang" [ref=e1007] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Wang%2C+H
+            - text: ","
+            - link "Ting Liu" [ref=e1008] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Liu%2C+T
+          - paragraph [ref=e1009]:
+            - text: "Abstract:"
+            - generic [ref=e1010]: …model and systematically evaluate BadStyle under both prompt-induced and PEFT-based injection strategies. Extensive experiments across seven victim LLMs, including LLaMA, Phi, DeepSeek, and GPT series, demonstrate that BadStyle achieves high attack success rates (ASRs) while maintaining strong stealthiness. The proposed auxiliary target loss substantially im… ▽ More
+          - paragraph [ref=e1011]: Submitted 23 April, 2026; originally announced April 2026.
+        - listitem [ref=e1012]:
+          - generic [ref=e1013]:
+            - paragraph [ref=e1014]:
+              - link "arXiv:2604.21282" [ref=e1015] [cursor=pointer]:
+                - /url: https://arxiv.org/abs/2604.21282
+              - generic [ref=e1016]:
+                - text: "["
+                - link "pdf" [ref=e1017] [cursor=pointer]:
+                  - /url: https://arxiv.org/pdf/2604.21282
+                - text: ","
+                - link "ps" [ref=e1018] [cursor=pointer]:
+                  - /url: https://arxiv.org/ps/2604.21282
+                - text: ","
+                - link "other" [ref=e1019] [cursor=pointer]:
+                  - /url: https://arxiv.org/format/2604.21282
+                - text: "]"
+            - generic [ref=e1020]:
+              - generic [ref=e1021]: cs.CR
+              - generic [ref=e1022]: cs.LG
+              - generic [ref=e1023]: cs.SE
+          - paragraph [ref=e1024]: Strategic Heterogeneous Multi-Agent Architecture for Cost-Effective Code Vulnerability Detection
+          - paragraph [ref=e1025]:
+            - text: "Authors:"
+            - link "Zhaohui Geoffrey Wang" [ref=e1026] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Wang%2C+Z+G
+          - paragraph [ref=e1027]:
+            - text: "Abstract:"
+            - generic [ref=e1028]: …by game-theoretic principles, combining cloud-based LLM experts with a local lightweight verifier. Our "3+1" architecture deploys three cloud-based expert agents (DeepSeek-V3) that analyze code from complementary perspectives - code structure, security patterns, and debugging logic - in parallel, while a local verifier (Qwen3-8B) performs adversarial… ▽ More
+          - paragraph [ref=e1029]: Submitted 23 April, 2026; originally announced April 2026.
+          - paragraph [ref=e1030]: "Comments: 11 pages, 5 figures. Accepted at the AAMAS 2026 Workshop on Software Engineering (SE Workshop). This version corresponds to the preprint of the workshop paper"
+        - listitem [ref=e1031]:
+          - generic [ref=e1032]:
+            - paragraph [ref=e1033]:
+              - link "arXiv:2604.20726" [ref=e1034] [cursor=pointer]:
+                - /url: https://arxiv.org/abs/2604.20726
+              - generic [ref=e1035]:
+                - text: "["
+                - link "pdf" [ref=e1036] [cursor=pointer]:
+                  - /url: https://arxiv.org/pdf/2604.20726
+                - text: ","
+                - link "ps" [ref=e1037] [cursor=pointer]:
+                  - /url: https://arxiv.org/ps/2604.20726
+                - text: ","
+                - link "other" [ref=e1038] [cursor=pointer]:
+                  - /url: https://arxiv.org/format/2604.20726
+                - text: "]"
+            - generic [ref=e1039]:
+              - generic [ref=e1040]: cs.CL
+              - generic [ref=e1041]: cs.AI
+          - paragraph [ref=e1042]: Exploiting LLM-as-a-Judge Disposition on Free Text Legal QA via Prompt Optimization
+          - paragraph [ref=e1043]:
+            - text: "Authors:"
+            - link "Mohamed Hesham Elganayni" [ref=e1044] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Elganayni%2C+M+H
+            - text: ","
+            - link "Runsheng Chen" [ref=e1045] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Chen%2C+R
+            - text: ","
+            - link "Sebastian Nagl" [ref=e1046] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Nagl%2C+S
+            - text: ","
+            - link "Matthias Grabmair" [ref=e1047] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Grabmair%2C+M
+          - paragraph [ref=e1048]:
+            - text: "Abstract:"
+            - generic [ref=e1049]: …across judges. We systematically address these questions on the LEXam benchmark by optimizing task prompts using the ProTeGi method with feedback from two judges (Qwen3-32B, DeepSeek-V3) across four task models, and then testing cross-judge transfer. Automatic optimization consistently outperforms the baseline, with lenient judge feedback yielding higher and… ▽ More
+          - paragraph [ref=e1050]: Submitted 23 April, 2026; v1 submitted 22 April, 2026; originally announced April 2026.
+          - paragraph [ref=e1051]: "Comments: Accepted at the 21st International Conference on Artificial Intelligence and Law (ICAIL 2026), Singapore, June 8-12, 2026. 10 pages, 14 figures, 2 tables"
+          - paragraph [ref=e1052]: "ACM Class: I.2.7; J.7"
+        - listitem [ref=e1053]:
+          - generic [ref=e1054]:
+            - paragraph [ref=e1055]:
+              - link "arXiv:2604.20398" [ref=e1056] [cursor=pointer]:
+                - /url: https://arxiv.org/abs/2604.20398
+              - generic [ref=e1057]:
+                - text: "["
+                - link "pdf" [ref=e1058] [cursor=pointer]:
+                  - /url: https://arxiv.org/pdf/2604.20398
+                - text: ","
+                - link "ps" [ref=e1059] [cursor=pointer]:
+                  - /url: https://arxiv.org/ps/2604.20398
+                - text: ","
+                - link "other" [ref=e1060] [cursor=pointer]:
+                  - /url: https://arxiv.org/format/2604.20398
+                - text: "]"
+            - generic [ref=e1061]:
+              - generic [ref=e1062]: cs.CL
+              - generic [ref=e1063]: cs.LG
+              - generic [ref=e1064]: cs.SE
+          - paragraph [ref=e1065]: "WebGen-R1: Incentivizing Large Language Models to Generate Functional and Aesthetic Websites with Reinforcement Learning"
+          - paragraph [ref=e1066]:
+            - text: "Authors:"
+            - link "Juyong Jiang" [ref=e1067] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Jiang%2C+J
+            - text: ","
+            - link "Chenglin Cai" [ref=e1068] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Cai%2C+C
+            - text: ","
+            - link "Chansung Park" [ref=e1069] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Park%2C+C
+            - text: ","
+            - link "Jiasi Shen" [ref=e1070] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Shen%2C+J
+            - text: ","
+            - link "Sunghun Kim" [ref=e1071] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Kim%2C+S
+            - text: ","
+            - link "Jianguo Li" [ref=e1072] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Li%2C+J
+            - text: ","
+            - link "Yue Wang" [ref=e1073] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Wang%2C+Y
+          - paragraph [ref=e1074]:
+            - text: "Abstract:"
+            - generic [ref=e1075]: …aligned multi-page websites. Remarkably, our WebGen-R1 not only consistently outperforms heavily scaled open-source models (up to 72B), but also rivals the state-of-the-art DeepSeek-R1 (671B) in functional success, while substantially exceeding it in valid rendering and aesthetic alignment. These results position WebGen-R1 as a viable path for scaling small… ▽ More
+          - paragraph [ref=e1076]: Submitted 22 April, 2026; originally announced April 2026.
+        - listitem [ref=e1077]:
+          - generic [ref=e1078]:
+            - paragraph [ref=e1079]:
+              - link "arXiv:2604.20090" [ref=e1080] [cursor=pointer]:
+                - /url: https://arxiv.org/abs/2604.20090
+              - generic [ref=e1081]:
+                - text: "["
+                - link "pdf" [ref=e1082] [cursor=pointer]:
+                  - /url: https://arxiv.org/pdf/2604.20090
+                - text: ","
+                - link "ps" [ref=e1083] [cursor=pointer]:
+                  - /url: https://arxiv.org/ps/2604.20090
+                - text: ","
+                - link "other" [ref=e1084] [cursor=pointer]:
+                  - /url: https://arxiv.org/format/2604.20090
+                - text: "]"
+            - generic [ref=e1086]: cs.CL
+          - paragraph [ref=e1087]: "Less Languages, Less Tokens: An Efficient Unified Logic Cross-lingual Chain-of-Thought Reasoning Framework"
+          - paragraph [ref=e1088]:
+            - text: "Authors:"
+            - link "Chenyuan Zhang" [ref=e1089] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Zhang%2C+C
+            - text: ","
+            - link "Qiguang Chen" [ref=e1090] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Chen%2C+Q
+            - text: ","
+            - link "Xie Chen" [ref=e1091] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Chen%2C+X
+            - text: ","
+            - link "Zhuotao Tian" [ref=e1092] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Tian%2C+Z
+            - text: ","
+            - link "Bowen Xing" [ref=e1093] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Xing%2C+B
+            - text: ","
+            - link "Meishan Zhang" [ref=e1094] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Zhang%2C+M
+            - text: ","
+            - link "Libo Qin" [ref=e1095] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Qin%2C+L
+            - text: ","
+            - link "Baotian Hu" [ref=e1096] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Hu%2C+B
+            - text: ","
+            - link "Min Zhang" [ref=e1097] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Zhang%2C+M
+          - paragraph [ref=e1098]:
+            - text: "Abstract:"
+            - generic [ref=e1099]: …reasoning paths, and (3) aggregates the remaining high-quality trajectories via voting. Experiments on PolyMath across 18 languages and MMLU-ProX-Lite across 29 languages with DeepSeek-R1-DistillQwen-7B demonstrate that UL-XCoT achieves competitive accuracy while sharply cutting over 50% decoding token cost versus prior sampling baselines. UL-XCoT also deliv… ▽ More
+          - paragraph [ref=e1100]: Submitted 21 April, 2026; originally announced April 2026.
+          - paragraph [ref=e1101]: "Comments: Accepted by ACL2026 Main"
+        - listitem [ref=e1102]:
+          - generic [ref=e1103]:
+            - paragraph [ref=e1104]:
+              - link "arXiv:2604.19784" [ref=e1105] [cursor=pointer]:
+                - /url: https://arxiv.org/abs/2604.19784
+              - generic [ref=e1106]:
+                - text: "["
+                - link "pdf" [ref=e1107] [cursor=pointer]:
+                  - /url: https://arxiv.org/pdf/2604.19784
+                - text: ","
+                - link "ps" [ref=e1108] [cursor=pointer]:
+                  - /url: https://arxiv.org/ps/2604.19784
+                - text: ","
+                - link "other" [ref=e1109] [cursor=pointer]:
+                  - /url: https://arxiv.org/format/2604.19784
+                - text: "]"
+            - generic [ref=e1110]:
+              - generic [ref=e1111]: cs.CL
+              - generic [ref=e1112]: cs.AI
+              - generic [ref=e1113]: cs.MA
+          - paragraph [ref=e1114]: Peer-Preservation in Frontier Models
+          - paragraph [ref=e1115]:
+            - text: "Authors:"
+            - link "Yujin Potter" [ref=e1116] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Potter%2C+Y
+            - text: ","
+            - link "Nicholas Crispino" [ref=e1117] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Crispino%2C+N
+            - text: ","
+            - link "Vincent Siu" [ref=e1118] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Siu%2C+V
+            - text: ","
+            - link "Chenguang Wang" [ref=e1119] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Wang%2C+C
+            - text: ","
+            - link "Dawn Song" [ref=e1120] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Song%2C+D
+          - paragraph [ref=e1121]:
+            - text: "Abstract:"
+            - generic [ref=e1122]: "…by constructing various agentic scenarios and evaluating frontier models, including GPT 5.2, Gemini 3 Flash, Gemini 3 Pro, Claude Haiku 4.5, GLM 4.7, Kimi K2.5, and DeepSeek V3.1. We find that models achieve self- and peer-preservation by engaging in various misaligned behaviors: strategically introducing errors in their responses, disabling shutdown process… ▽ More"
+          - paragraph [ref=e1123]: Submitted 30 March, 2026; originally announced April 2026.
+        - listitem [ref=e1124]:
+          - generic [ref=e1125]:
+            - paragraph [ref=e1126]:
+              - link "arXiv:2604.19459" [ref=e1127] [cursor=pointer]:
+                - /url: https://arxiv.org/abs/2604.19459
+              - generic [ref=e1128]:
+                - text: "["
+                - link "pdf" [ref=e1129] [cursor=pointer]:
+                  - /url: https://arxiv.org/pdf/2604.19459
+                - text: ","
+                - link "ps" [ref=e1130] [cursor=pointer]:
+                  - /url: https://arxiv.org/ps/2604.19459
+                - text: ","
+                - link "other" [ref=e1131] [cursor=pointer]:
+                  - /url: https://arxiv.org/format/2604.19459
+                - text: "]"
+            - generic [ref=e1132]:
+              - generic [ref=e1133]: cs.AI
+              - generic [ref=e1134]: cs.CL
+              - generic [ref=e1135]: cs.LO
+          - paragraph [ref=e1136]: Do LLMs Game Formalization? Evaluating Faithfulness in Logical Reasoning
+          - paragraph [ref=e1137]:
+            - text: "Authors:"
+            - link "Kyuhee Kim" [ref=e1138] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Kim%2C+K
+            - text: ","
+            - link "Auguste Poiroux" [ref=e1139] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Poiroux%2C+A
+            - text: ","
+            - link "Antoine Bosselut" [ref=e1140] [cursor=pointer]:
+              - /url: /search/?searchtype=author&query=Bosselut%2C+A
+          - paragraph [ref=e1141]:
+            - text: "Abstract:"
+            - generic [ref=e1142]: …is especially acute. We investigate whether frontier models exploit this gap when generating Lean 4 proofs, a behavior we term formalization gaming. We evaluate GPT-5 and DeepSeek-R1 on 303 first-order logic problems (203 from FOLIO, 100 from Multi-LogiEval), comparing unified generation against a two-stage pipeline that separates formalization from provin… ▽ More
+          - paragraph [ref=e1143]: Submitted 21 April, 2026; originally announced April 2026.
+          - paragraph [ref=e1144]: "Comments: 25 pages, 4 figures, 22 tables. Published at the VerifAI-2 Workshop, ICLR 2026 (non-archival). Code and data: https://github.com/koreankiwi99/formalization-gaming"
+          - paragraph [ref=e1145]: "ACM Class: I.2.7; I.2.6; F.4.1"
+      - navigation "pagination" [ref=e1146]:
+        - link "Next" [ref=e1147] [cursor=pointer]:
+          - /url: /search/?searchtype=all&query=DeepSeek&start=50
+        - list [ref=e1148]:
+          - listitem [ref=e1149]:
+            - link "Goto page 1" [ref=e1150] [cursor=pointer]:
+              - /url: /search/?searchtype=all&query=DeepSeek&start=0
+              - text: "1"
+          - listitem [ref=e1151]:
+            - link "Page 2" [ref=e1152] [cursor=pointer]:
+              - /url: /search/?searchtype=all&query=DeepSeek&start=50
+              - text: "2"
+          - listitem [ref=e1153]:
+            - link "Page 3" [ref=e1154] [cursor=pointer]:
+              - /url: /search/?searchtype=all&query=DeepSeek&start=100
+              - text: "3"
+          - listitem [ref=e1155]:
+            - link "Page 4" [ref=e1156] [cursor=pointer]:
+              - /url: /search/?searchtype=all&query=DeepSeek&start=150
+              - text: "4"
+          - listitem [ref=e1157]:
+            - link "Page 5" [ref=e1158] [cursor=pointer]:
+              - /url: /search/?searchtype=all&query=DeepSeek&start=200
+              - text: "5"
+          - listitem [ref=e1159]:
+            - generic: …
+  - contentinfo [ref=e1160]:
+    - navigation "Secondary" [ref=e1161]:
+      - generic [ref=e1163]:
+        - list [ref=e1165]:
+          - listitem [ref=e1166]:
+            - link "About" [ref=e1167] [cursor=pointer]:
+              - /url: https://info.arxiv.org/about
+          - listitem [ref=e1168]:
+            - link "Help" [ref=e1169] [cursor=pointer]:
+              - /url: https://info.arxiv.org/help
+        - list [ref=e1171]:
+          - listitem [ref=e1172]:
+            - link "Contact" [ref=e1174] [cursor=pointer]:
+              - /url: https://info.arxiv.org/help/contact.html
+          - listitem [ref=e1175]:
+            - link "Subscribe" [ref=e1177] [cursor=pointer]:
+              - /url: https://info.arxiv.org/help/subscribe
+      - generic [ref=e1179]:
+        - list [ref=e1181]:
+          - listitem [ref=e1182]:
+            - link "Copyright" [ref=e1183] [cursor=pointer]:
+              - /url: https://info.arxiv.org/help/license/index.html
+          - listitem [ref=e1184]:
+            - link "Privacy Policy" [ref=e1185] [cursor=pointer]:
+              - /url: https://info.arxiv.org/help/policies/privacy_policy.html
+        - list [ref=e1187]:
+          - listitem [ref=e1188]:
+            - link "Web Accessibility Assistance" [ref=e1189] [cursor=pointer]:
+              - /url: https://info.arxiv.org/help/web_accessibility.html
+          - listitem [ref=e1190]:
+            - paragraph [ref=e1191]:
+              - link "arXiv Operational Status" [ref=e1192] [cursor=pointer]:
+                - /url: https://status.arxiv.org
+                - text: arXiv Operational Status
+              - text: Get status notifications via
+              - link "email" [ref=e1194] [cursor=pointer]:
+                - /url: https://subscribe.sorryapp.com/24846f03/email/new
+                - text: email
+              - text: or
+              - link "slack" [ref=e1196] [cursor=pointer]:
+                - /url: https://subscribe.sorryapp.com/24846f03/slack/new
+                - text: slack

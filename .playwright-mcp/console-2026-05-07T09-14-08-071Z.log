@@ -1,0 +1,4 @@
+[    4057ms] [ERROR] Access to manifest at 'https://static.arxiv.org/static/base/1.0.0a5/images/icons/site.webmanifest' from origin 'https://arxiv.org' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ https://arxiv.org/search/?searchtype=author&query=DeepSeek:0
+[    4058ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://static.arxiv.org/static/base/1.0.0a5/images/icons/site.webmanifest:0
+[    5039ms] [ERROR] Access to manifest at 'https://static.arxiv.org/static/base/1.0.0a5/images/icons/site.webmanifest' from origin 'https://arxiv.org' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ https://arxiv.org/search/?searchtype=author&query=DeepSeek:0
+[    5039ms] [ERROR] Failed to load resource: net::ERR_FAILED @ https://static.arxiv.org/static/base/1.0.0a5/images/icons/site.webmanifest:0

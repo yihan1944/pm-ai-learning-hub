@@ -1,0 +1,397 @@
+- generic [active] [ref=e1]:
+  - generic:
+    - generic:
+      - link "跳到主要内容" [ref=e2] [cursor=pointer]
+      - link "无障碍功能帮助" [ref=e3] [cursor=pointer]:
+        - /url: https://support.google.com/websearch/answer/181196?hl=zh-CN
+      - link "无障碍功能反馈" [ref=e4] [cursor=pointer]
+  - generic [ref=e9]:
+    - search [ref=e10]:
+      - generic [ref=e12]:
+        - link "Google 首页" [ref=e14] [cursor=pointer]:
+          - /url: https://www.google.com/webhp?hl=zh-CN&sa=X&ved=0ahUKEwjxvOXb76aUAxVRyckDHQrdD04QPAgJ
+          - img [ref=e15]
+        - generic [ref=e22]:
+          - generic [ref=e23]:
+            - combobox "搜索" [ref=e26]: AI产品经理面试题 大模型 2024 2025 AI产品经理面试题 大模型 2024 2025
+            - generic [ref=e27]:
+              - button "清除" [ref=e29] [cursor=pointer]:
+                - img [ref=e31]
+              - generic [ref=e34]:
+                - button "按语音搜索" [ref=e35] [cursor=pointer]:
+                  - img [ref=e36]
+                - button "按图搜索" [ref=e38] [cursor=pointer]:
+                  - img [ref=e39]
+          - button "搜索" [ref=e41] [cursor=pointer]:
+            - img [ref=e44]
+    - generic [ref=e46]:
+      - button "设置" [ref=e48] [cursor=pointer]:
+        - img [ref=e51]
+      - generic [ref=e54]:
+        - button "Google 应用" [ref=e56] [cursor=pointer]:
+          - img [ref=e57]
+        - link "登录" [ref=e61] [cursor=pointer]:
+          - /url: https://accounts.google.com/ServiceLogin?hl=zh-CN&passive=true&continue=https://www.google.com/search%3Fq%3DAI%25E4%25BA%25A7%25E5%2593%2581%25E7%25BB%258F%25E7%2590%2586%25E9%259D%25A2%25E8%25AF%2595%25E9%25A2%2598%2B%25E5%25A4%25A7%25E6%25A8%25A1%25E5%259E%258B%2B2024%2B2025%26sei%3DkFz8aYr0KtzfwN4Pq5bMsAo&ec=futura_srp_og_si_72236_p
+  - generic [ref=e63]:
+    - navigation [ref=e69]:
+      - generic [ref=e75]:
+        - list [ref=e76]:
+          - listitem [ref=e77]:
+            - link "AI 模式" [ref=e80] [cursor=pointer]:
+              - /url: /search?q=AI%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98+%E5%A4%A7%E6%A8%A1%E5%9E%8B+2024+2025&sca_esv=7f670160f65c8184&udm=50&fbs=ADc_l-Z6XGGbkKmpylZqg2J7ZOuVNvV7jKtLqzLZ63dd2zPtrmgI7Q-S_UNmpLgK_HfmL3GuaXDG2rjNRLSVhAS-_RRmXibRvr6c7UM2oUTr6WIkC9puZRL4wC3n4Dqxn1bJ-MFHmIkt5c-P6qzuoIn5n1S-nVWrgRyyN2cQ7VCs0brEEpo_5aEhJ_ZE-DXjIvnEaLNSFxD1ptY20QiVF4Yt2--Ofoa94g&aep=1&ntc=1&sa=X&ved=2ahUKEwjxvOXb76aUAxVRyckDHQrdD04Q2J8OegQIEBAD
+              - generic [ref=e83]: AI 模式
+          - listitem [ref=e84]:
+            - link "全部" [disabled] [ref=e85]:
+              - generic [ref=e87]: 全部
+          - listitem [ref=e88]:
+            - link "图片" [ref=e89] [cursor=pointer]:
+              - /url: /search?sca_esv=7f670160f65c8184&udm=2&fbs=ADc_l-Z6XGGbkKmpylZqg2J7ZOuVNvV7jKtLqzLZ63dd2zPtrmgI7Q-S_UNmpLgK_HfmL3GuaXDG2rjNRLSVhAS-_RRmXibRvr6c7UM2oUTr6WIkC9puZRL4wC3n4Dqxn1bJ-MFHmIkt5c-P6qzuoIn5n1S-nVWrgRyyN2cQ7VCs0brEEpo_5aEhJ_ZE-DXjIvnEaLNSFxD1ptY20QiVF4Yt2--Ofoa94g&q=AI%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98+%E5%A4%A7%E6%A8%A1%E5%9E%8B+2024+2025&sa=X&ved=2ahUKEwjxvOXb76aUAxVRyckDHQrdD04QtKgLegQIExAB
+              - generic [ref=e91]: 图片
+          - listitem [ref=e92]:
+            - link "新闻" [ref=e93] [cursor=pointer]:
+              - /url: /search?sca_esv=7f670160f65c8184&q=AI%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98+%E5%A4%A7%E6%A8%A1%E5%9E%8B+2024+2025&tbm=nws&source=lnms&fbs=ADc_l-Z6XGGbkKmpylZqg2J7ZOuVNvV7jKtLqzLZ63dd2zPtrmgI7Q-S_UNmpLgK_HfmL3GuaXDG2rjNRLSVhAS-_RRmXibRvr6c7UM2oUTr6WIkC9puZRL4wC3n4Dqxn1bJ-MFHmIkt5c-P6qzuoIn5n1S-nVWrgRyyN2cQ7VCs0brEEpo_5aEhJ_ZE-DXjIvnEaLNSFxD1ptY20QiVF4Yt2--Ofoa94g&sa=X&ved=2ahUKEwjxvOXb76aUAxVRyckDHQrdD04Q0pQJegQIFRAB
+              - generic [ref=e95]: 新闻
+          - listitem [ref=e96]:
+            - link "视频" [ref=e97] [cursor=pointer]:
+              - /url: /search?sca_esv=7f670160f65c8184&udm=7&fbs=ADc_l-Z6XGGbkKmpylZqg2J7ZOuVNvV7jKtLqzLZ63dd2zPtrmgI7Q-S_UNmpLgK_HfmL3GuaXDG2rjNRLSVhAS-_RRmXibRvr6c7UM2oUTr6WIkC9puZRL4wC3n4Dqxn1bJ-MFHmIkt5c-P6qzuoIn5n1S-nVWrgRyyN2cQ7VCs0brEEpo_5aEhJ_ZE-DXjIvnEaLNSFxD1ptY20QiVF4Yt2--Ofoa94g&q=AI%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98+%E5%A4%A7%E6%A8%A1%E5%9E%8B+2024+2025&sa=X&ved=2ahUKEwjxvOXb76aUAxVRyckDHQrdD04QtKgLegQIFxAB
+              - generic [ref=e99]: 视频
+          - listitem [ref=e100]:
+            - link "购物" [ref=e101] [cursor=pointer]:
+              - /url: /search?sca_esv=7f670160f65c8184&udm=28&fbs=ADc_l-Z6XGGbkKmpylZqg2J7ZOuVNvV7jKtLqzLZ63dd2zPtrmgI7Q-S_UNmpLgK_HfmL3GuaXDG2rjNRLSVhAS-_RRmXibRvr6c7UM2oUTr6WIkC9puZRL4wC3n4Dqxn1bJ-MFHmIkt5c-P6qzuoIn5n1S-nVWrgRyyN2cQ7VCs0brEEpo_5aEhJ_ZE-DXjIvnEaLNSFxD1ptY20QiVF4Yt2--Ofoa94g&q=AI%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98+%E5%A4%A7%E6%A8%A1%E5%9E%8B+2024+2025&ved=1t:220175&ictx=111
+              - generic [ref=e103]: 购物
+          - listitem [ref=e104]:
+            - link "短视频" [ref=e105] [cursor=pointer]:
+              - /url: /search?sca_esv=7f670160f65c8184&udm=39&fbs=ADc_l-Z6XGGbkKmpylZqg2J7ZOuVNvV7jKtLqzLZ63dd2zPtrmgI7Q-S_UNmpLgK_HfmL3GuaXDG2rjNRLSVhAS-_RRmXibRvr6c7UM2oUTr6WIkC9puZRL4wC3n4Dqxn1bJ-MFHmIkt5c-P6qzuoIn5n1S-nVWrgRyyN2cQ7VCs0brEEpo_5aEhJ_ZE-DXjIvnEaLNSFxD1ptY20QiVF4Yt2--Ofoa94g&q=AI%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98+%E5%A4%A7%E6%A8%A1%E5%9E%8B+2024+2025&sa=X&ved=2ahUKEwjxvOXb76aUAxVRyckDHQrdD04Qs6gLegQIGBAB
+              - generic [ref=e107]: 短视频
+          - listitem [ref=e108]:
+            - button "更多过滤条件" [ref=e109] [cursor=pointer]:
+              - generic "更多过滤条件" [ref=e110]:
+                - generic [ref=e111]:
+                  - generic [ref=e112]: 更多
+                  - img [ref=e114]
+        - button "工具" [ref=e117] [cursor=pointer]:
+          - generic [ref=e119]:
+            - generic [ref=e120]: 工具
+            - img [ref=e122]
+    - heading "搜索结果" [level=1] [ref=e124]
+    - generic [ref=e129]:
+      - generic [ref=e148]:
+        - generic [ref=e151]:
+          - generic [ref=e153]:
+            - generic [ref=e155]:
+              - generic [ref=e156]:
+                - img [ref=e157]
+                - heading "AI 概览" [level=2] [ref=e159]
+              - button "关于这条结果的详细信息" [ref=e163]:
+                - img [ref=e165]
+            - generic [ref=e189]:
+              - generic [ref=e190]:
+                - text: 2024-2025年，AI大模型（LLM）产品经理的面试重点已从
+                - mark [ref=e191]: “了解概念”转向“落地应用”、“性能优化”与“商业化变现”
+                - text: 。
+              - generic [ref=e192]:
+                - text: 结合最新行业趋势，面试题可分为四大板块：
+                - strong [ref=e193]: 大模型基础与前沿、技术落地与优化（RAG/Fine-tuning）、AI产品场景化设计、商业化与安全
+                - text: 。
+                - button "查看相关链接" [disabled] [ref=e196]:
+                  - img [ref=e198]
+              - generic [ref=e201]: 以下是整理的高频真题及答题方向：
+              - heading "一、 大模型基础与技术前沿 (核心认知)" [level=3] [ref=e203]
+              - generic [ref=e205]: 面试官旨在考察你对LLM核心原理的理解及其对业务的局限性认识。
+              - list [ref=e207]:
+                - listitem [ref=e208]:
+                  - strong [ref=e210]:
+                    - generic [ref=e211]: 大模型“涌现能力”的根本原因是什么？
+                  - list [ref=e212]:
+                    - listitem [ref=e213]:
+                      - generic [ref=e214]:
+                        - strong [ref=e215]: 答题方向：
+                        - text: 从参数量、训练数据量、模型架构（Transformer）的量变引起质变角度解析。
+                - listitem [ref=e216]:
+                  - strong [ref=e218]:
+                    - generic [ref=e219]: Prefix LM 和 Causal LM 有什么区别？
+                  - list [ref=e220]:
+                    - listitem [ref=e221]:
+                      - generic [ref=e222]:
+                        - strong [ref=e223]: 答题方向：
+                        - text: 解释掩码机制区别，Causal LM适合生成，Prefix LM适合理解与理解生成结合场景。
+                - listitem [ref=e224]:
+                  - strong [ref=e226]:
+                    - generic [ref=e227]: 如何看待MoE（混合专家模型）架构？相比Dense模型有什么优势？
+                  - list [ref=e228]:
+                    - listitem [ref=e229]:
+                      - generic [ref=e230]:
+                        - strong [ref=e231]: 答题方向：
+                        - text: 优势在于计算效率高、参数规模大但推理成本低，解释“专家”分工原理。
+                - listitem [ref=e232]:
+                  - strong [ref=e234]:
+                    - generic [ref=e235]: 目前主流的开源模型体系（如Llama 3, Qwen, Mistral）你最看好哪个？为什么？
+                  - list [ref=e236]:
+                    - listitem [ref=e237]:
+                      - generic [ref=e238]:
+                        - strong [ref=e239]: 答题方向：
+                        - text: 结合应用场景（中英文能力、长文本能力、运行成本）比较各模型优缺点。
+          - progressbar [ref=e245]
+        - button "显示更多 AI 概览" [ref=e269]:
+          - generic [ref=e271] [cursor=pointer]:
+            - generic [ref=e272]: 展开
+            - img [ref=e274]
+      - main [ref=e277]:
+        - generic [ref=e281]:
+          - generic [ref=e284]:
+            - heading "网页搜索结果" [level=2] [ref=e285]
+            - generic [ref=e286]:
+              - generic [ref=e289]:
+                - link "2025年最全AI大模型面试题汇总 - 火山引擎ADG 社区 火山引擎ADG 社区 https://adg.csdn.net › ..." [ref=e291] [cursor=pointer]:
+                  - /url: https://adg.csdn.net/6953301e5b9f5f31781bba2c.html
+                  - heading "2025年最全AI大模型面试题汇总 - 火山引擎ADG 社区" [level=3] [ref=e292]
+                  - generic [ref=e297]:
+                    - generic [ref=e299]: 火山引擎ADG 社区
+                    - generic [ref=e301]: https://adg.csdn.net › ...
+                - button "关于这条结果的详细信息" [ref=e302] [cursor=pointer]:
+                  - img [ref=e305]
+              - generic [ref=e308]:
+                - generic [ref=e309]: 2025年4月28日 —
+                - generic [ref=e310]:
+                  - emphasis [ref=e311]: 大模型
+                  - text: "-推理加速面 ... ✓1、当前优化模型最主要技术手段有哪些？ ✓2、推理加速框架有哪一些？都有什么特点？ ✓3、vLLM的功能有哪些？ ✓4、vLLM的优缺点？ ✓6、 ..."
+          - generic [ref=e315]:
+            - generic [ref=e318]:
+              - link "AI大模型产品经理面试题（含答案） 牛客网 https://www.nowcoder.com › feed › main › detail" [ref=e320] [cursor=pointer]:
+                - /url: https://www.nowcoder.com/feed/main/detail/422a0c5438504804b33885f00929e20e
+                - heading "AI大模型产品经理面试题（含答案）" [level=3] [ref=e321]
+                - generic [ref=e326]:
+                  - generic [ref=e328]: 牛客网
+                  - generic [ref=e330]: https://www.nowcoder.com › feed › main › detail
+              - button "关于这条结果的详细信息" [ref=e331] [cursor=pointer]:
+                - img [ref=e334]
+            - generic [ref=e337]:
+              - generic [ref=e338]: 2024年7月25日 —
+              - generic [ref=e339]:
+                - text: 一、目前主流的开源模型体系有哪些? 二、prefix LM和causal LM区别是什么? 三、涌现能力是啥原因? 四、
+                - emphasis [ref=e340]: 大模型
+                - text: LLM的架构介绍?
+          - generic [ref=e344]:
+            - generic [ref=e347]:
+              - link "2025最新整理75道高频AI大模型面试真题（含详细解答） 知乎专栏 https://zhuanlan.zhihu.com › ..." [ref=e349] [cursor=pointer]:
+                - /url: https://zhuanlan.zhihu.com/p/1933262215072449236
+                - heading "2025最新整理75道高频AI大模型面试真题（含详细解答）" [level=3] [ref=e350]
+                - generic [ref=e355]:
+                  - generic [ref=e357]: 知乎专栏
+                  - generic [ref=e359]: https://zhuanlan.zhihu.com › ...
+              - button "关于这条结果的详细信息" [ref=e360] [cursor=pointer]:
+                - img [ref=e363]
+            - generic [ref=e366]:
+              - generic [ref=e367]: 2025年7月29日 —
+              - generic [ref=e368]:
+                - text: 从“注意力机制实现” 等基础
+                - emphasis [ref=e369]: 问题
+                - text: ，到“
+                - emphasis [ref=e370]: 大模型
+                - text: 部署优化”“
+                - emphasis [ref=e371]: AI
+                - text: 安全伦理” 等进阶与热点话题，每道题都有详尽解析，并标注了得分要点。 无论你是想转行入门，还是计划 ...
+          - generic [ref=e375]:
+            - generic [ref=e378]:
+              - link "从OpenAI 到字节：AI 产品经理真实面试题大曝光（含答案思路） 小麦招聘 https://article.lovtalent.com › articles › openai-byte-ai-i..." [ref=e380] [cursor=pointer]:
+                - /url: https://article.lovtalent.com/articles/openai-byte-ai-interview-questions-150-20251023-1-2-1761204262.html
+                - heading "从OpenAI 到字节：AI 产品经理真实面试题大曝光（含答案思路）" [level=3] [ref=e381]
+                - generic [ref=e386]:
+                  - generic [ref=e388]: 小麦招聘
+                  - generic [ref=e390]: https://article.lovtalent.com › articles › openai-byte-ai-i...
+              - button "关于这条结果的详细信息" [ref=e391] [cursor=pointer]:
+                - img [ref=e394]
+            - generic [ref=e397]:
+              - generic [ref=e398]: 2025年10月27日 —
+              - generic [ref=e399]:
+                - emphasis [ref=e400]: AI产品经理
+                - text: 面试指南：大厂常问的
+                - emphasis [ref=e401]: 模型
+                - text: 、场景、落地与协同问题全解析 · 从候选人到专家：一文掌握
+                - emphasis [ref=e402]: AI产品经理
+                - text: 高频
+                - emphasis [ref=e403]: 面试题
+                - text: 与答题套路 · ChatGPT之后，
+                - emphasis [ref=e404]: AI产品经理
+                - text: 的 ...
+          - generic [ref=e408]:
+            - generic [ref=e411]:
+              - link "AI大模型微调深度解析：产品经理面试必备题目集锦 CSDN https://mcp.csdn.net › ..." [ref=e413] [cursor=pointer]:
+                - /url: https://mcp.csdn.net/6800a692a5baf817cf494467.html
+                - heading "AI大模型微调深度解析：产品经理面试必备题目集锦" [level=3] [ref=e414]
+                - generic [ref=e419]:
+                  - generic [ref=e421]: CSDN
+                  - generic [ref=e423]: https://mcp.csdn.net › ...
+              - button "关于这条结果的详细信息" [ref=e424] [cursor=pointer]:
+                - img [ref=e427]
+            - generic [ref=e431]:
+              - text: 在
+              - emphasis [ref=e432]: AI大模型
+              - text: 微调领域的
+              - emphasis [ref=e433]: 产品经理
+              - text: 面试中，总会遇到一系列与技术细节、项目经验、市场趋势以及职业规划相关的问题。以下是一些建议的
+              - emphasis [ref=e434]: 面试题
+              - text: 及其回答示例：.
+          - generic [ref=e438]:
+            - generic [ref=e441]:
+              - link "2万字拆解98道AI产品经理面试题 Scribd https://www.scribd.com › document › 2万字拆解98道A..." [ref=e443] [cursor=pointer]:
+                - /url: https://www.scribd.com/document/938793269/2%E4%B8%87%E5%AD%97%E6%8B%86%E8%A7%A398%E9%81%93AI%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98
+                - heading "2万字拆解98道AI产品经理面试题" [level=3] [ref=e444]
+                - generic [ref=e449]:
+                  - generic [ref=e451]: Scribd
+                  - generic [ref=e453]: https://www.scribd.com › document › 2万字拆解98道A...
+              - button "关于这条结果的详细信息" [ref=e454] [cursor=pointer]:
+                - img [ref=e457]
+            - generic [ref=e460]:
+              - generic [ref=e461]: 2025年10月26日 —
+              - generic [ref=e462]:
+                - text: 本文收集了100道
+                - emphasis [ref=e463]: AI产品经理面试题
+                - text: ，并对每个问题进行了详细的回答思路拆解，涵盖生成式AI和
+                - emphasis [ref=e464]: 大模型
+                - text: 的基础知识及实践能力考察。内容包括AI的理解、行业 ...
+          - generic [ref=e468]:
+            - generic [ref=e471]:
+              - link "AI产品经理全景成长指南：从定位到精通的系统化路径（2025 ... 人人都是产品 https://www.woshipm.com › zhichang" [ref=e473] [cursor=pointer]:
+                - /url: https://www.woshipm.com/zhichang/6240879.html
+                - heading "AI产品经理全景成长指南：从定位到精通的系统化路径（2025 ..." [level=3] [ref=e474]
+                - generic [ref=e479]:
+                  - generic [ref=e481]: 人人都是产品
+                  - generic [ref=e483]: https://www.woshipm.com › zhichang
+              - button "关于这条结果的详细信息" [ref=e484] [cursor=pointer]:
+                - img [ref=e487]
+            - generic [ref=e491]:
+              - text: 在生成式
+              - emphasis [ref=e492]: AI
+              - text: 与
+              - emphasis [ref=e493]: 大模型
+              - text: 技术爆发的当下，人工智能正加速走向产业落地，
+              - emphasis [ref=e494]: AI产品经理
+              - text: 作为技术商业化的关键枢纽，其重要性日益凸显。本文深入剖析了
+              - emphasis [ref=e495]: AI产品经理
+              - text: 的职业定位、核心能力与 ...
+          - generic [ref=e499]:
+            - generic [ref=e502]:
+              - link "2024年吃透经典AI大模型面试题500问，7天学完 Bilibili https://www.bilibili.com › video" [ref=e504] [cursor=pointer]:
+                - /url: https://www.bilibili.com/video/BV1pT42167Yp/
+                - heading "2024年吃透经典AI大模型面试题500问，7天学完" [level=3] [ref=e505]
+                - generic [ref=e510]:
+                  - generic [ref=e512]: Bilibili
+                  - generic [ref=e514]: https://www.bilibili.com › video
+              - button "关于这条结果的详细信息" [ref=e515] [cursor=pointer]:
+                - img [ref=e518]
+            - generic [ref=e522]:
+              - emphasis [ref=e523]: 2024年吃透经典AI大模型面试题500问
+              - text: ，7天学完，让你面试少走99%弯路！！大模型与深度学习算法面试指南。【存下吧，附80W字面试宝典】. AI产品经理学习路线. 相关推荐.
+          - generic [ref=e527]:
+            - generic [ref=e530]:
+              - link "3个面试细节，决定你能否打动AI产品经理面试官 知乎 https://zhuanlan.zhihu.com › ..." [ref=e532] [cursor=pointer]:
+                - /url: https://zhuanlan.zhihu.com/p/1994127490629787793
+                - heading "3个面试细节，决定你能否打动AI产品经理面试官" [level=3] [ref=e533]
+                - generic [ref=e538]:
+                  - generic [ref=e540]: 知乎
+                  - generic [ref=e542]: https://zhuanlan.zhihu.com › ...
+              - button "关于这条结果的详细信息" [ref=e543] [cursor=pointer]:
+                - img [ref=e546]
+            - generic [ref=e549]:
+              - generic [ref=e550]: 2026年4月27日 —
+              - generic [ref=e551]:
+                - emphasis [ref=e552]: "2025"
+                - text: 年，你应该瞄准哪些公司？ 很多同学会问，国内
+                - emphasis [ref=e553]: 大模型
+                - text: 公司看好哪家？ 我的观点是：对于绝大部分转型同学来说， ...
+          - generic [ref=e557]:
+            - generic [ref=e560]:
+              - link "AI产品经理- 话题 牛客网 https://www.nowcoder.com › creation › subject" [ref=e562] [cursor=pointer]:
+                - /url: https://www.nowcoder.com/creation/subject/0c2a9b5f884b4d7ebb13db0f60b0b69a
+                - heading "AI产品经理- 话题" [level=3] [ref=e563]
+                - generic [ref=e568]:
+                  - generic [ref=e570]: 牛客网
+                  - generic [ref=e572]: https://www.nowcoder.com › creation › subject
+              - button "关于这条结果的详细信息" [ref=e573] [cursor=pointer]:
+                - img [ref=e576]
+            - generic [ref=e580]:
+              - text: 你认为一个优秀的
+              - emphasis [ref=e581]: AI产品经理
+              - text: 需要具备哪些关键技能和素质？
+              - emphasis [ref=e582]: AI
+              - text: 产品和普通产品有什么区别?
+              - emphasis [ref=e583]: AI
+              - text: 产品开发过程中，如何处理数据质量
+              - emphasis [ref=e584]: 问题
+              - text: ？一款
+              - emphasis [ref=e585]: AI
+              - text: 产品落地的过程中，
+              - emphasis [ref=e586]: 产品经理
+              - text: 的工作流程 ...
+        - generic [ref=e588]:
+          - generic [ref=e593]:
+            - heading "用户还搜索了" [level=2] [ref=e595]
+            - generic [ref=e597]:
+              - link "Ai 产品 面试 题" [ref=e602] [cursor=pointer]:
+                - /url: /search?sca_esv=7f670160f65c8184&q=Ai+%E4%BA%A7%E5%93%81+%E9%9D%A2%E8%AF%95+%E9%A2%98&sa=X&ved=2ahUKEwjxvOXb76aUAxVRyckDHQrdD04Q1QJ6BAgzEAE
+                - generic [ref=e603]:
+                  - generic [ref=e608]: Ai 产品 面试 题
+                  - img [ref=e612]
+              - link "产品经理面试攻略" [ref=e618] [cursor=pointer]:
+                - /url: /search?sca_esv=7f670160f65c8184&q=%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E9%9D%A2%E8%AF%95%E6%94%BB%E7%95%A5&sa=X&ved=2ahUKEwjxvOXb76aUAxVRyckDHQrdD04Q1QJ6BAgyEAE
+                - generic [ref=e619]:
+                  - generic [ref=e624]: 产品经理面试攻略
+                  - img [ref=e628]
+          - navigation [ref=e630]:
+            - heading "网页导航" [level=1] [ref=e631]
+            - text: "1"
+            - link "Page 2" [ref=e634] [cursor=pointer]:
+              - /url: /search?q=AI%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98+%E5%A4%A7%E6%A8%A1%E5%9E%8B+2024+2025&sca_esv=7f670160f65c8184&ei=kVz8abGwF9GSp84Pirq_8AQ&start=10&sa=N&sstk=Af77f_eeT_xLMr8IiUBZnk0o_OH5RGrYVHM5OHiBwqNu8wFVXofcCRSLKmDqcnn9ZhzRDN3DduRehH_UELFAIobvaVsCGvQTtNfuig&ved=2ahUKEwjxvOXb76aUAxVRyckDHQrdD04Q8tMDegQIKhAE
+              - text: "2"
+            - link "Page 3" [ref=e636] [cursor=pointer]:
+              - /url: /search?q=AI%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98+%E5%A4%A7%E6%A8%A1%E5%9E%8B+2024+2025&sca_esv=7f670160f65c8184&ei=kVz8abGwF9GSp84Pirq_8AQ&start=20&sa=N&sstk=Af77f_eeT_xLMr8IiUBZnk0o_OH5RGrYVHM5OHiBwqNu8wFVXofcCRSLKmDqcnn9ZhzRDN3DduRehH_UELFAIobvaVsCGvQTtNfuig&ved=2ahUKEwjxvOXb76aUAxVRyckDHQrdD04Q8tMDegQIKhAG
+              - text: "3"
+            - link "Page 4" [ref=e638] [cursor=pointer]:
+              - /url: /search?q=AI%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98+%E5%A4%A7%E6%A8%A1%E5%9E%8B+2024+2025&sca_esv=7f670160f65c8184&ei=kVz8abGwF9GSp84Pirq_8AQ&start=30&sa=N&sstk=Af77f_eeT_xLMr8IiUBZnk0o_OH5RGrYVHM5OHiBwqNu8wFVXofcCRSLKmDqcnn9ZhzRDN3DduRehH_UELFAIobvaVsCGvQTtNfuig&ved=2ahUKEwjxvOXb76aUAxVRyckDHQrdD04Q8tMDegQIKhAI
+              - text: "4"
+            - link "Page 5" [ref=e640] [cursor=pointer]:
+              - /url: /search?q=AI%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98+%E5%A4%A7%E6%A8%A1%E5%9E%8B+2024+2025&sca_esv=7f670160f65c8184&ei=kVz8abGwF9GSp84Pirq_8AQ&start=40&sa=N&sstk=Af77f_eeT_xLMr8IiUBZnk0o_OH5RGrYVHM5OHiBwqNu8wFVXofcCRSLKmDqcnn9ZhzRDN3DduRehH_UELFAIobvaVsCGvQTtNfuig&ved=2ahUKEwjxvOXb76aUAxVRyckDHQrdD04Q8tMDegQIKhAK
+              - text: "5"
+            - link "Page 6" [ref=e642] [cursor=pointer]:
+              - /url: /search?q=AI%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98+%E5%A4%A7%E6%A8%A1%E5%9E%8B+2024+2025&sca_esv=7f670160f65c8184&ei=kVz8abGwF9GSp84Pirq_8AQ&start=50&sa=N&sstk=Af77f_eeT_xLMr8IiUBZnk0o_OH5RGrYVHM5OHiBwqNu8wFVXofcCRSLKmDqcnn9ZhzRDN3DduRehH_UELFAIobvaVsCGvQTtNfuig&ved=2ahUKEwjxvOXb76aUAxVRyckDHQrdD04Q8tMDegQIKhAM
+              - text: "6"
+            - link "Page 7" [ref=e644] [cursor=pointer]:
+              - /url: /search?q=AI%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98+%E5%A4%A7%E6%A8%A1%E5%9E%8B+2024+2025&sca_esv=7f670160f65c8184&ei=kVz8abGwF9GSp84Pirq_8AQ&start=60&sa=N&sstk=Af77f_eeT_xLMr8IiUBZnk0o_OH5RGrYVHM5OHiBwqNu8wFVXofcCRSLKmDqcnn9ZhzRDN3DduRehH_UELFAIobvaVsCGvQTtNfuig&ved=2ahUKEwjxvOXb76aUAxVRyckDHQrdD04Q8tMDegQIKhAO
+              - text: "7"
+            - link "Page 8" [ref=e646] [cursor=pointer]:
+              - /url: /search?q=AI%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98+%E5%A4%A7%E6%A8%A1%E5%9E%8B+2024+2025&sca_esv=7f670160f65c8184&ei=kVz8abGwF9GSp84Pirq_8AQ&start=70&sa=N&sstk=Af77f_eeT_xLMr8IiUBZnk0o_OH5RGrYVHM5OHiBwqNu8wFVXofcCRSLKmDqcnn9ZhzRDN3DduRehH_UELFAIobvaVsCGvQTtNfuig&ved=2ahUKEwjxvOXb76aUAxVRyckDHQrdD04Q8tMDegQIKhAQ
+              - text: "8"
+            - link "Page 9" [ref=e648] [cursor=pointer]:
+              - /url: /search?q=AI%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98+%E5%A4%A7%E6%A8%A1%E5%9E%8B+2024+2025&sca_esv=7f670160f65c8184&ei=kVz8abGwF9GSp84Pirq_8AQ&start=80&sa=N&sstk=Af77f_eeT_xLMr8IiUBZnk0o_OH5RGrYVHM5OHiBwqNu8wFVXofcCRSLKmDqcnn9ZhzRDN3DduRehH_UELFAIobvaVsCGvQTtNfuig&ved=2ahUKEwjxvOXb76aUAxVRyckDHQrdD04Q8tMDegQIKhAS
+              - text: "9"
+            - link "Page 10" [ref=e650] [cursor=pointer]:
+              - /url: /search?q=AI%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98+%E5%A4%A7%E6%A8%A1%E5%9E%8B+2024+2025&sca_esv=7f670160f65c8184&ei=kVz8abGwF9GSp84Pirq_8AQ&start=90&sa=N&sstk=Af77f_eeT_xLMr8IiUBZnk0o_OH5RGrYVHM5OHiBwqNu8wFVXofcCRSLKmDqcnn9ZhzRDN3DduRehH_UELFAIobvaVsCGvQTtNfuig&ved=2ahUKEwjxvOXb76aUAxVRyckDHQrdD04Q8tMDegQIKhAU
+              - text: "10"
+            - heading "下一页" [level=2] [ref=e652]:
+              - link "下一页" [ref=e653] [cursor=pointer]:
+                - /url: /search?q=AI%E4%BA%A7%E5%93%81%E7%BB%8F%E7%90%86%E9%9D%A2%E8%AF%95%E9%A2%98+%E5%A4%A7%E6%A8%A1%E5%9E%8B+2024+2025&sca_esv=7f670160f65c8184&ei=kVz8abGwF9GSp84Pirq_8AQ&start=10&sa=N&sstk=Af77f_eeT_xLMr8IiUBZnk0o_OH5RGrYVHM5OHiBwqNu8wFVXofcCRSLKmDqcnn9ZhzRDN3DduRehH_UELFAIobvaVsCGvQTtNfuig&ved=2ahUKEwjxvOXb76aUAxVRyckDHQrdD04Q8NMDegQIKhAW
+                - generic [ref=e655]: 下一页
+        - navigation
+    - contentinfo [ref=e656]:
+      - heading "页脚链接" [level=1] [ref=e657]
+      - generic [ref=e661]:
+        - generic [ref=e663]:
+          - text: 日本
+          - generic [ref=e665]:
+            - button "东京都 - 是根据您的 IP 地址推断出来的" [ref=e667] [cursor=pointer]:
+              - generic [ref=e668]: 东京都
+              - generic [ref=e670]:
+                - text: "-"
+                - generic [ref=e671]: 是根据您的 IP 地址推断出来的
+            - text: "-"
+            - button "更新位置信息" [ref=e673] [cursor=pointer]: 更新位置信息
+        - generic [ref=e676]:
+          - link "帮助" [ref=e677] [cursor=pointer]:
+            - /url: https://support.google.com/websearch/?p=ws_results_help&hl=zh-CN&fg=1
+          - link "发送反馈" [ref=e678] [cursor=pointer]:
+            - /url: "#"
+          - link "隐私权" [ref=e679] [cursor=pointer]:
+            - /url: https://policies.google.com/privacy?hl=zh-CN&fg=1
+          - link "条款" [ref=e680] [cursor=pointer]:
+            - /url: https://policies.google.com/terms?hl=zh-CN&fg=1

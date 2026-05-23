@@ -1,0 +1,46 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ipconfig /all)",
+      "Bash(netsh interface:*)",
+      "Bash(route print:*)",
+      "Bash(netsh advfirewall:*)",
+      "Bash(arp -a)",
+      "Bash(netsh winhttp:*)",
+      "Bash(powershell -Command \"Get-NetAdapter | Select-Object Name, Status, LinkSpeed, MediaType | Format-Table -AutoSize\")",
+      "Bash(powershell -Command \"Get-NetAdapterAdvancedProperty -Name 'WLAN' | Select-Object DisplayName, DisplayValue | Format-Table -AutoSize\")",
+      "Bash(powershell -Command \"Get-DnsClientServerAddress -AddressFamily IPv4 | Format-Table -AutoSize\")",
+      "Bash(powershell -Command \"Get-NetConnectionProfile | Format-List *\")",
+      "Bash(powershell -Command \"Get-Service -Name 'IKEEXT','PolicyAgent','NlaSvc','Dnscache','Netman','Dhcp' | Select-Object Name, Status, StartType | Format-Table -AutoSize\")",
+      "Bash(powershell -Command 'Get-NetAdapter | Where-Object { $_.Name -like '\\\\''*Clash*'\\\\'' -or $_.Name -like '\\\\''*tun*'\\\\'' -or $_.Name -like '\\\\''*TUN*'\\\\'' -or $_.Name -like '\\\\''*Wintun*'\\\\'' } | Select-Object Name, Status, InterfaceDescription, LinkSpeed | Format-Table -AutoSize')",
+      "Bash(powershell -Command \"Get-NetAdapter | Select-Object Name, Status, InterfaceDescription, LinkSpeed | Format-Table -AutoSize\")",
+      "Bash(powershell -Command 'Get-Process | Where-Object { $_.ProcessName -like '\\\\''*clash*'\\\\'' -or $_.ProcessName -like '\\\\''*verge*'\\\\'' -or $_.ProcessName -like '\\\\''*mihomo*'\\\\'' } | Select-Object Id, ProcessName, CPU, WorkingSet | Format-Table -AutoSize')",
+      "Bash(powershell -Command \"Get-NetIPConfiguration | Format-List\")",
+      "Bash(powershell -Command \"Get-NetTCPConnection -LocalPort 7897 -ErrorAction SilentlyContinue | Select-Object LocalPort, OwningProcess, State | Format-Table -AutoSize\")",
+      "Bash(powershell -Command \"Get-ChildItem 'C:\\\\Users\\\\Miles\\\\AppData\\\\Roaming\\\\io.github.clash-verge-rev.clash-verge-rev\\\\' -Recurse -File | Select-Object FullName, Length, LastWriteTime | Format-Table -AutoSize -Wrap\")",
+      "Bash(cmd.exe /c \"dir /s /b C:\\\\Users\\\\Miles\\\\AppData\\\\Roaming\\\\io.github.clash-verge-rev.clash-verge-rev\\\\*.yaml 2>nul\")",
+      "Bash(powershell -Command ':*)",
+      "WebFetch(domain:api.bilibili.com)",
+      "WebFetch(domain:www.bilibili.com)",
+      "WebSearch",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:socialsisteryi.github.io)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(python bilibili_subtitle.py \"https://www.bilibili.com/video/BV1jCpizuEPg/?spm_id_from=333.337.search-card.all.click&vd_source=543a2d9f028823f6c6125b7066a04b86\")",
+      "Bash(pip install *)",
+      "Bash(ffmpeg -version)",
+      "Bash(start:*)",
+      "mcp__playwright__browser_navigate",
+      "mcp__playwright__browser_snapshot",
+      "Bash(python -c ' *)",
+      "Bash(Remove-Item -Recurse -Force \"d:\\\\pm-ai-system\\\\exam\\\\真题\", \"d:\\\\pm-ai-system\\\\exam\\\\模拟题\", \"d:\\\\pm-ai-system\\\\exam\\\\错题本\")",
+      "Bash(mv d:/pm-ai-system/papers/reading-notes/*.md d:/pm-ai-system/papers/ && rmdir d:/pm-ai-system/papers/reading-notes)",
+      "Bash(pwsh -ExecutionPolicy Bypass -File download.ps1)",
+      "Bash(powershell.exe -ExecutionPolicy Bypass -File \"d:\\\\pm-ai-system\\\\papers\\\\download.ps1\")",
+      "Bash(curl -L -o \"d:/pm-ai-system/papers/pdf/06_GPT3.pdf\" \"https://arxiv.org/pdf/2005.14165\" --max-time 60)"
+    ],
+    "additionalDirectories": [
+      "d:\\pm-ai-system\\papers\\reading-notes"
+    ]
+  }
+}
