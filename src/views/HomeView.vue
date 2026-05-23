@@ -86,8 +86,20 @@ const categories = [
 
 .categories {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
+}
+
+@media (max-width: 900px) {
+  .categories {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 580px) {
+  .categories {
+    grid-template-columns: 1fr;
+  }
 }
 
 .category-card {
