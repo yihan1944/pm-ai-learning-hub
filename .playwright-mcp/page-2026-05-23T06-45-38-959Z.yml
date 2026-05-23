@@ -1,0 +1,21 @@
+- generic [ref=e2]:
+  - navigation [ref=e3]:
+    - generic [ref=e4]:
+      - link "PM AI Hub" [ref=e5] [cursor=pointer]:
+        - /url: "#/"
+      - generic [ref=e6]:
+        - link "首页" [ref=e7] [cursor=pointer]:
+          - /url: "#/"
+        - link "论文" [ref=e8] [cursor=pointer]:
+          - /url: "#/papers"
+        - link "知识" [ref=e9] [cursor=pointer]:
+          - /url: "#/knowledge"
+        - link "Agent" [ref=e10] [cursor=pointer]:
+          - /url: "#/agents"
+        - link "产品" [ref=e11] [cursor=pointer]:
+          - /url: "#/products"
+        - link "面试题" [ref=e12] [cursor=pointer]:
+          - /url: "#/exam"
+        - link "搜索" [ref=e13] [cursor=pointer]:
+          - /url: "#/search"
+  - main [ref=e14]
