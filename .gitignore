@@ -5,3 +5,4 @@ src/data
 .DS_Store
 *.log
 .playwright-mcp/
+.claude/settings.local.json
