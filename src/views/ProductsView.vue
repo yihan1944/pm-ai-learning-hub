@@ -1,8 +1,29 @@
 <script setup lang="ts">
-import productsData from '../data/products.json'
+interface Product { id: string; title: string; description: string; tag?: string; link?: string }
 
-interface Product { id: string; title: string; description: string }
-const products = productsData as Product[]
+const products: Product[] = [
+  {
+    id: 'bianzhou-wangshi',
+    title: '汴州往事',
+    description: '隋末汴州，信息掮客顾衡以为自己在收割，却不知早已是别人棋盘上的棋子。',
+    tag: 'AI小说',
+    link: 'https://yihan1944.github.io/bianzhou-wangshi/index.html'
+  },
+  {
+    id: 'sanguo-renwu',
+    title: '三国人物',
+    description: '探讨三国人物如何在乱世中生存的历史人物随笔。',
+    tag: '历史随笔',
+    link: 'https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MjM5MjU1NTk0OQ==&action=getalbum&album_id=4448591694527234049'
+  },
+  {
+    id: 'dream-diary',
+    title: '梦境笔记',
+    description: '记录梦境，分析梦境，接入 DeepSeek 解构、分析梦境。',
+    tag: '梦境分析',
+    link: 'https://dream-diary-virid.vercel.app/'
+  }
+]
 </script>
 
 <template>
@@ -16,8 +37,14 @@ const products = productsData as Product[]
 
     <div v-else class="product-list">
       <div v-for="product in products" :key="product.id" class="product-card">
-        <h3>{{ product.title }}</h3>
+        <div class="card-header">
+          <h3>{{ product.title }}</h3>
+          <span v-if="product.tag" class="tag">{{ product.tag }}</span>
+        </div>
         <p>{{ product.description }}</p>
+        <a v-if="product.link" :href="product.link" target="_blank" rel="noopener" class="card-link">
+          访问产品 →
+        </a>
       </div>
     </div>
   </div>
@@ -46,15 +73,50 @@ const products = productsData as Product[]
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   padding: 1.25rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-.product-card h3 {
+.product-card:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5em;
+}
+
+.card-header h3 {
   font-size: 1.05rem;
-  margin-bottom: 0.4em;
+  margin: 0;
+}
+
+.tag {
+  font-size: 0.75rem;
+  padding: 0.2em 0.6em;
+  border-radius: 999px;
+  background: var(--color-primary);
+  color: #fff;
+  white-space: nowrap;
 }
 
 .product-card p {
   font-size: 0.9rem;
   color: var(--color-text-muted);
+  margin-bottom: 1em;
+}
+
+.card-link {
+  display: inline-block;
+  font-size: 0.85rem;
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.card-link:hover {
+  text-decoration: underline;
 }
 </style>
