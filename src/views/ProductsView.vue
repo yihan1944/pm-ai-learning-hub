@@ -37,10 +37,8 @@ const products: Product[] = [
 
     <div v-else class="product-list">
       <div v-for="product in products" :key="product.id" class="product-card">
-        <div class="card-header">
-          <h3>{{ product.title }}</h3>
-          <span v-if="product.tag" class="tag">{{ product.tag }}</span>
-        </div>
+        <h3>{{ product.title }}</h3>
+        <span v-if="product.tag" class="tag">{{ product.tag }}</span>
         <p>{{ product.description }}</p>
         <a v-if="product.link" :href="product.link" target="_blank" rel="noopener" class="card-link">
           访问产品 →
@@ -83,25 +81,20 @@ const products: Product[] = [
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 }
 
-.card-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 0.5em;
-}
-
-.card-header h3 {
+.product-card h3 {
   font-size: 1.05rem;
-  margin: 0;
+  margin: 0 0 0.4em;
 }
 
 .tag {
+  display: inline-block;
   font-size: 0.75rem;
   padding: 0.2em 0.6em;
   border-radius: 999px;
   background: var(--color-primary);
   color: #fff;
   white-space: nowrap;
+  margin-bottom: 0.6em;
 }
 
 .product-card p {
