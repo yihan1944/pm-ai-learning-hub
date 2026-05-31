@@ -282,12 +282,16 @@ def main():
     )
     print(f"  Agents: {len(agents)} (empty)")
 
-    # 5. Products (placeholder - directory empty)
-    products = []
+    # 5. Products
+    products_file = ROOT / "products" / "products.json"
+    if products_file.exists():
+        products = json.loads(products_file.read_text(encoding="utf-8"))
+    else:
+        products = []
     (OUT / "products.json").write_text(
         json.dumps(products, ensure_ascii=False, indent=2), encoding="utf-8"
     )
-    print(f"  Products: {len(products)} (empty)")
+    print(f"  Products: {len(products)}")
 
     # 6. Search index
     search_index = build_search_index(papers, knowledge, exam)
