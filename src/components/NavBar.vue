@@ -6,9 +6,9 @@ const menuOpen = ref(false)
 const links = [
   { to: '/', label: '首页' },
   { to: '/papers', label: '论文' },
+  { to: '/products', label: '产品' },
   { to: '/knowledge', label: '知识' },
   { to: '/agents', label: 'Agent' },
-  { to: '/products', label: '产品' },
   { to: '/exam', label: '面试题' },
   { to: '/search', label: '搜索' },
 ]
