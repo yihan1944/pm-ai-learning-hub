@@ -21,18 +21,18 @@ const categories = [
     icon: '📄',
   },
   {
-    title: 'Agent 资源',
-    description: 'Agent 框架、设计模式和项目实践',
-    count: agents.length,
-    route: '/agents',
-    icon: '🤖',
-  },
-  {
     title: 'AI 产品',
     description: '产品案例、产品思维和 Prompt 工程',
     count: products.length,
     route: '/products',
     icon: '💡',
+  },
+  {
+    title: 'Agent 资源',
+    description: 'Agent 框架、设计模式和项目实践',
+    count: agents.length,
+    route: '/agents',
+    icon: '🤖',
   },
   {
     title: '面试题库',
