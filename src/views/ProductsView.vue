@@ -72,13 +72,14 @@ const products: Product[] = [
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
-  padding: 1.25rem;
-  transition: border-color 0.2s, box-shadow 0.2s;
+  padding: 1.5rem;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
 }
 
 .product-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
   border-color: var(--color-primary);
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 }
 
 .product-card h3 {

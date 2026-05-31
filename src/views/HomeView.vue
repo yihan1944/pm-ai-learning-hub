@@ -102,6 +102,7 @@ const categories = [
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: stretch;
   gap: 1rem;
 }
 
