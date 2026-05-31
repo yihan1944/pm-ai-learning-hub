@@ -125,7 +125,8 @@ const categories = [
 }
 
 .category-card {
-  display: block;
+  display: flex;
+  flex-direction: column;
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
@@ -161,12 +162,14 @@ const categories = [
 
 .card-count {
   display: inline-block;
+  margin-top: auto;
   background: var(--color-primary);
   color: #fff;
   padding: 0.15em 0.6em;
   border-radius: 99px;
   font-size: 0.8rem;
   font-weight: 600;
+  align-self: flex-start;
 }
 
 .category-card.placeholder {
