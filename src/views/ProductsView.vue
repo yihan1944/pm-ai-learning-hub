@@ -6,7 +6,7 @@ const products: Product[] = [
     id: 'bianzhou-wangshi',
     title: '汴州往事',
     description: '隋末汴州，信息掮客顾衡以为自己在收割，却不知早已是别人棋盘上的棋子。',
-    tag: 'AI小说',
+    tag: '武侠小说',
     link: 'https://yihan1944.github.io/bianzhou-wangshi/index.html'
   },
   {
@@ -69,6 +69,8 @@ const products: Product[] = [
 }
 
 .product-card {
+  display: flex;
+  flex-direction: column;
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
@@ -110,6 +112,7 @@ const products: Product[] = [
 
 .card-link {
   display: inline-block;
+  margin-top: auto;
   font-size: 0.85rem;
   color: var(--color-primary);
   text-decoration: none;
