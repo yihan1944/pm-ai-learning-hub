@@ -9,35 +9,35 @@ const categories = [
   {
     title: '学习路线',
     description: `从基础认知到 AI 产品的 ${knowledge.stages.length} 阶段学习路径 + 术语表`,
-    count: knowledge.stages.length + ' 阶段',
+    count: `${knowledge.stages.length} 个学习阶段`,
     route: '/knowledge',
     icon: 'route',
   },
   {
     title: '论文笔记',
     description: '经典 AI 论文阅读笔记，涵盖 Transformer、GPT、DeepSeek 等',
-    count: papers.length + ' 篇',
+    count: `已收录 ${papers.length} 篇`,
     route: '/papers',
     icon: 'file-text',
   },
   {
     title: 'AI 产品',
     description: '产品案例、产品思维和 Prompt 工程',
-    count: products.length + ' 个',
+    count: `${products.length} 个案例`,
     route: '/products',
     icon: 'lightbulb',
   },
   {
     title: 'Agent 资源',
     description: 'Agent 框架、设计模式和项目实践',
-    count: agents.length + ' 个',
+    count: `${agents.length} 个资源`,
     route: '/agents',
     icon: 'bot',
   },
   {
     title: '面试题库',
     description: 'AI 产品经理岗位面试题，含答题方向',
-    count: exam.length + ' 题',
+    count: `共 ${exam.length} 道`,
     route: '/exam',
     icon: 'target',
   },
@@ -94,26 +94,42 @@ const categories = [
 <style scoped>
 .hero {
   text-align: center;
-  padding: 3rem 0 3.5rem;
+  padding: 3.5rem 0 3rem;
+  position: relative;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.12) 0%, transparent 65%);
+  pointer-events: none;
 }
 
 .hero h1 {
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-weight: 700;
   margin-bottom: 0.6rem;
   letter-spacing: -0.02em;
+  position: relative;
 }
 
 .hero-subtitle {
   color: var(--color-text-muted);
   font-size: 1.15rem;
   margin-bottom: 0.8rem;
+  position: relative;
 }
 
 .hero-tags {
   color: var(--color-text-muted);
   font-size: 0.9rem;
   opacity: 0.7;
+  position: relative;
 }
 
 .categories {
@@ -149,7 +165,7 @@ const categories = [
   background: var(--color-surface);
   border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: var(--radius-lg);
-  padding: 1.5rem;
+  padding: 1.25rem;
   transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   color: var(--color-text);
 }
@@ -165,12 +181,12 @@ const categories = [
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
   border-radius: 10px;
   background: rgba(99, 102, 241, 0.1);
   color: var(--color-primary-hover);
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
 }
 
 .category-card h2 {
