@@ -44,7 +44,9 @@ const links = [
   left: 0;
   right: 0;
   height: var(--nav-height);
-  background: var(--color-surface);
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--color-border);
   z-index: 100;
 }

@@ -164,9 +164,9 @@ const categories = [
 .card-count {
   display: inline-block;
   margin-top: auto;
-  background: var(--color-primary);
-  color: #fff;
-  padding: 0.15em 0.6em;
+  background: rgba(99, 102, 241, 0.15);
+  color: var(--color-primary-hover);
+  padding: 0.2em 0.7em;
   border-radius: 99px;
   font-size: 0.8rem;
   font-weight: 600;

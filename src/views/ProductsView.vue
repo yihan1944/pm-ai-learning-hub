@@ -90,12 +90,13 @@ const products: Product[] = [
 .tag {
   display: inline-block;
   font-size: 0.75rem;
-  padding: 0.2em 0.6em;
+  padding: 0.2em 0.7em;
   border-radius: 999px;
-  background: var(--color-primary);
-  color: #fff;
+  background: rgba(99, 102, 241, 0.15);
+  color: var(--color-primary-hover);
   white-space: nowrap;
   margin-bottom: 0.6em;
+  align-self: flex-start;
 }
 
 .product-card p {
