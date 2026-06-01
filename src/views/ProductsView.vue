@@ -22,6 +22,13 @@ const products: Product[] = [
     description: '记录梦境，分析梦境，接入 DeepSeek 解构、分析梦境。',
     tag: '梦境分析',
     link: 'https://dream-diary-virid.vercel.app/'
+  },
+  {
+    id: 'dream-cli',
+    title: '梦境分析CLI',
+    description: '命令行梦境分析工具，通过 AI 解析你的梦境，支持多种分析风格。',
+    tag: 'CLI工具',
+    link: 'https://github.com/yihan1944/dream-cli'
   }
 ]
 </script>
