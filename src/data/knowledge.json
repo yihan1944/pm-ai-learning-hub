@@ -1,0 +1,360 @@
+{
+  "stages": [
+    {
+      "id": "stage-1",
+      "name": "第一阶段：AI 基础认知",
+      "order": 1,
+      "items": [
+        {
+          "id": "item-1",
+          "text": "理解训练、推理、上下文窗口",
+          "completed": false
+        },
+        {
+          "id": "item-2",
+          "text": "理解 Token、Embedding、Attention",
+          "completed": false
+        },
+        {
+          "id": "item-3",
+          "text": "理解 Transformer 基本原理",
+          "completed": false
+        },
+        {
+          "id": "item-4",
+          "text": "理解幻觉与模型能力边界",
+          "completed": false
+        },
+        {
+          "id": "item-5",
+          "text": "了解主流模型能力差异（GPT、Claude、Gemini、Qwen、DeepSeek）",
+          "completed": false
+        }
+      ]
+    },
+    {
+      "id": "stage-2",
+      "name": "第二阶段：AI 使用能力",
+      "order": 2,
+      "items": [
+        {
+          "id": "item-6",
+          "text": "掌握 Prompt Engineering 基础方法",
+          "completed": false
+        },
+        {
+          "id": "item-7",
+          "text": "熟练使用 ChatGPT、Claude、Gemini、Perplexity",
+          "completed": false
+        },
+        {
+          "id": "item-8",
+          "text": "学习 Deep Research 工作流",
+          "completed": false
+        },
+        {
+          "id": "item-9",
+          "text": "建立个人 Prompt 库",
+          "completed": false
+        },
+        {
+          "id": "item-10",
+          "text": "建立个人 AI 工作流",
+          "completed": false
+        }
+      ]
+    },
+    {
+      "id": "stage-3",
+      "name": "第三阶段：AI Coding",
+      "order": 3,
+      "items": [
+        {
+          "id": "item-11",
+          "text": "熟练使用 Cursor、Claude Code",
+          "completed": false
+        },
+        {
+          "id": "item-12",
+          "text": "掌握 HTML、CSS、JavaScript 基础",
+          "completed": false
+        },
+        {
+          "id": "item-13",
+          "text": "掌握 Python 基础",
+          "completed": false
+        },
+        {
+          "id": "item-14",
+          "text": "学会调用 API",
+          "completed": false
+        },
+        {
+          "id": "item-15",
+          "text": "完成一个 AI 工具项目",
+          "completed": false
+        }
+      ]
+    },
+    {
+      "id": "stage-4",
+      "name": "第四阶段：AI 系统设计",
+      "order": 4,
+      "items": [
+        {
+          "id": "item-16",
+          "text": "理解 RAG 基本原理",
+          "completed": false
+        },
+        {
+          "id": "item-17",
+          "text": "理解 Agent 基本原理",
+          "completed": false
+        },
+        {
+          "id": "item-18",
+          "text": "理解 MCP 与 Tool Calling",
+          "completed": false
+        },
+        {
+          "id": "item-19",
+          "text": "学习 AI 应用评测（Evals）",
+          "completed": false
+        },
+        {
+          "id": "item-20",
+          "text": "设计一个完整 AI 应用架构",
+          "completed": false
+        }
+      ]
+    },
+    {
+      "id": "stage-5",
+      "name": "第五阶段：多模态",
+      "order": 5,
+      "items": [
+        {
+          "id": "item-21",
+          "text": "了解图像、语音、视频模型能力",
+          "completed": false
+        },
+        {
+          "id": "item-22",
+          "text": "理解多模态应用场景",
+          "completed": false
+        },
+        {
+          "id": "item-23",
+          "text": "完成一个多模态项目",
+          "completed": false
+        }
+      ]
+    },
+    {
+      "id": "stage-6",
+      "name": "第六阶段：AI 产品设计",
+      "order": 6,
+      "items": [
+        {
+          "id": "item-24",
+          "text": "研究 ChatGPT、Claude、Perplexity、Cursor",
+          "completed": false
+        },
+        {
+          "id": "item-25",
+          "text": "学习 AI 产品体验设计",
+          "completed": false
+        },
+        {
+          "id": "item-26",
+          "text": "学习 AI 产品指标体系",
+          "completed": false
+        },
+        {
+          "id": "item-27",
+          "text": "分析 10 个优秀 AI 产品",
+          "completed": false
+        },
+        {
+          "id": "item-28",
+          "text": "输出 AI 产品分析报告",
+          "completed": false
+        }
+      ]
+    },
+    {
+      "id": "stage-7",
+      "name": "第七阶段：AI 工作流与自动化",
+      "order": 7,
+      "items": [
+        {
+          "id": "item-29",
+          "text": "学习 Agent Workflow 设计",
+          "completed": false
+        },
+        {
+          "id": "item-30",
+          "text": "学习自动化工作流设计",
+          "completed": false
+        },
+        {
+          "id": "item-31",
+          "text": "建立个人知识库",
+          "completed": false
+        },
+        {
+          "id": "item-32",
+          "text": "建立个人 AI 工作流库",
+          "completed": false
+        }
+      ]
+    },
+    {
+      "id": "横向-原理进阶",
+      "name": "横向主题：AI 原理进阶",
+      "order": 8,
+      "items": [
+        {
+          "id": "item-33",
+          "text": "理解预训练 → SFT → RLHF",
+          "completed": false
+        },
+        {
+          "id": "item-34",
+          "text": "理解 MoE、Scaling Law",
+          "completed": false
+        },
+        {
+          "id": "item-35",
+          "text": "理解推理优化与长上下文",
+          "completed": false
+        },
+        {
+          "id": "item-36",
+          "text": "持续跟踪前沿模型发展",
+          "completed": false
+        }
+      ]
+    },
+    {
+      "id": "横向-治理合规",
+      "name": "横向主题：AI 治理与合规",
+      "order": 9,
+      "items": [
+        {
+          "id": "item-37",
+          "text": "了解数据隐私与安全",
+          "completed": false
+        },
+        {
+          "id": "item-38",
+          "text": "了解 AI 监管与合规要求",
+          "completed": false
+        },
+        {
+          "id": "item-39",
+          "text": "关注 AI 伦理与版权问题",
+          "completed": false
+        }
+      ]
+    },
+    {
+      "id": "项目实践",
+      "name": "项目实践（贯穿全程）",
+      "order": 10,
+      "items": [
+        {
+          "id": "item-40",
+          "text": "搭建个人 AI 知识库",
+          "completed": false
+        },
+        {
+          "id": "item-41",
+          "text": "完成一个 RAG 项目",
+          "completed": false
+        },
+        {
+          "id": "item-42",
+          "text": "完成一个 Agent 项目",
+          "completed": false
+        },
+        {
+          "id": "item-43",
+          "text": "完成一个 AI 产品 MVP",
+          "completed": false
+        },
+        {
+          "id": "item-44",
+          "text": "建立个人 AI 产品作品集",
+          "completed": false
+        }
+      ]
+    }
+  ],
+  "glossary": [
+    {
+      "term": "Transformer",
+      "definition": "基于自注意力机制的神经网络架构"
+    },
+    {
+      "term": "Attention",
+      "definition": "注意力机制，计算序列中元素间的相关性"
+    },
+    {
+      "term": "LLM",
+      "definition": "大语言模型"
+    },
+    {
+      "term": "RLHF",
+      "definition": "基于人类反馈的强化学习"
+    },
+    {
+      "term": "DPO",
+      "definition": "直接偏好优化"
+    },
+    {
+      "term": "RAG",
+      "definition": "检索增强生成"
+    },
+    {
+      "term": "CoT",
+      "definition": "思维链"
+    },
+    {
+      "term": "Agent",
+      "definition": "能自主规划和执行任务的 AI 系统"
+    },
+    {
+      "term": "Token",
+      "definition": "模型处理文本的最小单位"
+    },
+    {
+      "term": "Embedding",
+      "definition": "将文本映射为向量表示"
+    },
+    {
+      "term": "Fine-tuning",
+      "definition": "在预训练模型基础上用特定数据继续训练"
+    },
+    {
+      "term": "Prompt",
+      "definition": "给模型的输入指令或上下文"
+    },
+    {
+      "term": "MCP",
+      "definition": "模型上下文协议，用于工具调用的标准接口"
+    },
+    {
+      "term": "Tool Calling",
+      "definition": "模型调用外部工具的能力"
+    },
+    {
+      "term": "MoE",
+      "definition": "混合专家模型，通过稀疏激活提升效率"
+    },
+    {
+      "term": "Evals",
+      "definition": "AI 应用评测，评估模型性能的方法"
+    }
+  ]
+}

@@ -8,7 +8,7 @@ import exam from '../data/exam.json'
 const categories = [
   {
     title: '学习路线',
-    description: `从基础认知到 AI 产品的 ${knowledge.stages.length} 阶段学习路径 + 术语表`,
+    description: `从 AI 认知到产品落地的 ${knowledge.stages.length} 阶段学习路径 + 术语表`,
     count: `${knowledge.stages.length} 个学习阶段`,
     route: '/knowledge',
     icon: 'route',
