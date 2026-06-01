@@ -87,7 +87,7 @@ def parse_learning_path(filepath: Path) -> list:
 
     for line in text.split("\n"):
         line = line.strip()
-        if line.startswith("## 第"):
+        if line.startswith("## ") and not line.startswith("## 横向") and not line.startswith("## 项目"):
             if current_stage:
                 stages.append(current_stage)
             name = line.lstrip("# ").strip()
@@ -98,9 +98,20 @@ def parse_learning_path(filepath: Path) -> list:
                 "order": order,
                 "items": [],
             }
-        elif line.startswith("- [ ] ") and current_stage:
+        elif line.startswith("## 横向") or line.startswith("## 项目"):
+            if current_stage:
+                stages.append(current_stage)
+            name = line.lstrip("# ").strip()
+            order = len(stages) + 1
+            current_stage = {
+                "id": f"horizontal-{order}",
+                "name": name,
+                "order": order,
+                "items": [],
+            }
+        elif (line.startswith("- [ ] ") or line.startswith("* [ ] ")) and current_stage:
             item_id += 1
-            text_content = line.lstrip("- [ ] ").strip()
+            text_content = line.lstrip("- * ").lstrip("[ ] ").strip()
             current_stage["items"].append({
                 "id": f"item-{item_id}",
                 "text": text_content,
