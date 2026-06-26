@@ -41,6 +41,14 @@ export interface AgentResource {
   description: string
 }
 
+export interface Product {
+  id: string
+  title: string
+  description: string
+  tag?: string
+  link?: string
+}
+
 export interface SearchItem {
   id: string
   title: string

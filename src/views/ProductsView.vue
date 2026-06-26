@@ -1,36 +1,5 @@
 <script setup lang="ts">
-interface Product { id: string; title: string; description: string; tag?: string; link?: string }
-
-const products: Product[] = [
-  {
-    id: 'bianzhou-wangshi',
-    title: '汴州往事',
-    description: '隋末汴州，信息掮客顾衡以为自己在收割，却不知早已是别人棋盘上的棋子。',
-    tag: '武侠小说',
-    link: 'https://yihan1944.github.io/bianzhou-wangshi/index.html'
-  },
-  {
-    id: 'sanguo-renwu',
-    title: '三国人物',
-    description: '探讨三国人物如何在乱世中生存的历史人物随笔。',
-    tag: '历史随笔',
-    link: 'https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MjM5MjU1NTk0OQ==&action=getalbum&album_id=4448591694527234049'
-  },
-  {
-    id: 'dream-diary',
-    title: '梦境笔记',
-    description: '记录梦境，分析梦境，接入 DeepSeek 解构、分析梦境。',
-    tag: '梦境分析',
-    link: 'https://dream-diary-virid.vercel.app/'
-  },
-  {
-    id: 'dream-cli',
-    title: '梦境分析CLI',
-    description: '命令行梦境分析工具，通过 AI 解析你的梦境，支持多种分析风格。',
-    tag: 'CLI工具',
-    link: 'https://github.com/yihan1944/dream-cli'
-  }
-]
+import products from '../data/products.json'
 </script>
 
 <template>
