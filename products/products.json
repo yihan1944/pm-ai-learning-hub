@@ -40,5 +40,12 @@
     "description": "能生成商务风格的 PPT，真审美在线。",
     "tag": "PPT工具",
     "link": "https://github.com/yihan1944/ppt-cc"
+  },
+  {
+    "id": "weibo-cloud-wangshi",
+    "title": "weibo云端往事",
+    "description": "Chrome 浏览器插件，用于将微博推文下载为 Markdown 或 HTML 格式（可打印为 PDF）。",
+    "tag": "浏览器插件",
+    "link": "https://github.com/yihan1944/get-weibos"
   }
 ]
