@@ -53,6 +53,14 @@ const cards = [
     description: 'AI 产品经理岗位高频面试题，含答题方向与思路指引',
     tag: `共 ${exam.length} 道`,
   },
+  {
+    route: '',
+    icon: 'pen',
+    color: 'purple',
+    title: '我的想法',
+    description: 'AI 产品灵感、思考笔记和创意收集',
+    tag: '占坑中',
+  },
 ]
 
 onMounted(() => {
@@ -108,12 +116,12 @@ onMounted(() => {
       </div>
 
       <div class="cards-grid">
-        <router-link
-          v-for="card in cards"
-          :key="card.route"
-          :to="card.route"
-          class="card fade-in"
-        >
+        <template v-for="card in cards" :key="card.route || card.title">
+          <router-link
+            v-if="card.route"
+            :to="card.route"
+            class="card fade-in"
+          >
           <div class="card-icon" :class="card.color">
             <!-- route -->
             <svg v-if="card.icon === 'route'" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg>
@@ -125,6 +133,8 @@ onMounted(() => {
             <svg v-else-if="card.icon === 'bot'" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg>
             <!-- smile (exam) -->
             <svg v-else-if="card.icon === 'smile'" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" x2="9.01" y1="9" y2="9"/><line x1="15" x2="15.01" y1="9" y2="9"/></svg>
+            <!-- pen -->
+            <svg v-else-if="card.icon === 'pen'" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/></svg>
           </div>
           <div class="card-body">
             <h3>{{ card.title }}</h3>
@@ -135,27 +145,19 @@ onMounted(() => {
             <div class="card-arrow">↗</div>
           </div>
         </router-link>
-      </div>
-    </section>
-
-    <!-- Thoughts -->
-    <section class="thoughts-section">
-      <div class="section-header">
-        <h2>我的想法</h2>
-        <div class="line"></div>
-      </div>
-
-      <div class="thoughts-card fade-in">
-        <div class="thoughts-content">
-          <p>
-            AI 不只是一个技术浪潮，它正在重新定义「产品经理」这个角色的边界。
-            从 Prompt 工程到 Agent 架构，从论文理解到产品落地——PM 需要建立一套全新的认知框架。
-          </p>
-          <p>
-            这个站点记录我的学习路径：读过的论文、做过的产品思考、踩过的坑。
-            不追求大而全，只记录真正有收获的内容。希望对你也有帮助。
-          </p>
+        <div v-else class="card fade-in placeholder">
+          <div class="card-icon" :class="card.color">
+            <svg v-if="card.icon === 'pen'" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/></svg>
+          </div>
+          <div class="card-body">
+            <h3>{{ card.title }}</h3>
+            <p>{{ card.description }}</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-tag placeholder-tag">{{ card.tag }}</span>
+          </div>
         </div>
+        </template>
       </div>
     </section>
   </div>
@@ -449,43 +451,23 @@ onMounted(() => {
   transform: translate(2px, -2px);
 }
 
-/* ── Thoughts ── */
-.thoughts-section {
-  padding-bottom: 80px;
+/* ── Placeholder card ── */
+.card.placeholder {
+  border-style: dashed;
+  opacity: 0.6;
+  cursor: default;
 }
 
-.thoughts-card {
+.card.placeholder:hover {
+  transform: none;
+  box-shadow: none;
   background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: 36px;
-  position: relative;
-  overflow: hidden;
+  border-color: var(--color-border);
 }
 
-.thoughts-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: var(--gradient-main);
-  opacity: 0.5;
-}
-
-.thoughts-content {
-  font-size: 0.95rem;
-  color: var(--color-text-secondary);
-  line-height: 1.8;
-}
-
-.thoughts-content p {
-  margin-bottom: 12px;
-}
-
-.thoughts-content p:last-child {
-  margin-bottom: 0;
+.placeholder-tag {
+  background: rgba(148, 163, 184, 0.1);
+  color: var(--color-text-muted);
 }
 
 /* ── Responsive ── */
@@ -493,6 +475,5 @@ onMounted(() => {
   .hero { padding-top: 40px; padding-bottom: 40px; }
   .hero-stats { gap: 32px; }
   .cards-grid { grid-template-columns: 1fr; }
-  .thoughts-card { padding: 24px; }
 }
 </style>
