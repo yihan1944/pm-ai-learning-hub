@@ -20,10 +20,8 @@ marked.setOptions({
 const paper = computed(() => {
   const p = papers.find(p => p.id === route.params.id)
   if (!p) return null
-  // Decode HTML entities then render markdown
   const decoded = decodeHtml(p.contentHtml)
   let html = marked.parse(decoded) as string
-  // Add IDs to h2/h3 for TOC navigation
   let counter = 0
   html = html.replace(/<h([23])([^>]*)>(.*?)<\/h\1>/gi, (_, tag, attrs, text) => {
     const id = `section-${counter++}`
@@ -135,7 +133,11 @@ function scrollTo(id: string) {
 }
 
 .breadcrumb a {
-  color: var(--color-primary);
+  color: #818cf8;
+}
+
+.breadcrumb a:hover {
+  color: #a5b4fc;
 }
 
 .sep {
@@ -176,16 +178,16 @@ function scrollTo(id: string) {
 }
 
 .toc li {
-  margin-bottom: 0.3rem;
+  margin-bottom: 3px;
 }
 
 .toc li a {
   display: block;
-  padding: 0.3em 0.6em;
+  padding: 5px 10px;
   border-radius: 6px;
   color: var(--color-text-muted);
   text-decoration: none;
-  transition: background 0.15s, color 0.15s;
+  transition: all 0.15s;
   line-height: 1.4;
 }
 
@@ -196,11 +198,11 @@ function scrollTo(id: string) {
 
 .toc li.active a {
   background: rgba(99, 102, 241, 0.1);
-  color: var(--color-primary-hover);
+  color: #818cf8;
 }
 
 .toc li.sub a {
-  padding-left: 1.2em;
+  padding-left: 1.5em;
   font-size: 0.78rem;
 }
 
@@ -216,16 +218,17 @@ function scrollTo(id: string) {
 }
 
 .paper-header h1 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 700;
   line-height: 1.4;
-  margin-bottom: 0.75rem;
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
 }
 
 .paper-meta {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 8px;
   flex-wrap: wrap;
 }
 
@@ -233,31 +236,31 @@ function scrollTo(id: string) {
   display: inline-flex;
   align-items: center;
   gap: 0.3em;
-  padding: 0.25em 0.7em;
-  border-radius: 99px;
-  font-size: 0.8rem;
+  padding: 4px 12px;
+  border-radius: 100px;
+  font-size: 0.78rem;
   font-weight: 500;
 }
 
 .meta-badge.year {
   background: rgba(99, 102, 241, 0.12);
-  color: var(--color-primary-hover);
+  color: #818cf8;
 }
 
 .meta-badge.venue {
-  background: rgba(148, 163, 184, 0.1);
+  background: rgba(255, 255, 255, 0.04);
   color: var(--color-text-muted);
 }
 
 .meta-badge.link {
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.04);
   color: var(--color-text-muted);
   text-decoration: none;
-  transition: background 0.15s, color 0.15s;
+  transition: all 0.15s;
 }
 
 .meta-badge.link:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.08);
   color: var(--color-text);
 }
 
@@ -276,7 +279,7 @@ function scrollTo(id: string) {
   }
 }
 
-/* Prose overrides for paper detail */
+/* Prose overrides */
 .paper-content :deep(.prose) {
   font-size: 0.95rem;
   line-height: 1.8;
@@ -286,7 +289,7 @@ function scrollTo(id: string) {
   font-size: 1.2rem;
   margin-top: 2.5em;
   padding-bottom: 0.4em;
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
   color: var(--color-text);
 }
 
@@ -297,11 +300,11 @@ function scrollTo(id: string) {
 
 .paper-content :deep(.prose blockquote) {
   background: rgba(99, 102, 241, 0.06);
-  border-left: 3px solid var(--color-primary);
+  border-left: 3px solid #6366f1;
   padding: 0.8em 1em;
   border-radius: 0 8px 8px 0;
   margin: 1.2em 0;
-  color: var(--color-text-muted);
+  color: var(--color-text-secondary);
   font-style: normal;
 }
 
@@ -331,7 +334,7 @@ function scrollTo(id: string) {
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: var(--color-primary);
+  background: #6366f1;
   opacity: 0.5;
 }
 
@@ -342,7 +345,7 @@ function scrollTo(id: string) {
 
 .paper-content :deep(.prose code) {
   background: rgba(99, 102, 241, 0.1);
-  color: var(--color-primary-hover);
+  color: #818cf8;
   padding: 0.15em 0.4em;
   border-radius: 4px;
   font-size: 0.88em;

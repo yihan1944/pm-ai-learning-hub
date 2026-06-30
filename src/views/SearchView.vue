@@ -14,14 +14,27 @@ const typeLabels: Record<string, string> = {
   product: '产品',
   exam: '面试题',
 }
+
+const typeColors: Record<string, string> = {
+  paper: 'purple',
+  knowledge: 'blue',
+  agent: 'green',
+  product: 'cyan',
+  exam: 'rose',
+}
 </script>
 
 <template>
   <div class="search-page">
-    <h1>搜索</h1>
-    <p class="subtitle">在所有内容中搜索</p>
+    <div class="page-header">
+      <h1>搜索</h1>
+      <p class="subtitle">在所有内容中搜索</p>
+    </div>
 
     <div class="search-box">
+      <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+      </svg>
       <input
         v-model="query"
         type="text"
@@ -42,8 +55,10 @@ const typeLabels: Record<string, string> = {
         :to="item.route"
         class="result-card"
       >
-        <span class="result-type">{{ typeLabels[item.type] || item.type }}</span>
-        <span class="result-cat">{{ item.category }}</span>
+        <div class="result-header">
+          <span class="result-type" :class="typeColors[item.type]">{{ typeLabels[item.type] || item.type }}</span>
+          <span class="result-cat">{{ item.category }}</span>
+        </div>
         <h3>{{ item.title }}</h3>
         <p>{{ item.text.slice(0, 120) }}...</p>
       </router-link>
@@ -52,25 +67,51 @@ const typeLabels: Record<string, string> = {
 </template>
 
 <style scoped>
+.page-header {
+  margin-bottom: 2rem;
+}
+
+.page-header h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.4rem;
+}
+
 .subtitle {
-  color: var(--color-text-muted);
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+}
+
+.search-box {
+  position: relative;
   margin-bottom: 1.5rem;
+}
+
+.search-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-text-muted);
+  pointer-events: none;
 }
 
 .search-box input {
   width: 100%;
-  padding: 0.75rem 1rem;
+  padding: 14px 16px 14px 44px;
   background: var(--color-surface);
   border: 1px solid var(--color-border);
-  border-radius: var(--radius);
+  border-radius: var(--radius-lg);
   color: var(--color-text);
   font-size: 1rem;
   outline: none;
-  transition: border-color 0.2s;
+  transition: all 0.25s;
 }
 
 .search-box input:focus {
-  border-color: var(--color-primary);
+  border-color: rgba(99, 102, 241, 0.4);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
 }
 
 .search-box input::placeholder {
@@ -79,7 +120,7 @@ const typeLabels: Record<string, string> = {
 
 .empty {
   text-align: center;
-  padding: 2rem 0;
+  padding: 3rem 0;
   color: var(--color-text-muted);
 }
 
@@ -88,9 +129,9 @@ const typeLabels: Record<string, string> = {
 }
 
 .results-count {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: var(--color-text-muted);
-  margin-bottom: 1rem;
+  margin-bottom: 12px;
 }
 
 .result-card {
@@ -98,25 +139,41 @@ const typeLabels: Record<string, string> = {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
-  padding: 1rem;
-  margin-bottom: 0.5rem;
-  transition: border-color 0.2s;
+  padding: 16px 20px;
+  margin-bottom: 8px;
+  transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   color: var(--color-text);
+  text-decoration: none;
 }
 
 .result-card:hover {
-  border-color: var(--color-primary);
+  border-color: var(--color-border-hover);
+  background: var(--color-surface-hover);
+  transform: translateX(4px);
   color: var(--color-text);
 }
 
-.result-type {
-  font-size: 0.75rem;
-  background: var(--color-primary);
-  color: #fff;
-  padding: 0.1em 0.5em;
-  border-radius: 4px;
-  margin-right: 0.5rem;
+.result-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
 }
+
+.result-type {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.result-type.blue { background: rgba(99, 102, 241, 0.12); color: #818cf8; }
+.result-type.purple { background: rgba(168, 85, 247, 0.12); color: #c084fc; }
+.result-type.cyan { background: rgba(6, 182, 212, 0.12); color: #22d3ee; }
+.result-type.green { background: rgba(16, 185, 129, 0.12); color: #34d399; }
+.result-type.rose { background: rgba(244, 63, 94, 0.12); color: #fb7185; }
 
 .result-cat {
   font-size: 0.75rem;
@@ -125,12 +182,13 @@ const typeLabels: Record<string, string> = {
 
 .result-card h3 {
   font-size: 0.95rem;
-  margin: 0.4em 0 0.2em;
+  font-weight: 600;
+  margin-bottom: 4px;
 }
 
 .result-card p {
   font-size: 0.85rem;
-  color: var(--color-text-muted);
-  line-height: 1.4;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
 }
 </style>

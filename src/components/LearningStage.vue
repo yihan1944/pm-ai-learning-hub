@@ -49,29 +49,37 @@ function completedCount() {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   overflow: hidden;
+  transition: all 0.25s;
+}
+
+.stage-card:hover {
+  border-color: var(--color-border-hover);
 }
 
 .stage-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 1.25rem;
+  padding: 14px 18px;
   cursor: pointer;
   user-select: none;
 }
 
 .stage-header h3 {
   font-size: 1.05rem;
+  font-weight: 600;
 }
 
 .progress-text {
   font-size: 0.8rem;
   color: var(--color-text-muted);
+  margin-top: 2px;
 }
 
 .expand-icon {
   transition: transform 0.2s;
   color: var(--color-text-muted);
+  font-size: 0.9rem;
 }
 
 .expand-icon.expanded {
@@ -80,25 +88,25 @@ function completedCount() {
 
 .progress-bar {
   height: 3px;
-  background: var(--color-border);
+  background: rgba(255, 255, 255, 0.04);
 }
 
 .progress-fill {
   height: 100%;
-  background: var(--color-success);
+  background: #10b981;
   transition: width 0.3s;
 }
 
 .items {
   list-style: none;
-  padding: 0.5rem 1.25rem 1rem;
+  padding: 8px 18px 14px;
 }
 
 .items li {
   display: flex;
   align-items: center;
   gap: 0.6em;
-  padding: 0.4em 0;
+  padding: 6px 0;
   cursor: pointer;
   font-size: 0.95rem;
   transition: color 0.2s;

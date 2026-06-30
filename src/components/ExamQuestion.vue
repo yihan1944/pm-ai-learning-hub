@@ -25,26 +25,27 @@ const revealed = ref(false)
   border-radius: var(--radius);
   overflow: hidden;
   cursor: pointer;
-  transition: border-color 0.2s;
+  transition: all 0.25s;
 }
 
 .exam-card:hover {
-  border-color: var(--color-primary);
+  border-color: var(--color-border-hover);
+  background: var(--color-surface-hover);
 }
 
 .question-row {
   display: flex;
   align-items: flex-start;
-  gap: 0.75rem;
-  padding: 1rem;
+  gap: 12px;
+  padding: 14px 18px;
 }
 
 .q-icon {
-  background: var(--color-primary);
+  background: #6366f1;
   color: #fff;
-  width: 24px;
-  height: 24px;
-  border-radius: 4px;
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -63,14 +64,19 @@ const revealed = ref(false)
   color: var(--color-text-muted);
   font-size: 1.2rem;
   flex-shrink: 0;
+  transition: color 0.2s;
+}
+
+.exam-card:hover .toggle-icon {
+  color: var(--color-text-secondary);
 }
 
 .answer {
-  padding: 0 1rem 1rem;
-  padding-left: calc(1rem + 24px + 0.75rem);
-  color: var(--color-text-muted);
+  padding: 0 18px 14px;
+  padding-left: calc(18px + 26px + 12px);
+  color: var(--color-text-secondary);
   font-size: 0.9rem;
-  line-height: 1.6;
-  border-top: 1px solid var(--color-border);
+  line-height: 1.7;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
 }
 </style>
