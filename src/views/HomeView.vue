@@ -154,7 +154,7 @@ onMounted(() => {
             <p>{{ card.description }}</p>
           </div>
           <div class="card-footer">
-            <span class="card-tag placeholder-tag">{{ card.tag }}</span>
+            <span class="card-tag">{{ card.tag }}</span>
           </div>
         </div>
         </template>
@@ -453,21 +453,12 @@ onMounted(() => {
 
 /* ── Placeholder card ── */
 .card.placeholder {
-  border-style: dashed;
-  opacity: 0.6;
   cursor: default;
 }
 
 .card.placeholder:hover {
   transform: none;
   box-shadow: none;
-  background: var(--color-surface);
-  border-color: var(--color-border);
-}
-
-.placeholder-tag {
-  background: rgba(148, 163, 184, 0.1);
-  color: var(--color-text-muted);
 }
 
 /* ── Responsive ── */
