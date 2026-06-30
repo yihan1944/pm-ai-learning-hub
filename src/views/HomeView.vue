@@ -20,7 +20,6 @@ const cards = [
     title: '学习路线',
     description: `从 AI 认知到产品落地的 ${knowledge.stages.length} 阶段系统化学习路径，含术语表与进阶指引`,
     tag: `${knowledge.stages.length} 个学习阶段`,
-    wide: true,
   },
   {
     route: '/papers',
@@ -114,7 +113,6 @@ onMounted(() => {
           :key="card.route"
           :to="card.route"
           class="card fade-in"
-          :class="{ wide: card.wide }"
         >
           <div class="card-icon" :class="card.color">
             <!-- route -->
@@ -451,25 +449,6 @@ onMounted(() => {
   transform: translate(2px, -2px);
 }
 
-/* Wide card */
-.card.wide {
-  grid-column: 1 / -1;
-  flex-direction: row;
-  align-items: center;
-  gap: 32px;
-  padding: 32px 36px;
-}
-
-.card.wide .card-icon {
-  width: 56px;
-  height: 56px;
-  flex-shrink: 0;
-}
-
-.card.wide .card-body h3 {
-  font-size: 1.25rem;
-}
-
 /* ── Thoughts ── */
 .thoughts-section {
   padding-bottom: 80px;
@@ -514,7 +493,6 @@ onMounted(() => {
   .hero { padding-top: 40px; padding-bottom: 40px; }
   .hero-stats { gap: 32px; }
   .cards-grid { grid-template-columns: 1fr; }
-  .card.wide { flex-direction: column; gap: 20px; }
   .thoughts-card { padding: 24px; }
 }
 </style>
