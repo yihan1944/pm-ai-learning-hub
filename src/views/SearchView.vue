@@ -110,8 +110,8 @@ const typeColors: Record<string, string> = {
 }
 
 .search-box input:focus {
-  border-color: rgba(99, 102, 241, 0.4);
-  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(201, 87, 62, 0.1);
 }
 
 .search-box input::placeholder {
@@ -169,11 +169,11 @@ const typeColors: Record<string, string> = {
   letter-spacing: 0.03em;
 }
 
-.result-type.blue { background: rgba(99, 102, 241, 0.12); color: #818cf8; }
-.result-type.purple { background: rgba(168, 85, 247, 0.12); color: #c084fc; }
-.result-type.cyan { background: rgba(6, 182, 212, 0.12); color: #22d3ee; }
-.result-type.green { background: rgba(16, 185, 129, 0.12); color: #34d399; }
-.result-type.rose { background: rgba(244, 63, 94, 0.12); color: #fb7185; }
+.result-type.blue { background: rgba(0, 0, 0, 0.06); color: var(--color-text-secondary); }
+.result-type.purple { background: rgba(0, 0, 0, 0.06); color: var(--color-text-secondary); }
+.result-type.cyan { background: rgba(0, 0, 0, 0.06); color: var(--color-text-secondary); }
+.result-type.green { background: rgba(0, 0, 0, 0.06); color: var(--color-text-secondary); }
+.result-type.rose { background: rgba(0, 0, 0, 0.06); color: var(--color-text-secondary); }
 
 .result-cat {
   font-size: 0.75rem;

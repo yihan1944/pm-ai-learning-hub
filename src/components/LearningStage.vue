@@ -88,12 +88,12 @@ function completedCount() {
 
 .progress-bar {
   height: 3px;
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(0, 0, 0, 0.06);
 }
 
 .progress-fill {
   height: 100%;
-  background: #10b981;
+  background: var(--color-primary);
   transition: width 0.3s;
 }
 

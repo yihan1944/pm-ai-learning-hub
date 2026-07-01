@@ -17,7 +17,7 @@ import NavBar from './components/NavBar.vue'
 .site-footer {
   text-align: center;
   padding: 24px 0 40px;
-  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  border-top: 1px solid var(--color-border);
   font-size: 0.8rem;
   color: var(--color-text-muted);
 }
@@ -29,6 +29,6 @@ import NavBar from './components/NavBar.vue'
 }
 
 .site-footer a:hover {
-  color: #6366f1;
+  color: var(--color-primary);
 }
 </style>

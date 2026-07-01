@@ -84,7 +84,7 @@ import products from '../data/products.json'
   inset: 0;
   border-radius: var(--radius-lg);
   padding: 1px;
-  background: linear-gradient(135deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+  background: linear-gradient(135deg, transparent, rgba(255, 255, 255, 0.3), transparent);
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask-composite: exclude;
   -webkit-mask-composite: xor;
@@ -96,8 +96,8 @@ import products from '../data/products.json'
 .product-card:hover {
   background: var(--color-surface-hover);
   border-color: var(--color-border-hover);
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-glow);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
   color: inherit;
 }
 
@@ -127,7 +127,7 @@ import products from '../data/products.json'
   justify-content: space-between;
   margin-top: 16px;
   padding-top: 12px;
-  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  border-top: 1px solid var(--color-border);
 }
 
 .tag {
@@ -135,7 +135,7 @@ import products from '../data/products.json'
   font-weight: 500;
   padding: 3px 10px;
   border-radius: 100px;
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(0, 0, 0, 0.04);
   color: var(--color-text-muted);
 }
 
@@ -143,7 +143,7 @@ import products from '../data/products.json'
   width: 28px;
   height: 28px;
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(0, 0, 0, 0.04);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -153,7 +153,7 @@ import products from '../data/products.json'
 }
 
 .product-card:hover .card-arrow {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.08);
   color: var(--color-text);
   transform: translate(2px, -2px);
 }

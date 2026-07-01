@@ -12,6 +12,29 @@ const stats = [
   { num: products.length, label: '产品案例' },
 ]
 
+// 生成球面上的点
+function generateSpherePoints(count: number, radius: number) {
+  const points: { x: number; y: number; z: number; size: number; opacity: number }[] = []
+  const goldenAngle = Math.PI * (3 - Math.sqrt(5))
+
+  for (let i = 0; i < count; i++) {
+    const y = 1 - (i / (count - 1)) * 2
+    const radiusAtY = Math.sqrt(1 - y * y)
+    const theta = goldenAngle * i
+
+    points.push({
+      x: Math.cos(theta) * radiusAtY * radius,
+      y: y * radius,
+      z: Math.sin(theta) * radiusAtY * radius,
+      size: 3 + Math.random() * 3.5,
+      opacity: 0.6 + Math.random() * 0.4,
+    })
+  }
+  return points
+}
+
+const spherePoints = generateSpherePoints(250, 160)
+
 const cards = [
   {
     route: '/knowledge',
@@ -81,29 +104,32 @@ onMounted(() => {
 
 <template>
   <div class="home">
-    <!-- Background effects -->
-    <div class="bg-grid"></div>
-    <div class="orb orb-1"></div>
-    <div class="orb orb-2"></div>
-    <div class="orb orb-3"></div>
-
-    <!-- Hero -->
+    <!-- Hero — Minimalist: left text + right rotating sphere -->
     <section class="hero">
-      <div class="hero-badge">
-        <span class="hero-badge-dot">✦</span>
-        AI 产品经理学习平台
+      <div class="hero-left">
+        <h1>
+          Keep Learning.<br>
+          Keep Building.
+        </h1>
+        <p class="hero-subtitle">
+          AI 产品经理的学习与实践笔记。
+        </p>
       </div>
-      <h1>
-        <span class="gradient-text">PM AI</span> Learning Hub
-      </h1>
-      <p class="hero-subtitle">
-        从 AI 认知到产品落地，系统化学习路径。<br>
-        覆盖论文精读、产品思维、Agent 实践与面试准备。
-      </p>
-      <div class="hero-stats">
-        <div v-for="s in stats" :key="s.label" class="hero-stat">
-          <div class="hero-stat-num">{{ s.num }}</div>
-          <div class="hero-stat-label">{{ s.label }}</div>
+      <div class="hero-right">
+        <div class="sphere-container">
+          <div class="sphere" :style="{ transform: `rotateY(${0}deg) rotateX(${15}deg)` }">
+            <div
+              v-for="(point, i) in spherePoints"
+              :key="i"
+              class="sphere-point"
+              :style="{
+                transform: `translate3d(${point.x}px, ${point.y}px, ${point.z}px)`,
+                width: `${point.size}px`,
+                height: `${point.size}px`,
+                opacity: point.opacity,
+              }"
+            ></div>
+          </div>
         </div>
       </div>
     </section>
@@ -122,181 +148,112 @@ onMounted(() => {
             :to="card.route"
             class="card fade-in"
           >
-          <div class="card-icon" :class="card.color">
-            <!-- route -->
-            <svg v-if="card.icon === 'route'" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg>
-            <!-- book -->
-            <svg v-else-if="card.icon === 'book'" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
-            <!-- grid -->
-            <svg v-else-if="card.icon === 'grid'" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
-            <!-- bot -->
-            <svg v-else-if="card.icon === 'bot'" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg>
-            <!-- smile (exam) -->
-            <svg v-else-if="card.icon === 'smile'" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" x2="9.01" y1="9" y2="9"/><line x1="15" x2="15.01" y1="9" y2="9"/></svg>
-            <!-- pen -->
-            <svg v-else-if="card.icon === 'pen'" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/></svg>
+            <div class="card-body">
+              <h3>{{ card.title }}</h3>
+              <p>{{ card.description }}</p>
+            </div>
+            <div class="card-footer">
+              <span class="card-tag">{{ card.tag }}</span>
+              <span class="link-arrow">→</span>
+            </div>
+          </router-link>
+          <div v-else class="card fade-in placeholder">
+            <div class="card-body">
+              <h3>{{ card.title }}</h3>
+              <p>{{ card.description }}</p>
+            </div>
+            <div class="card-footer">
+              <span class="card-tag">{{ card.tag }}</span>
+            </div>
           </div>
-          <div class="card-body">
-            <h3>{{ card.title }}</h3>
-            <p>{{ card.description }}</p>
-          </div>
-          <div class="card-footer">
-            <span class="card-tag">{{ card.tag }}</span>
-            <div class="card-arrow">↗</div>
-          </div>
-        </router-link>
-        <div v-else class="card fade-in placeholder">
-          <div class="card-icon" :class="card.color">
-            <svg v-if="card.icon === 'pen'" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/></svg>
-          </div>
-          <div class="card-body">
-            <h3>{{ card.title }}</h3>
-            <p>{{ card.description }}</p>
-          </div>
-          <div class="card-footer">
-            <span class="card-tag">{{ card.tag }}</span>
-          </div>
-        </div>
         </template>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats-section fade-in">
+      <div class="stats-grid">
+        <div v-for="s in stats" :key="s.label" class="stat-item">
+          <div class="stat-num">{{ s.num }}</div>
+          <div class="stat-label">{{ s.label }}</div>
+        </div>
       </div>
     </section>
   </div>
 </template>
 
 <style scoped>
-/* ── Background ── */
+/* ── Home ── */
 .home {
-  position: relative;
+  padding-top: 20px;
 }
 
-.bg-grid {
-  position: fixed;
-  inset: 0;
-  z-index: -2;
-  background-image:
-    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(99, 102, 241, 0.12), transparent),
-    radial-gradient(ellipse 60% 40% at 80% 60%, rgba(168, 85, 247, 0.06), transparent),
-    radial-gradient(ellipse 50% 30% at 20% 80%, rgba(6, 182, 212, 0.06), transparent);
-  pointer-events: none;
-}
-
-.bg-grid::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
-  background-size: 60px 60px;
-  mask-image: radial-gradient(ellipse 70% 60% at 50% 30%, black, transparent);
-}
-
-.orb {
-  position: fixed;
-  border-radius: 50%;
-  filter: blur(80px);
-  opacity: 0.4;
-  pointer-events: none;
-  z-index: -1;
-  animation: float 20s ease-in-out infinite;
-}
-
-.orb-1 { width: 400px; height: 400px; background: #6366f1; top: -100px; left: -100px; animation-delay: 0s; }
-.orb-2 { width: 350px; height: 350px; background: #a855f7; top: 50%; right: -80px; animation-delay: -7s; }
-.orb-3 { width: 300px; height: 300px; background: #06b6d4; bottom: -50px; left: 30%; animation-delay: -14s; }
-
-@keyframes float {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  33% { transform: translate(30px, -20px) scale(1.05); }
-  66% { transform: translate(-20px, 15px) scale(0.95); }
-}
-
-/* ── Hero ── */
+/* ── Hero — Minimalist ── */
 .hero {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  text-align: center;
-}
-
-.hero-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 6px 16px 6px 8px;
-  border-radius: 100px;
-  background: rgba(99, 102, 241, 0.08);
-  border: 1px solid rgba(99, 102, 241, 0.15);
-  font-size: 0.8rem;
-  color: #818cf8;
-  font-weight: 500;
-  margin-bottom: 28px;
-  animation: fadeInUp 0.6s ease-out;
-}
-
-.hero-badge-dot {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: #6366f1;
   display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: 0.65rem;
+  gap: 24px;
+  padding: 100px 0 60px;
+  min-height: calc(100vh - var(--nav-height) - 100px);
 }
 
-.hero h1 {
-  font-size: clamp(2.5rem, 5vw, 3.8rem);
+.hero-left {
+  flex: 1;
+}
+
+.hero-left h1 {
+  font-size: clamp(2.2rem, 4.5vw, 3.4rem);
   font-weight: 800;
   line-height: 1.15;
   letter-spacing: -0.03em;
-  margin-bottom: 18px;
-  animation: fadeInUp 0.6s ease-out 0.1s both;
-}
-
-.gradient-text {
-  background: var(--gradient-main);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--color-text);
+  margin-bottom: 20px;
 }
 
 .hero-subtitle {
   font-size: 1.1rem;
   color: var(--color-text-secondary);
-  max-width: 560px;
-  margin: 0 auto 40px;
-  line-height: 1.7;
-  font-weight: 400;
-  animation: fadeInUp 0.6s ease-out 0.2s both;
+  line-height: 1.75;
+  max-width: 400px;
+  margin-bottom: 32px;
 }
 
-.hero-stats {
+.hero-right {
+  flex: 1;
+  height: 100%;
   display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 48px;
-  animation: fadeInUp 0.6s ease-out 0.3s both;
 }
 
-.hero-stat {
-  text-align: center;
+/* ── Rotating Sphere ── */
+.sphere-container {
+  width: 380px;
+  height: 380px;
+  perspective: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.hero-stat-num {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: var(--color-text);
-  letter-spacing: -0.02em;
+.sphere {
+  position: relative;
+  width: 0;
+  height: 0;
+  transform-style: preserve-3d;
+  animation: rotateSphere 20s linear infinite;
 }
 
-.hero-stat-label {
-  font-size: 0.8rem;
-  color: var(--color-text-muted);
-  margin-top: 4px;
+@keyframes rotateSphere {
+  from { transform: rotateY(0deg) rotateX(15deg); }
+  to { transform: rotateY(360deg) rotateX(15deg); }
 }
 
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+.sphere-point {
+  position: absolute;
+  background: var(--color-primary);
+  border-radius: 50%;
+  transform-origin: center center;
 }
 
 /* ── Section header ── */
@@ -304,19 +261,21 @@ onMounted(() => {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 28px;
+  margin-bottom: 24px;
 }
 
 .section-header h2 {
-  font-size: 1.35rem;
+  font-size: 1.3rem;
   font-weight: 700;
   letter-spacing: -0.02em;
+  color: var(--color-text);
+  flex-shrink: 0;
 }
 
 .section-header .line {
   flex: 1;
   height: 1px;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.08), transparent);
+  background: var(--color-border);
 }
 
 /* ── Cards ── */
@@ -331,81 +290,32 @@ onMounted(() => {
 }
 
 .card {
-  position: relative;
-  background: var(--color-surface);
+  background: var(--color-card-bg);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   padding: 28px;
   text-decoration: none;
   color: inherit;
-  transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  overflow: hidden;
+  transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-.card::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: var(--radius-lg);
-  padding: 1px;
-  background: linear-gradient(135deg, transparent, rgba(255, 255, 255, 0.05), transparent);
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask-composite: exclude;
-  -webkit-mask-composite: xor;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.35s;
-}
-
 .card:hover {
   background: var(--color-surface-hover);
   border-color: var(--color-border-hover);
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-glow);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
   color: inherit;
 }
-
-.card:hover::before {
-  opacity: 1;
-}
-
-.card-icon {
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-
-.card-icon::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: 12px;
-  opacity: 0.15;
-}
-
-.card-icon.blue { background: rgba(99, 102, 241, 0.1); color: #818cf8; }
-.card-icon.blue::after { background: #6366f1; }
-.card-icon.purple { background: rgba(168, 85, 247, 0.1); color: #c084fc; }
-.card-icon.purple::after { background: #a855f7; }
-.card-icon.cyan { background: rgba(6, 182, 212, 0.1); color: #22d3ee; }
-.card-icon.cyan::after { background: #06b6d4; }
-.card-icon.green { background: rgba(16, 185, 129, 0.1); color: #34d399; }
-.card-icon.green::after { background: #10b981; }
-.card-icon.rose { background: rgba(244, 63, 94, 0.1); color: #fb7185; }
-.card-icon.rose::after { background: #f43f5e; }
 
 .card-body h3 {
   font-size: 1.1rem;
   font-weight: 600;
   letter-spacing: -0.01em;
   margin-bottom: 6px;
+  color: var(--color-text);
 }
 
 .card-body p {
@@ -420,7 +330,7 @@ onMounted(() => {
   justify-content: space-between;
   margin-top: auto;
   padding-top: 12px;
-  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  border-top: 1px solid var(--color-border);
 }
 
 .card-tag {
@@ -428,32 +338,14 @@ onMounted(() => {
   font-weight: 500;
   padding: 3px 10px;
   border-radius: 100px;
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(0, 0, 0, 0.04);
   color: var(--color-text-muted);
-}
-
-.card-arrow {
-  width: 28px;
-  height: 28px;
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.04);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-text-muted);
-  font-size: 0.85rem;
-  transition: all 0.25s;
-}
-
-.card:hover .card-arrow {
-  background: rgba(255, 255, 255, 0.08);
-  color: var(--color-text);
-  transform: translate(2px, -2px);
 }
 
 /* ── Placeholder card ── */
 .card.placeholder {
   cursor: default;
+  opacity: 0.6;
 }
 
 .card.placeholder:hover {
@@ -461,10 +353,65 @@ onMounted(() => {
   box-shadow: none;
 }
 
+/* ── Stats ── */
+.stats-section {
+  padding: 48px 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.stats-grid {
+  display: flex;
+  justify-content: center;
+  gap: 64px;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-num {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-text);
+  letter-spacing: -0.03em;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-top: 4px;
+  font-weight: 500;
+}
+
 /* ── Responsive ── */
 @media (max-width: 768px) {
-  .hero { padding-top: 40px; padding-bottom: 40px; }
-  .hero-stats { gap: 32px; }
-  .cards-grid { grid-template-columns: 1fr; }
+  .hero {
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 0;
+    text-align: center;
+  }
+
+  .hero-subtitle {
+    max-width: 100%;
+  }
+
+  .hero-right {
+    width: 100%;
+  }
+
+  .sphere-container {
+    width: 240px;
+    height: 240px;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-grid {
+    gap: 32px;
+    flex-wrap: wrap;
+  }
 }
 </style>

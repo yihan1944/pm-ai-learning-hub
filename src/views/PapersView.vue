@@ -83,7 +83,7 @@ const grouped = computed(() => {
 .section-header .line {
   flex: 1;
   height: 1px;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.08), transparent);
+  background: var(--color-border);
 }
 
 .category-section {
@@ -122,8 +122,8 @@ const grouped = computed(() => {
 }
 
 .paper-year {
-  background: rgba(99, 102, 241, 0.1);
-  color: #818cf8;
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--color-text-secondary);
   padding: 0.15em 0.6em;
   border-radius: 6px;
   font-size: 0.78rem;
@@ -139,7 +139,7 @@ const grouped = computed(() => {
 .arxiv-link {
   font-size: 0.78rem;
   padding: 0.2em 0.7em;
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--color-border);
   border-radius: 6px;
   color: var(--color-text-muted);
   flex-shrink: 0;
@@ -147,7 +147,7 @@ const grouped = computed(() => {
 }
 
 .arxiv-link:hover {
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(0, 0, 0, 0.04);
   color: var(--color-text);
 }
 </style>

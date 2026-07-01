@@ -74,7 +74,7 @@ import LearningStage from '../components/LearningStage.vue'
 .section-header .line {
   flex: 1;
   height: 1px;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.08), transparent);
+  background: var(--color-border);
 }
 
 .term-list {
@@ -100,7 +100,7 @@ import LearningStage from '../components/LearningStage.vue'
   font-weight: 600;
   font-size: 0.95rem;
   margin-bottom: 0.3em;
-  color: #818cf8;
+  color: var(--color-primary);
 }
 
 .term-card dd {
