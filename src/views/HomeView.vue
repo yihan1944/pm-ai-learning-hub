@@ -118,7 +118,7 @@ onMounted(() => {
       </div>
       <div class="hero-right">
         <div class="sphere-container">
-          <div class="sphere" :style="{ transform: `rotateY(${0}deg) rotateX(${15}deg)` }">
+          <div class="sphere">
             <div
               v-for="(point, i) in spherePoints"
               :key="i"
@@ -241,6 +241,8 @@ onMounted(() => {
   display: flex;
   align-items: center;
   justify-content: center;
+  opacity: 0.85;
+  animation: floatSphere 8s ease-in-out infinite;
 }
 
 .sphere {
@@ -248,8 +250,7 @@ onMounted(() => {
   width: 0;
   height: 0;
   transform-style: preserve-3d;
-  animation: rotateSphere 20s linear infinite, floatSphere 8s ease-in-out infinite;
-  opacity: 0.85;
+  animation: rotateSphere 20s linear infinite;
 }
 
 @keyframes rotateSphere {
@@ -258,8 +259,8 @@ onMounted(() => {
 }
 
 @keyframes floatSphere {
-  0%, 100% { margin-top: 0; }
-  50% { margin-top: -6px; }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
 }
 
 .sphere-point {
