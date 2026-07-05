@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<title>PM AI Learning Hub - 二维码</title>
+<style>
+  body { display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0; background: #0f0f14; font-family: system-ui, sans-serif; }
+  .card { background: #1a1a24; border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 2.5rem; text-align: center; }
+  h1 { color: #fff; font-size: 1.2rem; margin-bottom: 0.3rem; }
+  p { color: #94a3b8; font-size: 0.85rem; margin-bottom: 1.5rem; }
+  canvas { border-radius: 12px; }
+</style>
+</head>
+<body>
+<div class="card">
+  <h1>PM AI Learning Hub</h1>
+  <p>扫码访问</p>
+  <canvas id="qr"></canvas>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.4/build/qrcode.min.js"></script>
+<script>
+  QRCode.toCanvas(document.getElementById('qr'), 'https://yihan1944.github.io/pm-ai-learning-hub/#/', {
+    width: 280,
+    margin: 2,
+    color: { dark: '#ffffff', light: '#1a1a24' }
+  });
+</script>
+</body>
+</html>

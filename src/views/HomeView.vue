@@ -14,7 +14,7 @@ const stats = [
 
 // 生成球面上的点
 function generateSpherePoints(count: number, radius: number) {
-  const points: { x: number; y: number; z: number; size: number; opacity: number }[] = []
+  const points: { x: number; y: number; z: number; size: number; opacity: number; delay: number }[] = []
   const goldenAngle = Math.PI * (3 - Math.sqrt(5))
 
   for (let i = 0; i < count; i++) {
@@ -27,13 +27,14 @@ function generateSpherePoints(count: number, radius: number) {
       y: y * radius,
       z: Math.sin(theta) * radiusAtY * radius,
       size: 3 + Math.random() * 3.5,
-      opacity: 0.6 + Math.random() * 0.4,
+      opacity: 0.45 + Math.random() * 0.4,
+      delay: Math.random() * 8,
     })
   }
   return points
 }
 
-const spherePoints = generateSpherePoints(250, 160)
+const spherePoints = generateSpherePoints(250, 190)
 
 const cards = [
   {
@@ -127,12 +128,18 @@ onMounted(() => {
                 width: `${point.size}px`,
                 height: `${point.size}px`,
                 opacity: point.opacity,
+                '--twinkle-delay': point.delay,
               }"
             ></div>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- Scroll hint -->
+    <div class="scroll-hint">
+      <span class="scroll-arrow">↓</span>
+    </div>
 
     <!-- Cards -->
     <section class="cards-section">
@@ -193,8 +200,8 @@ onMounted(() => {
   display: flex;
   align-items: center;
   gap: 24px;
-  padding: 100px 0 60px;
-  min-height: calc(100vh - var(--nav-height) - 100px);
+  padding: 40px 0 24px;
+  min-height: auto;
 }
 
 .hero-left {
@@ -203,19 +210,19 @@ onMounted(() => {
 
 .hero-left h1 {
   font-size: clamp(2.2rem, 4.5vw, 3.4rem);
-  font-weight: 800;
+  font-weight: 750;
   line-height: 1.15;
   letter-spacing: -0.03em;
   color: var(--color-text);
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .hero-subtitle {
-  font-size: 1.1rem;
+  font-size: 1.125rem;
   color: var(--color-text-secondary);
-  line-height: 1.75;
+  line-height: 1.6;
   max-width: 400px;
-  margin-bottom: 32px;
+  margin-bottom: 0;
 }
 
 .hero-right {
@@ -228,8 +235,8 @@ onMounted(() => {
 
 /* ── Rotating Sphere ── */
 .sphere-container {
-  width: 380px;
-  height: 380px;
+  width: 450px;
+  height: 450px;
   perspective: 800px;
   display: flex;
   align-items: center;
@@ -241,7 +248,8 @@ onMounted(() => {
   width: 0;
   height: 0;
   transform-style: preserve-3d;
-  animation: rotateSphere 20s linear infinite;
+  animation: rotateSphere 20s linear infinite, floatSphere 8s ease-in-out infinite;
+  opacity: 0.85;
 }
 
 @keyframes rotateSphere {
@@ -249,11 +257,23 @@ onMounted(() => {
   to { transform: rotateY(360deg) rotateX(15deg); }
 }
 
+@keyframes floatSphere {
+  0%, 100% { margin-top: 0; }
+  50% { margin-top: -6px; }
+}
+
 .sphere-point {
   position: absolute;
   background: var(--color-primary);
   border-radius: 50%;
   transform-origin: center center;
+  animation: twinkle 4s ease-in-out infinite;
+  animation-delay: calc(var(--twinkle-delay, 0) * 1s);
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: inherit; }
+  50% { opacity: 0.3; }
 }
 
 /* ── Section header ── */
@@ -383,6 +403,30 @@ onMounted(() => {
   font-weight: 500;
 }
 
+/* ── Scroll hint ── */
+.scroll-hint {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 32px;
+}
+
+.scroll-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  opacity: 0.5;
+  animation: bounce 2.5s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(4px); }
+}
+
 /* ── Responsive ── */
 @media (max-width: 768px) {
   .hero {
@@ -401,8 +445,8 @@ onMounted(() => {
   }
 
   .sphere-container {
-    width: 240px;
-    height: 240px;
+    width: 280px;
+    height: 280px;
   }
 
   .cards-grid {

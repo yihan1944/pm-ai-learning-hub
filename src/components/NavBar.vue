@@ -48,7 +48,7 @@ onUnmounted(() => window.removeEventListener('scroll', onScroll))
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
         </svg>
-        <span class="search-label">搜索</span>
+        <span class="search-label">搜索文章、论文、产品…</span>
         <kbd>⌘K</kbd>
       </router-link>
     </div>
@@ -62,16 +62,16 @@ onUnmounted(() => window.removeEventListener('scroll', onScroll))
   left: 0;
   right: 0;
   height: var(--nav-height);
-  background: rgba(245, 240, 232, 0.85);
+  background: rgba(247, 243, 236, 0.85);
   backdrop-filter: blur(20px) saturate(1.2);
   -webkit-backdrop-filter: blur(20px) saturate(1.2);
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
   z-index: 100;
   transition: all 0.3s ease;
 }
 
 .navbar.scrolled {
-  background: rgba(245, 240, 232, 0.95);
+  background: rgba(247, 243, 236, 0.95);
   box-shadow: 0 1px 12px rgba(0, 0, 0, 0.06);
 }
 
@@ -88,22 +88,23 @@ onUnmounted(() => window.removeEventListener('scroll', onScroll))
 .navbar-brand {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   text-decoration: none;
   color: var(--color-text);
-  font-weight: 700;
-  font-size: 1.1rem;
+  font-weight: 600;
+  font-size: 1.05rem;
+  letter-spacing: -0.01em;
 }
 
 .brand-icon {
-  width: 32px;
-  height: 32px;
-  border-radius: 8px;
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
   background: var(--color-text);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.75rem;
+  font-size: 0.6rem;
   font-weight: 800;
   color: var(--color-bg);
 }
@@ -115,10 +116,11 @@ onUnmounted(() => window.removeEventListener('scroll', onScroll))
 
 .navbar-links a {
   padding: 6px 14px;
-  border-radius: 8px;
+  border-radius: 6px;
   color: var(--color-text-secondary);
   font-size: 0.875rem;
   font-weight: 500;
+  letter-spacing: 0.02em;
   transition: all 0.2s;
 }
 
@@ -129,6 +131,7 @@ onUnmounted(() => window.removeEventListener('scroll', onScroll))
 
 .navbar-links a.router-link-exact-active {
   color: var(--color-text);
+  font-weight: 600;
 }
 
 .nav-search {
@@ -136,9 +139,9 @@ onUnmounted(() => window.removeEventListener('scroll', onScroll))
   align-items: center;
   gap: 6px;
   padding: 6px 14px;
-  border-radius: 8px;
+  border-radius: 6px;
   background: rgba(0, 0, 0, 0.03);
-  border: 1px solid var(--color-border);
+  border: 1px solid #e5e5e5;
   color: var(--color-text-muted);
   font-size: 0.8rem;
   cursor: pointer;
@@ -158,7 +161,7 @@ onUnmounted(() => window.removeEventListener('scroll', onScroll))
   padding: 1px 5px;
   border-radius: 4px;
   background: rgba(0, 0, 0, 0.05);
-  border: 1px solid var(--color-border);
+  border: 1px solid #e5e5e5;
 }
 
 .menu-toggle {
@@ -225,11 +228,11 @@ onUnmounted(() => window.removeEventListener('scroll', onScroll))
     top: var(--nav-height);
     left: 0;
     right: 0;
-    background: rgba(245, 240, 232, 0.98);
+    background: rgba(247, 243, 236, 0.98);
     backdrop-filter: blur(20px);
     flex-direction: column;
     padding: 0.5rem 1rem 1rem;
-    border-bottom: 1px solid var(--color-border);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
     display: none;
   }
 
