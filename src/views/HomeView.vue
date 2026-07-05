@@ -136,11 +136,6 @@ onMounted(() => {
       </div>
     </section>
 
-    <!-- Scroll hint -->
-    <div class="scroll-hint">
-      <span class="scroll-arrow">↓</span>
-    </div>
-
     <!-- Cards -->
     <section class="cards-section">
       <div class="section-header">
@@ -402,30 +397,6 @@ onMounted(() => {
   color: var(--color-text-muted);
   margin-top: 4px;
   font-weight: 500;
-}
-
-/* ── Scroll hint ── */
-.scroll-hint {
-  display: flex;
-  justify-content: center;
-  padding-bottom: 32px;
-}
-
-.scroll-arrow {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 28px;
-  height: 28px;
-  font-size: 1.1rem;
-  color: var(--color-text-muted);
-  opacity: 0.5;
-  animation: bounce 2.5s ease-in-out infinite;
-}
-
-@keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(4px); }
 }
 
 /* ── Responsive ── */
