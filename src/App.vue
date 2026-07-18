@@ -4,7 +4,7 @@ import NavBar from './components/NavBar.vue'
 
 <template>
   <NavBar />
-  <main class="container" style="padding-top: var(--nav-height); padding-bottom: 3rem;">
+  <main class="container main">
     <router-view />
   </main>
 
@@ -14,18 +14,23 @@ import NavBar from './components/NavBar.vue'
 </template>
 
 <style scoped>
+.main {
+  padding-top: calc(var(--nav-height) + var(--space-6));
+  padding-bottom: var(--space-7);
+}
+
 .site-footer {
   text-align: center;
-  padding: 24px 0 40px;
+  padding: var(--space-5) 0 var(--space-6);
   border-top: 1px solid var(--color-border);
-  font-size: 0.8rem;
+  font-size: var(--text-xs);
   color: var(--color-text-muted);
 }
 
 .site-footer a {
   color: var(--color-text-secondary);
   text-decoration: none;
-  transition: color 0.2s;
+  transition: color var(--dur) var(--ease);
 }
 
 .site-footer a:hover {

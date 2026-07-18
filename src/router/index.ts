@@ -11,6 +11,7 @@ const router = createRouter({
     { path: '/products', name: 'products', component: () => import('../views/ProductsView.vue') },
     { path: '/exam', name: 'exam', component: () => import('../views/ExamView.vue') },
     { path: '/search', name: 'search', component: () => import('../views/SearchView.vue') },
+    { path: '/:pathMatch(.*)*', name: 'not-found', component: () => import('../views/NotFoundView.vue') },
   ],
   scrollBehavior() {
     return { top: 0 }

@@ -1,29 +1,16 @@
 <script setup lang="ts">
-import { computed, ref, onMounted, onUnmounted } from 'vue'
+import { computed, ref, watch, nextTick, onMounted, onUnmounted } from 'vue'
 import { useRoute } from 'vue-router'
-import { marked } from 'marked'
 import papers from '../data/papers.json'
 
 const route = useRoute()
 
-function decodeHtml(html: string) {
-  const txt = document.createElement('textarea')
-  txt.innerHTML = html
-  return txt.value
-}
-
-marked.setOptions({
-  breaks: true,
-  gfm: true,
-})
-
+// contentHtml 已是 build.py 预渲染的 HTML，直接注入标题 id 即可
 const paper = computed(() => {
   const p = papers.find(p => p.id === route.params.id)
   if (!p) return null
-  const decoded = decodeHtml(p.contentHtml)
-  let html = marked.parse(decoded) as string
   let counter = 0
-  html = html.replace(/<h([23])([^>]*)>(.*?)<\/h\1>/gi, (_, tag, attrs, text) => {
+  const html = p.contentHtml.replace(/<h([23])([^>]*)>(.*?)<\/h\1>/gi, (_, tag, attrs, text) => {
     const id = `section-${counter++}`
     return `<h${tag}${attrs} id="${id}">${text}</h${tag}>`
   })
@@ -36,15 +23,22 @@ const headings = computed(() => {
   const matches: { level: number; id: string; text: string }[] = []
   let m
   while ((m = regex.exec(paper.value.contentHtml)) !== null) {
-    matches.push({ level: parseInt(m[1]), id: m[2], text: m[3] })
+    matches.push({
+      level: parseInt(m[1]),
+      id: m[2],
+      text: m[3].replace(/<[^>]+>/g, ''),
+    })
   }
   return matches
 })
 
 const activeId = ref('')
 
-onMounted(() => {
-  const observer = new IntersectionObserver(
+let observer: IntersectionObserver | null = null
+
+function observeHeadings() {
+  observer?.disconnect()
+  observer = new IntersectionObserver(
     (entries) => {
       for (const e of entries) {
         if (e.isIntersecting) {
@@ -54,13 +48,19 @@ onMounted(() => {
     },
     { rootMargin: '-80px 0px -60% 0px' }
   )
-  setTimeout(() => {
-    document.querySelectorAll('.prose h2[id], .prose h3[id]').forEach(el => {
-      observer.observe(el)
-    })
-  }, 100)
-  onUnmounted(() => observer.disconnect())
+  document.querySelectorAll('.prose h2[id], .prose h3[id]').forEach(el => observer!.observe(el))
+}
+
+onMounted(observeHeadings)
+
+// 同组件切换论文时，等 DOM 更新后重新收集标题
+watch(paper, async () => {
+  activeId.value = ''
+  await nextTick()
+  if (paper.value) observeHeadings()
 })
+
+onUnmounted(() => observer?.disconnect())
 
 function scrollTo(id: string) {
   const el = document.getElementById(id)
@@ -96,16 +96,16 @@ function scrollTo(id: string) {
         <header class="paper-header">
           <h1>{{ paper.title }}</h1>
           <div class="paper-meta">
-            <span class="meta-badge year">{{ paper.year }}</span>
-            <span class="meta-badge venue">{{ paper.categoryName }}</span>
+            <span class="tag tag-primary">{{ paper.year }}</span>
+            <span class="tag">{{ paper.categoryName }}</span>
             <a
               v-if="paper.arxivId"
               :href="`https://arxiv.org/abs/${paper.arxivId}`"
               target="_blank"
               rel="noopener"
-              class="meta-badge link"
+              class="tag meta-link"
             >
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
               arXiv
             </a>
           </div>
@@ -116,9 +116,9 @@ function scrollTo(id: string) {
     </div>
   </div>
 
-  <div v-else class="not-found">
-    <h2>论文未找到</h2>
-    <router-link to="/papers">返回论文列表</router-link>
+  <div v-else class="empty">
+    <p class="empty-title">论文未找到</p>
+    <router-link to="/papers">← 返回论文列表</router-link>
   </div>
 </template>
 
@@ -126,40 +126,32 @@ function scrollTo(id: string) {
 .breadcrumb {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  font-size: 0.88rem;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
   color: var(--color-text-muted);
-  margin-bottom: 1.5rem;
-}
-
-.breadcrumb a {
-  color: #818cf8;
-}
-
-.breadcrumb a:hover {
-  color: #a5b4fc;
+  margin-bottom: var(--space-5);
 }
 
 .sep {
-  opacity: 0.4;
+  opacity: 0.5;
 }
 
 .paper-layout {
   display: flex;
-  gap: 2.5rem;
+  gap: var(--space-7);
   align-items: flex-start;
 }
 
-/* Sidebar TOC */
+/* ── 侧边目录 ── */
 .paper-sidebar {
   position: sticky;
-  top: calc(var(--nav-height) + 1.5rem);
-  width: 200px;
+  top: calc(var(--nav-height) + var(--space-5));
+  width: 220px;
   flex-shrink: 0;
 }
 
 .toc {
-  font-size: 0.82rem;
+  font-size: var(--text-sm);
 }
 
 .toc-title {
@@ -167,187 +159,93 @@ function scrollTo(id: string) {
   color: var(--color-text-muted);
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  margin-bottom: 0.75rem;
-  font-size: 0.72rem;
+  margin-bottom: var(--space-3);
+  font-size: var(--text-xs);
 }
 
 .toc ul {
   list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
 .toc li {
-  margin-bottom: 3px;
+  margin-bottom: 2px;
 }
 
 .toc li a {
   display: block;
   padding: 5px 10px;
-  border-radius: 6px;
+  border-radius: var(--radius-sm);
   color: var(--color-text-muted);
   text-decoration: none;
-  transition: all 0.15s;
-  line-height: 1.4;
+  transition: color var(--dur) var(--ease), background var(--dur) var(--ease);
+  line-height: 1.5;
 }
 
 .toc li a:hover {
-  background: rgba(255, 255, 255, 0.04);
+  background: var(--color-surface-sunken);
   color: var(--color-text);
 }
 
 .toc li.active a {
-  background: rgba(99, 102, 241, 0.1);
-  color: #818cf8;
+  background: var(--color-primary-subtle);
+  color: var(--color-primary);
+  box-shadow: inset 2px 0 0 var(--color-primary);
 }
 
 .toc li.sub a {
-  padding-left: 1.5em;
-  font-size: 0.78rem;
+  padding-left: 1.75em;
+  font-size: var(--text-xs);
 }
 
-/* Content */
+/* ── 正文 ── */
 .paper-content {
   flex: 1;
   min-width: 0;
-  max-width: 800px;
+  max-width: var(--prose-width);
 }
 
 .paper-header {
-  margin-bottom: 2rem;
+  margin-bottom: var(--space-6);
 }
 
 .paper-header h1 {
-  font-size: 1.6rem;
+  font-size: var(--text-2xl);
   font-weight: 700;
   line-height: 1.4;
-  margin-bottom: 12px;
+  margin-bottom: var(--space-3);
   letter-spacing: -0.02em;
 }
 
 .paper-meta {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: var(--space-2);
   flex-wrap: wrap;
 }
 
-.meta-badge {
+.meta-link {
   display: inline-flex;
   align-items: center;
-  gap: 0.3em;
-  padding: 4px 12px;
-  border-radius: 100px;
-  font-size: 0.78rem;
-  font-weight: 500;
-}
-
-.meta-badge.year {
-  background: rgba(99, 102, 241, 0.12);
-  color: #818cf8;
-}
-
-.meta-badge.venue {
-  background: rgba(255, 255, 255, 0.04);
-  color: var(--color-text-muted);
-}
-
-.meta-badge.link {
-  background: rgba(255, 255, 255, 0.04);
-  color: var(--color-text-muted);
+  gap: 4px;
   text-decoration: none;
-  transition: all 0.15s;
+  transition: color var(--dur) var(--ease), background var(--dur) var(--ease);
 }
 
-.meta-badge.link:hover {
-  background: rgba(255, 255, 255, 0.08);
+.meta-link:hover {
+  color: var(--color-primary);
+  background: var(--color-primary-subtle);
+}
+
+.empty-title {
+  font-size: var(--text-lg);
+  font-weight: 600;
   color: var(--color-text);
-}
-
-.not-found {
-  text-align: center;
-  padding: 3rem 0;
-}
-
-.not-found h2 {
-  margin-bottom: 1rem;
+  margin-bottom: var(--space-3);
 }
 
 @media (max-width: 900px) {
   .paper-sidebar {
     display: none;
   }
-}
-
-/* Prose overrides */
-.paper-content :deep(.prose) {
-  font-size: 0.95rem;
-  line-height: 1.8;
-}
-
-.paper-content :deep(.prose h2) {
-  font-size: 1.2rem;
-  margin-top: 2.5em;
-  padding-bottom: 0.4em;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-  color: var(--color-text);
-}
-
-.paper-content :deep(.prose h3) {
-  font-size: 1.05rem;
-  margin-top: 1.8em;
-}
-
-.paper-content :deep(.prose blockquote) {
-  background: rgba(99, 102, 241, 0.06);
-  border-left: 3px solid #6366f1;
-  padding: 0.8em 1em;
-  border-radius: 0 8px 8px 0;
-  margin: 1.2em 0;
-  color: var(--color-text-secondary);
-  font-style: normal;
-}
-
-.paper-content :deep(.prose table) {
-  font-size: 0.88rem;
-}
-
-.paper-content :deep(.prose th) {
-  background: rgba(99, 102, 241, 0.08);
-}
-
-.paper-content :deep(.prose ul) {
-  padding-left: 0;
-  list-style: none;
-}
-
-.paper-content :deep(.prose ul li) {
-  position: relative;
-  padding-left: 1.2em;
-}
-
-.paper-content :deep(.prose ul li::before) {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0.65em;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: #6366f1;
-  opacity: 0.5;
-}
-
-.paper-content :deep(.prose strong) {
-  color: var(--color-text);
-  font-weight: 600;
-}
-
-.paper-content :deep(.prose code) {
-  background: rgba(99, 102, 241, 0.1);
-  color: #818cf8;
-  padding: 0.15em 0.4em;
-  border-radius: 4px;
-  font-size: 0.88em;
 }
 </style>

@@ -54,6 +54,8 @@ def parse_paper(filepath: Path) -> dict:
 
     # Convert markdown to HTML (simple approach: use markdown content as-is)
     content_html = markdown_to_html(text)
+    # Drop the leading <h1> (the detail page header already renders the title)
+    content_html = re.sub(r"^\s*<h1>.*?</h1>\s*", "", content_html, flags=re.S)
 
     return {
         "id": stem,
@@ -151,6 +153,47 @@ def parse_glossary(filepath: Path) -> list:
     return terms
 
 
+def normalize_answer_md(text: str) -> str:
+    """Insert blank lines so labels and list blocks parse as separate blocks.
+
+    Collected answer lines contain no blank lines, which would make
+    Python-Markdown glue the labels and the list into a single paragraph.
+    Fenced code blocks are dedented to column 0 because the fenced_code
+    extension only recognizes fences at line start.
+    """
+    lines = text.split("\n")
+    out = []
+    prev_list = False
+    in_fence = False
+    fence_indent = 0
+    for line in lines:
+        stripped = line.strip()
+        if stripped.startswith("```"):
+            if in_fence:
+                in_fence = False
+                prev_list = False
+            else:
+                in_fence = True
+                fence_indent = len(line) - len(line.lstrip())
+            out.append(line.lstrip())
+            continue
+        if in_fence:
+            prefix = " " * fence_indent
+            out.append(line[len(prefix):] if line.startswith(prefix) else line.lstrip())
+            continue
+        is_list = stripped.startswith("- ")
+        if out and stripped and not (is_list and prev_list):
+            out.append("")
+        out.append(line)
+        prev_list = is_list
+    return "\n".join(out)
+
+
+def render_answer(lines: list) -> str:
+    """Render collected answer markdown lines to HTML."""
+    return markdown_to_html(normalize_answer_md("\n".join(lines).strip()))
+
+
 def parse_exam(filepath: Path) -> list:
     """Parse exam markdown into questions."""
     text = filepath.read_text(encoding="utf-8")
@@ -158,6 +201,7 @@ def parse_exam(filepath: Path) -> list:
     current_q = None
     current_answer_lines = []
     q_id = 0
+    in_fence = False
 
     # Determine category from filename
     stem = filepath.stem
@@ -171,7 +215,7 @@ def parse_exam(filepath: Path) -> list:
         if m:
             # Save previous question
             if current_q:
-                current_q["answer"] = "\n".join(current_answer_lines).strip()
+                current_q["answer"] = render_answer(current_answer_lines)
                 questions.append(current_q)
 
             q_id += 1
@@ -182,18 +226,25 @@ def parse_exam(filepath: Path) -> list:
                 "category": category,
             }
             current_answer_lines = []
+            in_fence = False
             continue
 
         # Collect answer lines (after **答题方向**: or **考察点**:)
         if current_q:
-            if stripped.startswith("**答题方向**") or stripped.startswith("**考察点**"):
+            if stripped.startswith("```"):
+                in_fence = not in_fence
+                if current_answer_lines:
+                    current_answer_lines.append(line.rstrip())
+            elif not in_fence and (
+                stripped.startswith("**答题方向**") or stripped.startswith("**考察点**")
+            ):
                 current_answer_lines.append(stripped)
-            elif current_answer_lines and stripped:
-                current_answer_lines.append(stripped)
+            elif current_answer_lines and (stripped or in_fence):
+                current_answer_lines.append(line.rstrip())
 
     # Save last question
     if current_q:
-        current_q["answer"] = "\n".join(current_answer_lines).strip()
+        current_q["answer"] = render_answer(current_answer_lines)
         questions.append(current_q)
 
     return questions

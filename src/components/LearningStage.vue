@@ -13,7 +13,7 @@ function completedCount() {
 </script>
 
 <template>
-  <div class="stage-card">
+  <div class="card stage-card">
     <div class="stage-header" @click="expanded = !expanded">
       <div>
         <h3>{{ stage.name }}</h3>
@@ -36,8 +36,8 @@ function completedCount() {
         :class="{ done: isCompleted(item.id) }"
         @click="toggle(item.id)"
       >
-        <span class="checkbox">{{ isCompleted(item.id) ? '☑' : '☐' }}</span>
-        <span>{{ item.text }}</span>
+        <span class="cbx" :class="{ checked: isCompleted(item.id) }"></span>
+        <span class="item-text">{{ item.text }}</span>
       </li>
     </ul>
   </div>
@@ -45,41 +45,39 @@ function completedCount() {
 
 <style scoped>
 .stage-card {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
+  padding: 0;
   overflow: hidden;
-  transition: all 0.25s;
-}
-
-.stage-card:hover {
-  border-color: var(--color-border-hover);
 }
 
 .stage-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 14px 18px;
+  padding: var(--space-4) var(--space-5);
   cursor: pointer;
   user-select: none;
+  transition: background var(--dur) var(--ease);
+}
+
+.stage-header:hover {
+  background: var(--color-surface-sunken);
 }
 
 .stage-header h3 {
-  font-size: 1.05rem;
+  font-size: var(--text-base);
   font-weight: 600;
 }
 
 .progress-text {
-  font-size: 0.8rem;
+  font-size: var(--text-xs);
   color: var(--color-text-muted);
   margin-top: 2px;
 }
 
 .expand-icon {
-  transition: transform 0.2s;
+  transition: transform var(--dur) var(--ease);
   color: var(--color-text-muted);
-  font-size: 0.9rem;
+  font-size: var(--text-sm);
 }
 
 .expand-icon.expanded {
@@ -87,38 +85,62 @@ function completedCount() {
 }
 
 .progress-bar {
-  height: 3px;
-  background: rgba(0, 0, 0, 0.06);
+  height: 4px;
+  background: var(--color-surface-sunken);
 }
 
 .progress-fill {
   height: 100%;
   background: var(--color-primary);
-  transition: width 0.3s;
+  border-radius: 0 2px 2px 0;
+  transition: width 0.3s var(--ease);
 }
 
 .items {
   list-style: none;
-  padding: 8px 18px 14px;
+  padding: var(--space-2) var(--space-5) var(--space-4);
 }
 
 .items li {
   display: flex;
   align-items: center;
-  gap: 0.6em;
+  gap: var(--space-3);
   padding: 6px 0;
   cursor: pointer;
-  font-size: 0.95rem;
-  transition: color 0.2s;
+  font-size: var(--text-md);
 }
 
-.items li.done {
+/* CSS 复选框（替代 ☐/☑ 字符，跨平台渲染一致） */
+.cbx {
+  flex-shrink: 0;
+  width: 15px;
+  height: 15px;
+  border: 1.5px solid var(--color-border-strong);
+  border-radius: 4px;
+  position: relative;
+  transition: background var(--dur) var(--ease), border-color var(--dur) var(--ease);
+}
+
+.cbx.checked {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.cbx.checked::after {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 1px;
+  width: 4px;
+  height: 8px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.items li.done .item-text {
   color: var(--color-text-muted);
   text-decoration: line-through;
-}
-
-.checkbox {
-  flex-shrink: 0;
-  font-size: 1.1rem;
+  text-decoration-color: var(--color-border-strong);
 }
 </style>

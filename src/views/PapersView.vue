@@ -1,6 +1,8 @@
 <script setup lang="ts">
-import papers from '../data/papers.json'
 import { computed } from 'vue'
+import PageHeader from '../components/PageHeader.vue'
+import SectionHeader from '../components/SectionHeader.vue'
+import papers from '../data/papers.json'
 
 const grouped = computed(() => {
   const map: Record<string, typeof papers> = {}
@@ -14,25 +16,19 @@ const grouped = computed(() => {
 
 <template>
   <div class="papers">
-    <div class="page-header">
-      <h1>论文笔记</h1>
-      <p class="subtitle">经典 AI 论文阅读笔记</p>
-    </div>
+    <PageHeader title="论文笔记" subtitle="经典 AI 论文阅读笔记" />
 
     <section v-for="(items, cat) in grouped" :key="cat" class="category-section">
-      <div class="section-header">
-        <h2>{{ cat }}</h2>
-        <div class="line"></div>
-      </div>
+      <SectionHeader :title="cat" />
       <div class="paper-list">
         <router-link
           v-for="paper in items"
           :key="paper.id"
           :to="`/papers/${paper.id}`"
-          class="paper-card"
+          class="card paper-row"
         >
           <div class="paper-info">
-            <span class="paper-year">{{ paper.year }}</span>
+            <span class="tag">{{ paper.year }}</span>
             <h3>{{ paper.title }}</h3>
           </div>
           <a
@@ -50,104 +46,60 @@ const grouped = computed(() => {
 </template>
 
 <style scoped>
-.page-header {
-  margin-bottom: 2.5rem;
-}
-
-.page-header h1 {
-  font-size: 1.8rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  margin-bottom: 0.4rem;
-}
-
-.subtitle {
-  color: var(--color-text-secondary);
-  font-size: 0.95rem;
-}
-
-.section-header {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 16px;
-}
-
-.section-header h2 {
-  font-size: 1.2rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  white-space: nowrap;
-}
-
-.section-header .line {
-  flex: 1;
-  height: 1px;
-  background: var(--color-border);
-}
-
 .category-section {
-  margin-bottom: 2.5rem;
+  margin-bottom: var(--space-6);
 }
 
 .paper-list {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: var(--space-2);
 }
 
-.paper-card {
+.paper-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 14px 18px;
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
   border-radius: var(--radius);
-  transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  color: var(--color-text);
+  color: inherit;
+  transition:
+    border-color var(--dur) var(--ease),
+    transform var(--dur) var(--ease),
+    background var(--dur) var(--ease);
 }
 
-.paper-card:hover {
-  border-color: var(--color-border-hover);
-  background: var(--color-surface-hover);
-  transform: translateX(4px);
-  color: var(--color-text);
+.paper-row:hover {
+  color: inherit;
+  border-color: var(--color-border-strong);
+  transform: translateX(2px);
 }
 
 .paper-info {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: var(--space-3);
+  min-width: 0;
 }
 
-.paper-year {
-  background: rgba(0, 0, 0, 0.05);
-  color: var(--color-text-secondary);
-  padding: 0.15em 0.6em;
-  border-radius: 6px;
-  font-size: 0.78rem;
-  font-weight: 500;
-  flex-shrink: 0;
-}
-
-.paper-card h3 {
-  font-size: 0.95rem;
+.paper-row h3 {
+  font-size: var(--text-md);
   font-weight: 500;
 }
 
 .arxiv-link {
-  font-size: 0.78rem;
-  padding: 0.2em 0.7em;
+  font-size: var(--text-xs);
+  padding: 2px 10px;
   border: 1px solid var(--color-border);
-  border-radius: 6px;
+  border-radius: var(--radius-sm);
   color: var(--color-text-muted);
   flex-shrink: 0;
-  transition: all 0.2s;
+  transition: color var(--dur) var(--ease), border-color var(--dur) var(--ease);
 }
 
 .arxiv-link:hover {
-  background: rgba(0, 0, 0, 0.04);
-  color: var(--color-text);
+  color: var(--color-primary);
+  border-color: var(--color-primary);
 }
 </style>

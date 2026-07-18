@@ -1,5 +1,9 @@
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, watch, onMounted, onUnmounted } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
+
+const route = useRoute()
+const router = useRouter()
 
 const menuOpen = ref(false)
 const scrolled = ref(false)
@@ -13,12 +17,34 @@ const links = [
   { to: '/exam', label: '面试题' },
 ]
 
+// 路由变化时收起移动菜单
+watch(() => route.path, () => {
+  menuOpen.value = false
+})
+
 function onScroll() {
   scrolled.value = window.scrollY > 20
 }
 
-onMounted(() => window.addEventListener('scroll', onScroll))
-onUnmounted(() => window.removeEventListener('scroll', onScroll))
+function onKeydown(e: KeyboardEvent) {
+  if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+    e.preventDefault()
+    menuOpen.value = false
+    router.push('/search')
+  } else if (e.key === 'Escape') {
+    menuOpen.value = false
+  }
+}
+
+onMounted(() => {
+  window.addEventListener('scroll', onScroll, { passive: true })
+  window.addEventListener('keydown', onKeydown)
+})
+
+onUnmounted(() => {
+  window.removeEventListener('scroll', onScroll)
+  window.removeEventListener('keydown', onKeydown)
+})
 </script>
 
 <template>
@@ -62,23 +88,24 @@ onUnmounted(() => window.removeEventListener('scroll', onScroll))
   left: 0;
   right: 0;
   height: var(--nav-height);
-  background: rgba(247, 243, 236, 0.85);
-  backdrop-filter: blur(20px) saturate(1.2);
-  -webkit-backdrop-filter: blur(20px) saturate(1.2);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  /* --color-bg 的半透明版本 */
+  background: rgba(250, 248, 243, 0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--color-border);
   z-index: 100;
-  transition: all 0.3s ease;
+  transition: background var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
 }
 
 .navbar.scrolled {
-  background: rgba(247, 243, 236, 0.95);
-  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.06);
+  background: rgba(250, 248, 243, 0.97);
+  box-shadow: var(--shadow-sm);
 }
 
 .navbar-inner {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 var(--space-5);
   height: 100%;
   display: flex;
   align-items: center;
@@ -88,18 +115,18 @@ onUnmounted(() => window.removeEventListener('scroll', onScroll))
 .navbar-brand {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: var(--space-3);
   text-decoration: none;
   color: var(--color-text);
   font-weight: 600;
-  font-size: 1.05rem;
+  font-size: var(--text-base);
   letter-spacing: -0.01em;
 }
 
 .brand-icon {
   width: 24px;
   height: 24px;
-  border-radius: 6px;
+  border-radius: var(--radius-sm);
   background: var(--color-text);
   display: flex;
   align-items: center;
@@ -116,17 +143,17 @@ onUnmounted(() => window.removeEventListener('scroll', onScroll))
 
 .navbar-links a {
   padding: 6px 14px;
-  border-radius: 6px;
+  border-radius: var(--radius-sm);
   color: var(--color-text-secondary);
-  font-size: 0.875rem;
+  font-size: var(--text-sm);
   font-weight: 500;
   letter-spacing: 0.02em;
-  transition: all 0.2s;
+  transition: color var(--dur) var(--ease), background var(--dur) var(--ease);
 }
 
 .navbar-links a:hover {
   color: var(--color-text);
-  background: rgba(0, 0, 0, 0.04);
+  background: var(--color-surface-sunken);
 }
 
 .navbar-links a.router-link-exact-active {
@@ -139,19 +166,18 @@ onUnmounted(() => window.removeEventListener('scroll', onScroll))
   align-items: center;
   gap: 6px;
   padding: 6px 14px;
-  border-radius: 6px;
-  background: rgba(0, 0, 0, 0.03);
-  border: 1px solid #e5e5e5;
+  border-radius: var(--radius-sm);
+  background: var(--color-surface-sunken);
+  border: 1px solid var(--color-border);
   color: var(--color-text-muted);
-  font-size: 0.8rem;
+  font-size: var(--text-xs);
   cursor: pointer;
-  transition: all 0.2s;
+  transition: border-color var(--dur) var(--ease), color var(--dur) var(--ease);
   text-decoration: none;
 }
 
 .nav-search:hover {
-  background: rgba(0, 0, 0, 0.06);
-  border-color: var(--color-border-hover);
+  border-color: var(--color-border-strong);
   color: var(--color-text-secondary);
 }
 
@@ -160,8 +186,8 @@ onUnmounted(() => window.removeEventListener('scroll', onScroll))
   font-size: 0.7rem;
   padding: 1px 5px;
   border-radius: 4px;
-  background: rgba(0, 0, 0, 0.05);
-  border: 1px solid #e5e5e5;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
 }
 
 .menu-toggle {
@@ -182,7 +208,7 @@ onUnmounted(() => window.removeEventListener('scroll', onScroll))
   height: 2px;
   background: var(--color-text);
   position: absolute;
-  transition: transform 0.3s;
+  transition: transform var(--dur) var(--ease);
 }
 
 .menu-toggle span {
@@ -216,7 +242,7 @@ onUnmounted(() => window.removeEventListener('scroll', onScroll))
 
 @media (max-width: 768px) {
   .navbar-inner {
-    padding: 0 1rem;
+    padding: 0 var(--space-4);
   }
 
   .menu-toggle {
@@ -228,11 +254,10 @@ onUnmounted(() => window.removeEventListener('scroll', onScroll))
     top: var(--nav-height);
     left: 0;
     right: 0;
-    background: rgba(247, 243, 236, 0.98);
-    backdrop-filter: blur(20px);
+    background: var(--color-bg);
     flex-direction: column;
-    padding: 0.5rem 1rem 1rem;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    padding: var(--space-2) var(--space-4) var(--space-4);
+    border-bottom: 1px solid var(--color-border);
     display: none;
   }
 
@@ -244,10 +269,7 @@ onUnmounted(() => window.removeEventListener('scroll', onScroll))
     padding: 0.6em 0;
   }
 
-  .search-label {
-    display: none;
-  }
-
+  .search-label,
   .nav-search kbd {
     display: none;
   }

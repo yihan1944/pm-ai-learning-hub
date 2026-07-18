@@ -1,14 +1,16 @@
 <script setup lang="ts">
-import knowledge from '../data/knowledge.json'
+import PageHeader from '../components/PageHeader.vue'
+import SectionHeader from '../components/SectionHeader.vue'
 import LearningStage from '../components/LearningStage.vue'
+import knowledge from '../data/knowledge.json'
 </script>
 
 <template>
   <div class="knowledge">
-    <div class="page-header">
-      <h1>学习路线</h1>
-      <p class="subtitle">从 AI 认知到产品落地的 {{ knowledge.stages.length }} 阶段学习路径</p>
-    </div>
+    <PageHeader
+      title="学习路线"
+      :subtitle="`从 AI 认知到产品落地的 ${knowledge.stages.length} 阶段学习路径`"
+    />
 
     <section class="stages">
       <LearningStage
@@ -19,12 +21,9 @@ import LearningStage from '../components/LearningStage.vue'
     </section>
 
     <section class="glossary">
-      <div class="section-header">
-        <h2>术语表</h2>
-        <div class="line"></div>
-      </div>
+      <SectionHeader title="术语表" />
       <div class="term-list">
-        <div v-for="term in knowledge.glossary" :key="term.term" class="term-card">
+        <div v-for="term in knowledge.glossary" :key="term.term" class="card term-card">
           <dt>{{ term.term }}</dt>
           <dd>{{ term.definition }}</dd>
         </div>
@@ -34,78 +33,33 @@ import LearningStage from '../components/LearningStage.vue'
 </template>
 
 <style scoped>
-.page-header {
-  margin-bottom: 2.5rem;
-}
-
-.page-header h1 {
-  font-size: 1.8rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  margin-bottom: 0.4rem;
-}
-
-.subtitle {
-  color: var(--color-text-secondary);
-  font-size: 0.95rem;
-}
-
 .stages {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  margin-bottom: 3rem;
-}
-
-.section-header {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 20px;
-}
-
-.section-header h2 {
-  font-size: 1.2rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  white-space: nowrap;
-}
-
-.section-header .line {
-  flex: 1;
-  height: 1px;
-  background: var(--color-border);
+  gap: var(--space-3);
+  margin-bottom: var(--space-7);
 }
 
 .term-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 10px;
+  gap: var(--space-3);
 }
 
 .term-card {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius);
-  padding: 14px 18px;
-  transition: all 0.25s;
-}
-
-.term-card:hover {
-  border-color: var(--color-border-hover);
-  background: var(--color-surface-hover);
+  padding: var(--space-4) var(--space-5);
 }
 
 .term-card dt {
   font-weight: 600;
-  font-size: 0.95rem;
-  margin-bottom: 0.3em;
+  font-size: var(--text-md);
+  margin-bottom: var(--space-1);
   color: var(--color-primary);
 }
 
 .term-card dd {
-  font-size: 0.88rem;
+  font-size: var(--text-sm);
   color: var(--color-text-secondary);
-  line-height: 1.5;
+  line-height: 1.6;
 }
 </style>
