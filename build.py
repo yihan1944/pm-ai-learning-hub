@@ -240,6 +240,14 @@ def parse_exam(filepath: Path) -> list:
             ):
                 current_answer_lines.append(stripped)
             elif current_answer_lines and (stripped or in_fence):
+                # Skip section headers, horizontal rules, and blockquotes
+                # that belong to the document structure, not the answer
+                if (
+                    stripped.startswith("## ")
+                    or stripped.startswith("---")
+                    or stripped.startswith("> ")
+                ):
+                    continue
                 current_answer_lines.append(line.rstrip())
 
     # Save last question

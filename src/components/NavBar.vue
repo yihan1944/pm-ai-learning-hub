@@ -243,10 +243,23 @@ onUnmounted(() => {
 @media (max-width: 768px) {
   .navbar-inner {
     padding: 0 var(--space-4);
+    gap: var(--space-2);
+  }
+
+  .navbar-brand {
+    gap: var(--space-2);
+    font-size: var(--text-sm);
+  }
+
+  .brand-icon {
+    width: 22px;
+    height: 22px;
+    font-size: 0.55rem;
   }
 
   .menu-toggle {
     display: block;
+    margin-left: auto;
   }
 
   .navbar-links {
@@ -267,6 +280,12 @@ onUnmounted(() => {
 
   .navbar-links a {
     padding: 0.6em 0;
+  }
+
+  .nav-search {
+    padding: 6px;
+    background: none;
+    border: none;
   }
 
   .search-label,

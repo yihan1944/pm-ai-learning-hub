@@ -363,8 +363,9 @@ const cards = [
 @media (max-width: 768px) {
   .hero {
     flex-direction: column;
-    gap: var(--space-6);
+    gap: var(--space-5);
     text-align: center;
+    padding-top: calc(var(--nav-height) + var(--space-5));
   }
 
   .hero-subtitle {
@@ -373,11 +374,16 @@ const cards = [
 
   .hero-right {
     width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
   }
 
   .sphere-container {
-    width: 280px;
-    height: 280px;
+    width: 180px;
+    height: 180px;
+    scale: 0.6;
+    margin: -20px 0 -30px;
   }
 
   .cards-grid {
