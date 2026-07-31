@@ -47,5 +47,12 @@
     "description": "Chrome 浏览器插件，用于将微博推文下载为 Markdown 或 HTML 格式（可打印为 PDF）。",
     "tag": "浏览器插件",
     "link": "https://github.com/yihan1944/get-weibos"
+  },
+  {
+    "id": "xichuang-dushi",
+    "title": "西窗读诗",
+    "description": "微信小程序，诗词曲赋散文小说啥都有。",
+    "tag": "微信小程序",
+    "link": "#小程序://西窗读诗/YrCx1qYyizM73Gk"
   }
 ]
